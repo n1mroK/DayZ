@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{4F215C18686A18CA}Gui/imagesets/playstation_buttons2@2x.tga"
+ Author "ntb-7446"
+ ChangeDate 342618872
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "playstation_buttons2@2x.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

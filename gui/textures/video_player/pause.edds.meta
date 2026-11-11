@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{F590C7F79E916751}Gui/textures/video_player/Pause.edds"
+ Author "4761"
+ ChangeDate 687075057
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Pause.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

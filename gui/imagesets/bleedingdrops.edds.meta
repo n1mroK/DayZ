@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{FEAD63B1347867F9}Gui/imagesets/BleedingDrops.png"
+ Author "6884"
+ ChangeDate -536089304
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "BleedingDrops.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,84 @@
+ImageSetClass {
+ Name "dayz_resources_grayscale"
+ RefSize 512 512
+ Textures {
+  ImageSetTextureClass {
+   mpix 0
+   path "{8A1E8EEA7DB4F5DE}Gui/imagesets/dayz_resources_grayscale.edds"
+  }
+  ImageSetTextureClass {
+   mpix 1
+   path "{0C4B4C0442BD5884}Gui/imagesets/dayz_resources_grayscale@2x.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass woodenlog {
+   Name "woodenlog"
+   Pos 2 2
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass woodenplank {
+   Name "woodenplank"
+   Pos 91 2
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass shortstick {
+   Name "shortstick"
+   Pos 180 2
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass brick {
+   Name "brick"
+   Pos 269 2
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass metalsheet {
+   Name "metalsheet"
+   Pos 358 2
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass rope {
+   Name "rope"
+   Pos 2 91
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass metalwire {
+   Name "metalwire"
+   Pos 91 91
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass leather {
+   Name "leather"
+   Pos 180 91
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass bigstone {
+   Name "bigstone"
+   Pos 269 91
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass tarp {
+   Name "tarp"
+   Pos 358 91
+   Size 85 85
+   Flags 0
+  }
+  ImageSetDefClass nails {
+   Name "nails"
+   Pos 2 180
+   Size 85 85
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

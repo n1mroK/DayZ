@@ -1,0 +1,1688 @@
+FrameWidgetClass HudFrameWidget {
+ visible 1
+ clipchildren 0
+ ignorepointer 1
+ position 0.00059 -0.00239
+ size 0.9 0.9
+ halign center_ref
+ valign center_ref
+ hexactsize 0
+ vexactsize 0
+ priority 100
+ {
+  GridSpacerWidgetClass DigitalLockLayout_Grid {
+   visible 1
+   clipchildren 0
+   inheritalpha 0
+   ignorepointer 1
+   position 0 0
+   size 350 166
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   scaled 1
+   fixaspect fixwidth
+   draggable 0
+   scriptclass ""
+   Padding 0
+   Margin 0
+   "Size To Content H" 1
+   "Size To Content V" 1
+   Columns 1
+   {
+    ImageWidgetClass HeaderPanel_Image {
+     visible 1
+     clipchildren 0
+     inheritalpha 0
+     color 0.3137 0.3137 0.3137 0.6275
+     position 0 0
+     size 350 40
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     scriptclass ""
+     imageTexture "{E262CF82FD5DFF31}Gui/textures/linear_gradient.edds"
+     mode blend
+     "src alpha" 1
+     "stretch mode" stretch_w_h
+     {
+      GridSpacerWidgetClass PasswordHeader_Grid {
+       clipchildren 0
+       inheritalpha 0
+       position 10 0
+       size 290 40
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       scaled 1
+       Padding 0
+       Margin 0
+       "Size To Content H" 1
+       "Size To Content V" 1
+       Columns 100
+       Rows 1
+       {
+        TextWidgetClass PasswordHeader_Text {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         position 10 0
+         size 270 16
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style Normal
+         text "PASSWORD:"
+         font "gui/fonts/sdf_MetronBook72"
+         "shadow size" 3
+         "shadow color" 0 0 0 1
+         "italic text" 0
+         "bold text" 0
+         "exact text" 0
+         "size to text h" 1
+         "size to text v" 1
+         "text valign" center
+        }
+        PanelWidgetClass PasswordDigit_Panel0 {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         position 10 0
+         size 16 16
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style blank
+         {
+          TextWidgetClass PasswordDigitUnderline_Text0 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "_"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass PasswordDigitNumber_Text0 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "4"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        PanelWidgetClass PasswordDigit_Panel1 {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         position 10 0
+         size 16 16
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style blank
+         {
+          TextWidgetClass PasswordDigitUnderline_Text1 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "_"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass PasswordDigitNumber_Text1 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "4"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        PanelWidgetClass PasswordDigit_Panel2 {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         position 10 0
+         size 16 16
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style blank
+         {
+          TextWidgetClass PasswordDigitUnderline_Text2 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "_"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass PasswordDigitNumber_Text2 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "8"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        PanelWidgetClass PasswordDigit_Panel3 {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         position 10 0
+         size 16 16
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style blank
+         {
+          TextWidgetClass PasswordDigitUnderline_Text3 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "_"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass PasswordDigitNumber_Text3 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "*"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        PanelWidgetClass PasswordDigit_Panel4 {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         position 10 0
+         size 16 16
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style blank
+         {
+          TextWidgetClass PasswordDigitUnderline_Text4 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "_"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass PasswordDigitNumber_Text4 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "*"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        PanelWidgetClass PasswordDigit_Panel17 {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         position 10 0
+         size 16 16
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style blank
+         {
+          TextWidgetClass PasswordDigitUnderline_Text17 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "_"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass PasswordDigitNumber_Text5 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           size 10 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           scaled 1
+           style Normal
+           text "*"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    ImageWidgetClass ContentPanel_Image {
+     visible 1
+     clipchildren 0
+     inheritalpha 0
+     color 0.3137 0.3137 0.3137 0.6275
+     position 0 0
+     size 350 176.79399
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     scriptclass ""
+     imageTexture "{E262CF82FD5DFF31}Gui/textures/linear_gradient.edds"
+     mode blend
+     "src alpha" 1
+     "stretch mode" stretch_w_h
+     {
+      GridSpacerWidgetClass PasswordKeypad_Grid {
+       clipchildren 0
+       inheritalpha 0
+       position 10 0
+       size 290 40
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       scaled 1
+       Padding 0
+       Margin 0
+       "Size To Content H" 1
+       "Size To Content V" 1
+       Rows 4
+       {
+        ButtonWidgetClass KeyNumber1_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber3_Button"
+         "next right" "KeyNumber2_Button"
+         "next down" "KeyNumber4_Button"
+         {
+          TextWidgetClass KeyNumber_Text8 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "1"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock0 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear1 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber2_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber1_Button"
+         "next right" "KeyNumber3_Button"
+         "next up" "KeyNumber0_Button"
+         "next down" "KeyNumber5_Button"
+         {
+          TextWidgetClass KeyNumber_Text5 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "2"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock2 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear3 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber3_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber2_Button"
+         "next right" "KeyNumber1_Button"
+         "next up" "KeyLock_Button"
+         "next down" "KeyNumber6_Button"
+         {
+          TextWidgetClass KeyNumber_Text6 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "3"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock4 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear5 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber4_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber6_Button"
+         "next right" "KeyNumber5_Button"
+         "next up" "KeyNumber1_Button"
+         "next down" "KeyNumber7_Button"
+         {
+          TextWidgetClass KeyNumber_Text7 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "4"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass Sick6 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear7 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber5_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber4_Button"
+         "next right" "KeyNumber6_Button"
+         "next up" "KeyNumber2_Button"
+         "next down" "KeyNumber8_Button"
+         {
+          TextWidgetClass KeyNumber_Text9 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "5"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock8 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear9 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber6_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber5_Button"
+         "next right" "KeyNumber4_Button"
+         "next up" "KeyNumber3_Button"
+         "next down" "KeyNumber9_Button"
+         {
+          TextWidgetClass KeyNumber_Text10 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "6"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock10 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear11 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber7_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber9_Button"
+         "next right" "KeyNumber8_Button"
+         "next up" "KeyNumber4_Button"
+         "next down" "KeyClear_Button"
+         {
+          TextWidgetClass KeyNumber_Text11 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "7"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock12 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear13 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber8_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber7_Button"
+         "next right" "KeyNumber9_Button"
+         "next up" "KeyNumber5_Button"
+         "next down" "KeyNumber0_Button"
+         {
+          TextWidgetClass KeyNumber_Text12 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "8"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock14 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear15 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber9_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber8_Button"
+         "next right" "KeyNumber7_Button"
+         "next up" "KeyNumber6_Button"
+         "next down" "KeyLock_Button"
+         {
+          TextWidgetClass KeyNumber_Text13 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "9"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock16 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear17 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyClear_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyLock_Button"
+         "next right" "KeyNumber0_Button"
+         "next up" "KeyNumber7_Button"
+         "next down" "KeyNumber1_Button"
+         {
+          TextWidgetClass KeyNumber_Text14 {
+           visible 0
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "1"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock18 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear19 {
+           visible 1
+           ignorepointer 1
+           color 1 1 1 0.9961
+           position 0 0
+           size 26 26
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyNumber0_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyClear_Button"
+         "next right" "KeyLock_Button"
+         "next up" "KeyNumber8_Button"
+         "next down" "KeyNumber2_Button"
+         {
+          TextWidgetClass KeyNumber_Text15 {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock20 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear21 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+        ButtonWidgetClass KeyLock_Button {
+         visible 1
+         disabled 0
+         clipchildren 0
+         inheritalpha 0
+         ignorepointer 0
+         keepsafezone 0
+         color 1 1 1 0.9922
+         position 10 0
+         size 50 40
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         style DayZDigitButton
+         "next left" "KeyNumber0_Button"
+         "next right" "KeyClear_Button"
+         "next up" "KeyNumber9_Button"
+         "next down" "KeyNumber3_Button"
+         {
+          TextWidgetClass KeyNumber_Text16 {
+           visible 0
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0 0
+           size 1 24
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           scaled 1
+           style Normal
+           text "1"
+           font "gui/fonts/sdf_MetronBook72"
+           "shadow size" 3
+           "shadow color" 0 0 0 1
+           "italic text" 0
+           "bold text" 0
+           "exact text" 0
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+          ImageWidgetClass IconLock22 {
+           visible 1
+           ignorepointer 1
+           color 1 1 1 0.9961
+           position 0 0
+           size 26 26
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconKey"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+          ImageWidgetClass IconClear23 {
+           visible 0
+           color 1 1 1 0.9961
+           position 0 0
+           size 35 35
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           image0 "set:dayz_additional_gui_unique image:ButtonIconCorrect"
+           mode blend
+           "src alpha" 1
+           "clamp mode" clamp
+           filter 1
+           nocache 0
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

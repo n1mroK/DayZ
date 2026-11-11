@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{07947A391FFAF5FF}Gui/textures/frostline_logo_temp.edds"
+ Author "9702"
+ ChangeDate -2026229478
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "frostline_logo_temp.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{15F9C38BC27D2985}Gui/imagesets/Map2D_UI.edds"
+ Author "4948"
+ ChangeDate 1107520734
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Map2D_UI.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

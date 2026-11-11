@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{CF51626CB74FF257}Gui/textures/feedback_icon.tga"
+ Author "9702"
+ ChangeDate -416665272
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "feedback_icon.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

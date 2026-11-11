@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{EDC6B80B15FF21C6}Gui/textures/forstline_logo_small_temp.png"
+ Author "9702"
+ ChangeDate -1051528916
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "forstline_logo_small_temp.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

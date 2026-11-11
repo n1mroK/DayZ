@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{DDA552262677C952}Gui/textures/video_player/Once.edds"
+ Author "4761"
+ ChangeDate 861040370
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Once.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

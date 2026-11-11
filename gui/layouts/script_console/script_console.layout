@@ -1,0 +1,7218 @@
+PanelWidgetClass "{00000000D59CB750}" {
+ Name "FrameWidget"
+ visible 1
+ clipchildren 1
+ ignorepointer 1
+ color 0 0 0 1
+ position 0 0
+ size 1 1
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ priority 5
+ {
+  PanelWidgetClass "{00000000D26AD560}" {
+   Name "HeaderBarPC"
+   visible 1
+   clipchildren 1
+   ignorepointer 1
+   keepsafezone 0
+   color 0 0 0 0.549
+   size 1 0.038
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   priority 100
+   style rover_sim_colorable
+   {
+    ButtonWidgetClass "{00000000DCFF5316}" {
+     Name "CloseConsoleButton"
+     keepsafezone 0
+     color 1 0.286 0.286 1
+     position 0.01 0.06
+     size 34 34
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     priority 11
+     style Editor
+     text "X"
+     font "gui/fonts/sdf_MetronBook24"
+    }
+   }
+  }
+  GridSpacerWidgetClass "{0000000022B48CF4}" {
+   Name "ButtonsContextMenu"
+   visible 1
+   clipchildren 0
+   inheritalpha 0
+   color 0.392 0.392 0.392 1
+   position 0.01 0.003
+   size 200 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 0
+   priority 100
+   style Colorable
+   Padding 0
+   Margin 0
+   "Size To Content H" 1
+   "Size To Content V" 1
+   content_halign center
+   Columns 1
+   Rows 1
+   {
+    ButtonWidgetClass "{000000000EC98E9E}" {
+     Name "ButtonContextMenu"
+     position 10 10
+     size 200 34
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Default
+     {
+      TextWidgetClass "{000000002D0E4EBE}" {
+       Name "ButtonContextMenuLabel"
+       ignorepointer 1
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "Menu"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000099CF1F70}" {
+     Name "ContextMenuGrid"
+     visible 0
+     clipchildren 0
+     ignorepointer 0
+     size 0.9 1
+     halign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     Columns 1
+     Rows 100
+     {
+      PanelWidgetClass "{0000000046FCA8C2}" {
+       Name "Spacer1"
+       ignorepointer 1
+       position 0 0
+       size 1 6
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+      }
+      PanelWidgetClass "{000000009DA4EA56}" {
+       Name "Spacer2"
+       ignorepointer 1
+       position 0 0
+       size 1 14
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       priority 1000
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{000000002FB36BFD}" {
+   Name "HeaderBarConsole"
+   visible 0
+   clipchildren 1
+   ignorepointer 1
+   keepsafezone 0
+   color 0 0 0 0.549
+   size 1 0.038
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   priority 100
+   style rover_sim_colorable
+   "no focus" 1
+   {
+    ScrollWidgetClass "{0000000085F9517C}" {
+     Name "HeaderBarConsoleScroller"
+     clipchildren 1
+     ignorepointer 0
+     position 0 0
+     size 1 1
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style blank
+     "no focus" 1
+     "Scrollbar H" 1
+     {
+      GridSpacerWidgetClass "{00000000C83F179C}" {
+       Name "TabButtonsGrid"
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0 0 0 0.498
+       size 0.99 40
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style Colorable
+       "no focus" 0
+       "Size To Content H" 1
+       "Size To Content V" 1
+       Columns 100
+       Rows 2
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{000000001EF730E7}" {
+   Name "ItemsPanel"
+   visible 0
+   clipchildren 1
+   inheritalpha 0
+   color 0 0.223 0.055 0.627
+   position 0.005 0.04
+   size 0.99 0.9
+   priority 1
+   style DayZDefaultPanel
+   {
+    FrameWidgetClass "{000000002695ADF9}" {
+     Name "BatchSpawning"
+     visible 1
+     ignorepointer 1
+     position 0.34 0.85
+     size 0.31 0.14
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      ImageWidgetClass "{00000000660A39CF}" {
+       Name "BatchBackground"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.627
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+      }
+      ButtonWidgetClass "{000000009EA138CA}" {
+       Name "ButtonSpawnRectangle"
+       position 0.01 0.02
+       size 0.3 25
+       vexactsize 1
+       style Default
+       text "Rectangle"
+       text_proportion 0.8
+       text_halign left
+      }
+      ButtonWidgetClass "{00000000488C4233}" {
+       Name "ButtonSpawnCircle"
+       visible 0
+       position 0.356 0.02
+       size 0.3 30
+       vexactsize 1
+       style InventoryActionMenu
+       text "Circle"
+       text_proportion 0.8
+      }
+      ButtonWidgetClass "{0000000079E509B5}" {
+       Name "ButtonSpawnShape"
+       visible 0
+       position 0.69 0.02
+       size 0.3 30
+       vexactsize 1
+       style InventoryActionMenu
+       text "Shape"
+       text_proportion 0.8
+       text_halign right
+      }
+      TextWidgetClass "{0000000084E1B165}" {
+       Name "BatchCountLabel"
+       position 0.1 0.24
+       size 0.28 25
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "Count:"
+       "exact text" 0
+       text_proportion 0.75
+       "text valign" center
+      }
+      EditBoxWidgetClass "{00000000D121C3C4}" {
+       Name "BatchCount"
+       position 0.4 0.232
+       size 0.21 25
+       valign top
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "10"
+      }
+      ButtonWidgetClass "{0000000032B2192C}" {
+       Name "ButtonSpawnBatch"
+       color 0.839 0.839 0.839 1
+       position 0.65 0.24
+       size 0.3 25
+       vexactsize 1
+       style Colorable
+       text "Spawn"
+       text_proportion 0.8
+       "text color" 0 0 0 1
+      }
+      FrameWidgetClass "{0000000004A59614}" {
+       Name "SpawnRectangle"
+       visible 1
+       ignorepointer 1
+       position 0.003 0.466
+       size 0.995 0.524
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        TextWidgetClass "{00000000A23F4316}" {
+         Name "RectangleColumnLabel"
+         position 0.015 0.06
+         size 0.28 25
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "Column:"
+         "exact text" 0
+         "text valign" center
+        }
+        EditBoxWidgetClass "{00000000862674C0}" {
+         Name "RectangleColumnValue"
+         position 0.32 0.06
+         size 0.17 25
+         valign top
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "10"
+        }
+        TextWidgetClass "{000000003C499D38}" {
+         Name "RectangleRowLabel"
+         position 0.015 0.54
+         size 0.28 25
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "Row:"
+         "exact text" 0
+         "text valign" center
+        }
+        EditBoxWidgetClass "{000000001850AAEE}" {
+         Name "RectangleRowValue"
+         position 0.32 0.54
+         size 0.17 25
+         valign top
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "10"
+        }
+        TextWidgetClass "{00000000F12469F4}" {
+         Name "RectangleStepXLabel"
+         position 0.52 0.06
+         size 0.28 25
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "StepX:"
+         "exact text" 0
+         "text valign" center
+        }
+        EditBoxWidgetClass "{00000000D53D5E22}" {
+         Name "RectangleStepXValue"
+         position 0.82 0.06
+         size 0.17 25
+         valign top
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "1.0"
+        }
+        TextWidgetClass "{000000007E5A4A96}" {
+         Name "RectangleStepYLabel"
+         position 0.52 0.54
+         size 0.28 25
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "StepY:"
+         "exact text" 0
+         "text valign" center
+        }
+        EditBoxWidgetClass "{000000005A437D40}" {
+         Name "RectangleStepYValue"
+         position 0.82 0.54
+         size 0.17 25
+         valign top
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "1.0"
+        }
+       }
+      }
+      FrameWidgetClass "{00000000C05C0883}" {
+       Name "SpawnCircle"
+       ignorepointer 1
+       position 0.003 0.466
+       size 0.995 0.524
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      FrameWidgetClass "{0000000028118F49}" {
+       Name "SpawnShape"
+       ignorepointer 1
+       position 0.003 0.466
+       size 0.995 0.525
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+     }
+    }
+    ImageWidgetClass "{00000000047E30E2}" {
+     Name "FilterBackground"
+     visible 1
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.01 0.01
+     size 0.98 0.035
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{0000000069DEF248}" {
+     Name "CategoryBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.01 0.05
+     size 0.98 0.045
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{0000000008B9ABA0}" {
+     Name "ItemsBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.01 0.1
+     size 0.31 0.85
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{00000000EF9884F5}" {
+     Name "ItemsBackground2"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.01 0.955
+     size 0.31 0.035
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{000000003FE10AA6}" {
+     Name "ItemsPresetsBackground0"
+     visible 1
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.69 0.555
+     size 0.29 0.435
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{00000000BECAE112}" {
+     Name "ItemLabelBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.02 0.11
+     size 0.29 30
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     mode blend
+    }
+    ImageWidgetClass "{000000009C856D1F}" {
+     Name "ObjectLabelBackground"
+     visible 1
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.34 0.1
+     size 0.31 30
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     mode blend
+    }
+    ImageWidgetClass "{00000000E54776B7}" {
+     Name "ObjectLabelBackground2"
+     visible 1
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.34 0.13
+     size 0.31 28
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     mode blend
+    }
+    ImageWidgetClass "{00000000F54DC042}" {
+     Name "PresetLabelBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.69 0.11
+     size 0.29 30
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     mode blend
+    }
+    ImageWidgetClass "{00000000837D1A2B}" {
+     Name "PreviewBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.34 0.16
+     size 0.31 0.346
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{0000000061B85C20}" {
+     Name "ObjectBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.34 0.1
+     size 0.31 0.6
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{0000000011C78495}" {
+     Name "MarkObjectBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.34 0.6
+     size 0.31 0.1
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{00000000B1688B83}" {
+     Name "ItemsPresetsBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.68 0.1
+     size 0.31 0.89
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    MultilineEditBoxWidgetClass "{00000000700B9759}" {
+     Name "ObjectFilter"
+     inheritalpha 0
+     color 1 1 1 1
+     position 0.035 0.015
+     size 0.955 0.029
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     style DayZNormal
+     text "object name"
+     font "gui/fonts/Metron22"
+     "text color" 1 1 1 1
+     "exact text" 0
+     "text valign" center
+     lines 1
+     "limit visible" 1
+    }
+    ImageWidgetClass "{0000000091C84C22}" {
+     Name "ObjectFilterSortPic"
+     visible 1
+     ignorepointer 1
+     color 0.98 0.98 0.98 1
+     position 0.014 0.022
+     size 0.013 0.015
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     image0 "set:dayz_gui image:icon_arrow"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+    }
+    ButtonWidgetClass "{00000000B737075D}" {
+     Name "ObjectFilterSortButton"
+     position 0.012 0.015
+     size 0.018 0.025
+     vexactsize 0
+     style Default
+     text_proportion 0.8
+    }
+    CheckBoxWidgetClass "{00000000BF24253F}" {
+     Name "CategoryMergeType"
+     position 0.01 0.052
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "Exclusive"
+    }
+    CheckBoxWidgetClass "{00000000E854AF4D}" {
+     Name "ItemCategory0"
+     position 0.01 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory0"
+    }
+    CheckBoxWidgetClass "{00000000A703C75C}" {
+     Name "ItemCategory1"
+     position 0.1 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory1"
+    }
+    CheckBoxWidgetClass "{0000000076FA7F6F}" {
+     Name "ItemCategory2"
+     position 0.19 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory2"
+    }
+    CheckBoxWidgetClass "{0000000039AD177E}" {
+     Name "ItemCategory3"
+     position 0.28 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory3"
+    }
+    CheckBoxWidgetClass "{00000000D1C812BE}" {
+     Name "ItemCategory4"
+     position 0.37 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory4"
+    }
+    CheckBoxWidgetClass "{000000009E9F7AAF}" {
+     Name "ItemCategory5"
+     position 0.46 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory5"
+    }
+    CheckBoxWidgetClass "{000000004F66C29C}" {
+     Name "ItemCategory6"
+     position 0.55 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory6"
+    }
+    CheckBoxWidgetClass "{000000000031AA8D}" {
+     Name "ItemCategory7"
+     position 0.64 0.072
+     size 0.08 21
+     vexactsize 1
+     style Default
+     text "ItemCategory7"
+    }
+    CheckBoxWidgetClass "{000000009B6DD4AB}" {
+     Name "ItemCategory8"
+     position 0.73 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory8"
+    }
+    CheckBoxWidgetClass "{00000000D43ABCBA}" {
+     Name "ItemCategory9"
+     position 0.82 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory9"
+    }
+    CheckBoxWidgetClass "{00000000023A4364}" {
+     Name "ItemCategory10"
+     position 0.91 0.072
+     size 0.08 20
+     vexactsize 1
+     style Default
+     text "ItemCategory10"
+    }
+    TextWidgetClass "{00000000BDD6EBAE}" {
+     Name "Item"
+     ignorepointer 0
+     position 0.02 0.11
+     size 0.29 30
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text " ITEM"
+     "exact text" 0
+     "text valign" center
+    }
+    TextListboxWidgetClass "{00000000F07DA44D}" {
+     Name "ObjectsList"
+     visible 1
+     position 0.02 0.15
+     size 0.29 0.78
+     colums ""
+     lines 30
+    }
+    ButtonWidgetClass "{00000000F9B4CF22}" {
+     Name "ItemNameCopy"
+     position 0.02 0.965
+     size 0.11 20
+     vexactsize 1
+     style Default
+     text "Copy To Clipboard"
+     text_proportion 0.8
+    }
+    TextWidgetClass "{000000006DAA5D6D}" {
+     Name "Presets"
+     inheritalpha 0
+     color 1 1 1 1
+     position 0.69 0.11
+     size 0.29 30
+     halign left
+     vexactsize 1
+     text " PRESETS"
+     "exact text" 0
+     "text halign" left
+     "text valign" center
+    }
+    TextListboxWidgetClass "{00000000DE565DF7}" {
+     Name "PresetList"
+     position 0.69 0.15
+     size 0.22 0.4
+     lines 19
+    }
+    ButtonWidgetClass "{0000000026750CC7}" {
+     Name "NewPresetButton"
+     position 0.92 0.15
+     size 0.06 20
+     vexactsize 1
+     style Default
+     text "New"
+     text_proportion 0.8
+    }
+    ButtonWidgetClass "{000000000D1626C3}" {
+     Name "SetDefaultPresetButton"
+     position 0.92 0.18
+     size 0.06 20
+     vexactsize 1
+     style Default
+     text "Default"
+     text_proportion 0.8
+    }
+    ButtonWidgetClass "{00000000835131EC}" {
+     Name "DeletePresetButton"
+     position 0.92 0.24
+     size 0.06 20
+     vexactsize 1
+     style Default
+     text "Delete"
+     text_proportion 0.8
+    }
+    ButtonWidgetClass "{000000002891876E}" {
+     Name "RenamePresetButton"
+     position 0.92 0.21
+     size 0.06 20
+     vexactsize 1
+     style Default
+     text "Rename"
+     text_proportion 0.8
+    }
+    TextWidgetClass "{000000006E1305B8}" {
+     Name "PresetItems"
+     inheritalpha 0
+     position 0.69 0.56
+     size 0.29 15
+     halign left
+     vexactsize 1
+     text " ITEMS IN PRESETS"
+     "exact text" 0
+     "text halign" left
+     "text valign" center
+    }
+    TextListboxWidgetClass "{00000000B0F2B84E}" {
+     Name "PresetItemsList"
+     position 0.69 0.58
+     size 0.29 0.4
+     lines 30
+    }
+    ButtonWidgetClass "{000000003EDB8CC0}" {
+     Name "AddToPresetButton"
+     position 0.95 0.51
+     size 0.03 40
+     vexactsize 1
+     style Default
+     text ">>"
+     font "gui/fonts/system"
+    }
+    ButtonWidgetClass "{000000009DF0C216}" {
+     Name "RemoveFromPresetButton"
+     position 0.917 0.51
+     size 0.03 40
+     vexactsize 1
+     style Default
+     text "<<"
+     font "gui/fonts/system"
+    }
+    ButtonWidgetClass "{0000000090088510}" {
+     Name "ItemMoveUpButton"
+     visible 0
+     disabled 0
+     position 0.69 0.95
+     size 0.075 20
+     vexactsize 1
+     style Default
+     text "Up"
+    }
+    ButtonWidgetClass "{000000001B59814C}" {
+     Name "ItemMoveDownButton"
+     visible 0
+     disabled 0
+     position 0.77 0.95
+     size 0.075 20
+     vexactsize 1
+     style Default
+     text "Down"
+    }
+    ImageWidgetClass "{0000000007422381}" {
+     Name "ButtonsBackground"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.34 0.71
+     size 0.31 0.13
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ButtonWidgetClass "{0000000045506F5A}" {
+     Name "ListActions"
+     color 0.502 0 0 1
+     position 0.551 0.469
+     size 0.095 30
+     vexactsize 1
+     style Colorable
+     text "List Actions"
+     text_proportion 0.8
+    }
+    TextWidgetClass "{00000000C5ACCCCC}" {
+     Name "ObjectName"
+     position 0.34 0.1
+     size 0.06 30
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text " Object:"
+     "exact text" 0
+     "text valign" center
+    }
+    TextWidgetClass "{00000000DAEBEC9D}" {
+     Name "ObjectNameLocalized"
+     position 0.34 0.13
+     size 0.08 28
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text " Localized:"
+     "exact text" 0
+     "text valign" center
+    }
+    TextWidgetClass "{000000000A00736D}" {
+     Name "SelectedObject"
+     inheritalpha 0
+     color 1 1 1 1
+     position 0.42 0.1
+     size 0.23 30
+     halign left
+     hexactpos 0
+     vexactpos 0
+     vexactsize 1
+     draggable 0
+     "exact text" 0
+     text_proportion 0.8
+     "text valign" center
+    }
+    TextWidgetClass "{00000000F6D5AD09}" {
+     Name "SelectedObjectLocalized"
+     inheritalpha 0
+     color 1 1 1 1
+     position 0.42 0.13
+     size 0.23 28
+     halign left
+     hexactpos 0
+     vexactpos 0
+     vexactsize 1
+     draggable 0
+     "exact text" 0
+     text_proportion 0.8
+     "text valign" center
+    }
+    ItemPreviewWidgetClass "{00000000D4171895}" {
+     Name "ItemPreviewWidget"
+     ignorepointer 1
+     position 0.34 0.16
+     size 0.31 0.345
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      CheckBoxWidgetClass "{0000000071075741}" {
+       Name "ItemPreviewCheckbox"
+       position 0.01 2
+       size 0.2 17
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       scaled 1
+       text "Preview"
+      }
+      ButtonWidgetClass "{0000000016F23489}" {
+       Name "ReloadShapeButton"
+       position 0.01 21
+       size 0.3 17
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style Default
+       text "Reload Shape"
+      }
+     }
+    }
+    ButtonWidgetClass "{000000005B988341}" {
+     Name "ButtonSpawnInInv"
+     color 0.506 0.812 0.812 1
+     position 0.345 0.76
+     size 0.095 30
+     vexactsize 1
+     style Colorable
+     text " In Inventory"
+     text_proportion 0.8
+    }
+    ButtonWidgetClass "{000000003BF5B31E}" {
+     Name "ButtonSpawnInTarget"
+     color 0.388 0.157 0.623 1
+     position 0.548 0.76
+     size 0.095 30
+     vexactsize 1
+     style Colorable
+     text " In Target"
+     text_proportion 0.8
+    }
+    ButtonWidgetClass "{000000002609AAE7}" {
+     Name "SpawnAsAttachment"
+     visible 0
+     position 0.414 0.821
+     size 0.14 30
+     vexactsize 1
+     style Default
+     text "Spawn As Attachment"
+     text_proportion 0.8
+     text_halign left
+    }
+    ButtonWidgetClass "{000000007579691F}" {
+     Name "ButtonSpawnInGround"
+     color 0.259 0.365 0.686 1
+     position 0.447 0.76
+     size 0.095 30
+     vexactsize 1
+     style Colorable
+     text "On Ground"
+     text_proportion 0.8
+    }
+    ButtonWidgetClass "{00000000FA31D779}" {
+     Name "ButtonDrawItem"
+     color 0.839 0.839 0.839 1
+     position 0.35 0.655
+     size 0.13 30
+     vexactsize 1
+     style Colorable
+     text " Mark Them In World"
+     text_proportion 0.8
+     text_halign left
+     "text color" 0 0 0 1
+    }
+    ButtonWidgetClass "{00000000DAAC818A}" {
+     Name "ButtonDrawItemClear"
+     color 0.839 0.839 0.839 1
+     position 0.5 0.655
+     size 0.135 30
+     vexactsize 1
+     style Colorable
+     text " Clear Marks"
+     text_proportion 0.8
+     text_halign left
+     "text color" 0 0 0 1
+    }
+    CheckBoxWidgetClass "{0000000085B3AC22}" {
+     Name "ShowProtectedCheckbox"
+     position 0.209 0.965
+     size 0.101 20
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text "Show Protected"
+    }
+    TextWidgetClass "{000000007F7F4667}" {
+     Name "MarkObjectsLabel"
+     position 0.35 0.615
+     size 0.13 25
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text " Objects in"
+     "exact text" 0
+     "text valign" center
+    }
+    EditBoxWidgetClass "{000000009FF762EF}" {
+     Name "DrawItemDistance"
+     position 0.5 0.615
+     size 0.065 25
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text "100"
+    }
+    CheckBoxWidgetClass "{000000008E40823E}" {
+     Name "ForceClearCheckbox"
+     clipchildren 0
+     inheritalpha 0
+     position 0.92 0.27
+     size 0.06 17
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     style Default
+     text "Clear Inventory"
+     font "gui/fonts/Metron12"
+     checked 0
+    }
+    TextWidgetClass "{00000000189AB5A8}" {
+     Name "SpawnLabel"
+     position 0.345 0.72
+     size 0.3 30
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text " Spawn:"
+     "exact text" 0
+     "text valign" center
+    }
+    TextWidgetClass "{00000000A217DBCA}" {
+     Name "RadiusLabel"
+     position 0.57 0.615
+     size 0.065 25
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text " Radius"
+     "exact text" 0
+     "text valign" center
+    }
+    ButtonWidgetClass "{000000000063D901}" {
+     Name "ButtonSpawnCursor"
+     color 0.388 0.623 0.157 1
+     position 0.447 0.803
+     size 0.095 30
+     vexactsize 1
+     style Colorable
+     text "On Cursor"
+     text_proportion 0.8
+    }
+    TextWidgetClass "{000000001E3987A7}" {
+     Name "SpawnLabel0"
+     position 0.521 0.722
+     size 0.193 21.789
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     text "Hold Shift For Spawn Special"
+     "exact text" 0
+     "text valign" center
+    }
+    ButtonWidgetClass "{00000000C90ADC09}" {
+     Name "ButtonSpawnHands"
+     color 0.961 0.623 0.239 1
+     position 0.345 0.803
+     size 0.095 30
+     vexactsize 1
+     style Colorable
+     text "In Hands"
+     text_proportion 0.8
+    }
+    GridSpacerWidgetClass "{000000008D0BAB6F}" {
+     Name "SpawnModifiers"
+     ignorepointer 1
+     position 0.34 0.05
+     size 0.31 81.781
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     Columns 2
+     {
+      GridSpacerWidgetClass "{000000009BDE259C}" {
+       Name "GridSpacerWidget0"
+       ignorepointer 1
+       position 10 10
+       size 48 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 10
+       Margin 0
+       "Size To Content H" 1
+       Columns 2
+       Rows 1
+       {
+        TextWidgetClass "{00000000C1A294B6}" {
+         Name "DistanceLabel"
+         inheritalpha 0
+         color 1 1 1 1
+         position 0.35 0.56
+         size 0.08 25
+         halign left
+         vexactsize 1
+         style Normal
+         text " Distance:"
+         "exact text" 0
+         "size to text h" 1
+         "text valign" center
+        }
+        EditBoxWidgetClass "{00000000112A7100}" {
+         Name "SpawnDistance"
+         position 0 0.56
+         size 1 25
+         valign top
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "1.0"
+        }
+       }
+      }
+      GridSpacerWidgetClass "{000000005E67E8D0}" {
+       Name "GridSpacerWidget1"
+       ignorepointer 1
+       position 10 10
+       size 48 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 10
+       Margin 0
+       "Size To Content H" 1
+       Columns 2
+       Rows 1
+       {
+        TextWidgetClass "{00000000C79CBE18}" {
+         Name "QuantityLabel"
+         position 0 0.52
+         size 0.75 1.188
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text " Quantity:"
+         "exact text" 0
+         "size to text h" 1
+         "text valign" center
+        }
+        EditBoxWidgetClass "{000000004F376137}" {
+         Name "QuantityValue"
+         position 0 0.52
+         size 1 25
+         valign top
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "1.0"
+        }
+       }
+      }
+      GridSpacerWidgetClass "{00000000146CA2B3}" {
+       Name "GridSpacerWidget2"
+       ignorepointer 1
+       position 10 10
+       size 48 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 10
+       Margin 0
+       "Size To Content H" 1
+       Columns 2
+       Rows 1
+       {
+        TextWidgetClass "{00000000DEB60955}" {
+         Name "DamageLabel"
+         position 0.35 0.52
+         size 0.08 25
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text " Health:"
+         "exact text" 0
+         "size to text h" 1
+         "text valign" center
+        }
+        EditBoxWidgetClass "{00000000561DD67A}" {
+         Name "DamageValue"
+         position 0 0.52
+         size 1 25
+         valign top
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "1.0"
+        }
+       }
+      }
+      GridSpacerWidgetClass "{00000000D1D56FFF}" {
+       Name "GridSpacerWidget3"
+       ignorepointer 1
+       position 10 10
+       size 48 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 10
+       Margin 0
+       "Size To Content H" 1
+       Columns 2
+       Rows 1
+       {
+        TextWidgetClass "{000000001221499A}" {
+         Name "WithPhysicsLabel"
+         position 0.35 0.52
+         size 0.08 25
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text " With Physics:"
+         "exact text" 0
+         "size to text h" 1
+         "text valign" center
+        }
+        CheckBoxWidgetClass "{00000000E1670E65}" {
+         Name "WithPhysicsCheckbox"
+         position 0 0.52
+         size 1 25
+         valign top
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         style Default
+        }
+       }
+      }
+      GridSpacerWidgetClass "{00000000807A3675}" {
+       Name "GridSpacerWidget4"
+       ignorepointer 1
+       position 1 1
+       size 0 0
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       Padding 10
+       Margin 0
+       Columns 1
+       Rows 1
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{00000000A349FD9C}" {
+   Name "ConfigsPanel"
+   visible 0
+   inheritalpha 1
+   position 0.015 0.04
+   size 0.99 0.946
+   priority 1
+   style rover_sim_black
+   {
+    PanelWidgetClass "{00000000597A541E}" {
+     Name "ConfigClasses"
+     visible 1
+     ignorepointer 1
+     position 0.01 0.01
+     size 0.98 0.048
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style blank
+     {
+      WindowWidgetClass "{0000000052897BA5}" {
+       Name "ClassesBck0"
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0 0 0 0.498
+       position 0 0
+       size 1 1.368
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 0
+       style Colorable
+      }
+      TextWidgetClass "{000000002CF5AF64}" {
+       Name "ClassesTitle"
+       visible 1
+       ignorepointer 0
+       position 0 0.01
+       size 0.12 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Config Classes:"
+       "exact text" 0
+       "text valign" center
+      }
+      PanelWidgetClass "{000000008E60C60B}" {
+       Name "ClassesPanelX"
+       ignorepointer 1
+       position 0.125 0
+       size 0.845 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass "AutoHeightSpacer"
+       style blank
+       "next right" "10"
+      }
+      GridSpacerWidgetClass "{00000000FE7C8E69}" {
+       Name "ClassesPanel"
+       ignorepointer 1
+       position 215.849 1.54
+       size 1402.93 36.721
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Columns 4
+      }
+     }
+    }
+    ImageWidgetClass "{000000004D006D09}" {
+     Name "BackgroundFilter"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.01 0.05
+     size 0.325 0.04
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{000000006649A573}" {
+     Name "BackgroundHierarchy"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.01 0.095
+     size 0.325 0.895
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    ImageWidgetClass "{000000007AAD3AB1}" {
+     Name "BackgroundVariables"
+     ignorepointer 1
+     color 0.09 0.078 0.078 0.627
+     position 0.34 0.114
+     size 0.65 0.876
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+    }
+    EditBoxWidgetClass "{000000006FB62F8F}" {
+     Name "ObjectConfigFilter"
+     inheritalpha 1
+     color 1 1 1 1
+     position 0.015 0.057
+     size 0.315 0.025
+     hexactsize 0
+     vexactsize 0
+     scaled 0
+     priority 1
+     style Editor
+     text ""
+     "text color" 1 1 1 1
+    }
+    TextListboxWidgetClass "{000000005FB63FED}" {
+     Name "ConfigHierarchy"
+     position 0.015 0.109
+     size 0.315 0.871
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     "title visible" 0
+     colums ""
+     lines 45
+    }
+    TextListboxWidgetClass "{000000004352A02F}" {
+     Name "ConfigVariables"
+     position 0.345 0.119
+     size 0.64 0.861
+     hexactsize 0
+     draggable 0
+     "next left" ""
+     "title visible" 0
+     colums ""
+     lines 60
+    }
+    ButtonWidgetClass "{000000007BA1FF49}" {
+     Name "PlaySoundsetButton"
+     visible 0
+     position 1426.97 896.841
+     size 259.488 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Play Soundset"
+    }
+    ButtonWidgetClass "{000000000F2FD064}" {
+     Name "DumpParamButton"
+     position 1371.85 26.788
+     size 173.483 33.901
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Dump Param"
+    }
+    EditBoxWidgetClass "{00000000B189824E}" {
+     Name "VariableConfigFilter"
+     inheritalpha 1
+     color 1 1 1 1
+     position 0.343 0.057
+     size 0.315 0.025
+     hexactsize 0
+     vexactsize 0
+     scaled 0
+     priority 1
+     style Editor
+     text ""
+     "text color" 1 1 1 1
+    }
+    TextWidgetClass "{0000000070B288D7}" {
+     Name "ClassPath"
+     ignorepointer 1
+     position 0.034 0.088
+     size 0.386 0.022
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+    }
+   }
+  }
+  PanelWidgetClass "{00000000BE55E315}" {
+   Name "EnScriptPanel"
+   visible 0
+   inheritalpha 0
+   color 0 0.192 0.047 1
+   position 0.005 0.04
+   size 0.99 0.878
+   priority 1
+   style DayZDefaultPanel
+   {
+    ButtonWidgetClass "{00000000313464DC}" {
+     Name "RunButton"
+     visible 1
+     position 0.007 0.007
+     size 0.098 0.051
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "Run"
+     text_proportion 0.8
+     font "gui/fonts/Metron"
+    }
+    PanelWidgetClass "{00000000182253BC}" {
+     Name "PanelWidget0"
+     position 0.006 0.007
+     size 0.985 0.517
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style editor_quad
+     {
+      MultilineEditBoxWidgetClass "{000000006B9D2203}" {
+       Name "MultilineEditBoxWidget0"
+       position 0 -0.002
+       size 0.994 0.975
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZNormal
+       text "Print(\"Hello World\");"
+       font "gui/fonts/Metron16"
+       "exact text" 1
+       lines 20
+      }
+     }
+    }
+    TextWidgetClass "{0000000094771A08}" {
+     Name "Hint1"
+     ignorepointer 1
+     position 0.108 0.044
+     size 0.649 0.018
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "(tip: you can access any item you are currently watching [CTRL+RMB/Watch in inventory or CTRL-Z when looking at the item in the world]  using the '_item' keyword here)"
+     "text color" 1 0.616 0 1
+    }
+    PanelWidgetClass "{000000000DB25552}" {
+     Name "PanelScriptOutput"
+     position 0.01 0.229
+     size 0.983 0.405
+     halign right_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style editor_quad
+     {
+      TextListboxWidgetClass "{000000009F03F0EE}" {
+       Name "ScriptOutputListbox"
+       position 0 0.001
+       size 0.999 0.983
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       lines 50
+      }
+     }
+    }
+    ButtonWidgetClass "{0000000027EE4FC8}" {
+     Name "ClearButton"
+     visible 1
+     position 0.892 0.007
+     size 0.098 0.051
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "Clear"
+     text_proportion 0.8
+     font "gui/fonts/Metron"
+    }
+   }
+  }
+  PanelWidgetClass "{000000003803DABE}" {
+   Name "GeneralPanel"
+   visible 0
+   inheritalpha 0
+   color 0 0.223 0.055 0.627
+   position 0.005 0.038
+   size 0.99 1
+   vexactpos 0
+   priority 1
+   style DayZDefaultPanel
+   {
+    TextListboxWidgetClass "{00000000FF610547}" {
+     Name "DiagToggle"
+     visible 0
+     clipchildren 0
+     position 0.26 0
+     size 0.25 0.45
+     halign right_ref
+     hexactpos 0
+     hexactsize 0
+     "title visible" 1
+     colums "DEBUG DIALOGS"
+     lines 15
+     {
+      ButtonWidgetClass "{00000000D91B1E45}" {
+       Name "DiagToggleButton"
+       position 0 -0.08
+       size 1 0.08
+       halign right_ref
+       valign bottom_ref
+       hexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "TOGGLE"
+       font "gui/fonts/Metron"
+      }
+     }
+    }
+    TextListboxWidgetClass "{0000000068039C18}" {
+     Name "DiagDrawmode"
+     visible 0
+     clipchildren 0
+     size 0.25 0.45
+     halign right_ref
+     hexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Default
+     "title visible" 1
+     colums "DRAW MODE"
+     lines 15
+     {
+      ButtonWidgetClass "{0000000009917825}" {
+       Name "DiagDrawButton"
+       position 0 -0.08
+       size 1 0.08
+       halign right_ref
+       valign bottom_ref
+       hexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "DRAW"
+       font "gui/fonts/Metron"
+      }
+     }
+    }
+    PanelWidgetClass "{000000000D037F8F}" {
+     Name "Positions"
+     ignorepointer 1
+     position 0 0.005
+     size 0.2 0.6
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style editor_quad
+     {
+      WindowWidgetClass "{00000000373A97A4}" {
+       Name "PoistionsBck"
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0 0 0 0.498
+       position 0.005 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 0
+       style Colorable
+      }
+      ButtonWidgetClass "{00000000FADCE79E}" {
+       Name "AddButton"
+       position 0.02 0.01
+       size 0.45 0.05
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       style InventoryActionMenu
+       text "Add"
+      }
+      ButtonWidgetClass "{00000000EE4225A4}" {
+       Name "RemoveButton"
+       position 0.02 0.01
+       size 0.45 0.05
+       halign right_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       style InventoryActionMenu
+       text "Remove"
+      }
+      TextListboxWidgetClass "{0000000057D7DE39}" {
+       Name "PositionsList"
+       position 0.01 0
+       size 0.98 0.92
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       "title visible" 1
+       colums "POSITIONS"
+       lines 20
+      }
+     }
+    }
+    PanelWidgetClass "{0000000007A5DE10}" {
+     Name "DebugOptions"
+     visible 1
+     position 0.39 0.915
+     size 0.6 0.05
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style editor_quad
+     {
+      WindowWidgetClass "{000000003FEB41FB}" {
+       Name "DebugOptionsBck"
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0 0 0 0.498
+       position 0 0
+       size 1 1.05
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 0
+       style Colorable
+      }
+      TextWidgetClass "{0000000064616B00}" {
+       Name "txt_dbo_title"
+       ignorepointer 0
+       position 0 0
+       size 1 0.5
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text " DEBUG OPTIONS"
+       "exact text" 0
+       "text valign" center
+      }
+      CheckBoxWidgetClass "{00000000B5930D8B}" {
+       Name "cbx_LogsEnabled"
+       position 0.005 0.56
+       size 0.3 0.35
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Script Logs Enabled"
+      }
+     }
+    }
+    PanelWidgetClass "{000000002BB9474F}" {
+     Name "HudDebug"
+     visible 1
+     position 0 0.61
+     size 0.2 0.24
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style editor_quad
+     {
+      WindowWidgetClass "{000000002DC24243}" {
+       Name "HudDebugBck"
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0 0 0 0.498
+       position 0 0
+       size 1 1.05
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 0
+       style Colorable
+      }
+      TextWidgetClass "{00000000A96498A6}" {
+       Name "txt_Title"
+       ignorepointer 0
+       position 0 0
+       size 1 0.1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "HUD DEBUG"
+       "exact text" 0
+       "text halign" center
+       "text valign" center
+      }
+      CheckBoxWidgetClass "{00000000DF94B28A}" {
+       Name "cbx_CharacterStats"
+       position 2 25
+       size 0.5 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Character Stats"
+      }
+      CheckBoxWidgetClass "{000000009AB18173}" {
+       Name "cbx_CharacterModifiers"
+       position 2 45
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Character Modifiers"
+      }
+      CheckBoxWidgetClass "{0000000020377346}" {
+       Name "cbx_CharacterDebug"
+       position 2 165
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Debug"
+      }
+      CheckBoxWidgetClass "{00000000E85D7B11}" {
+       Name "cbx_FreeCamCross"
+       position 2 145
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Free camera crosshair"
+       checked 1
+      }
+      CheckBoxWidgetClass "{00000000D4F6ADA4}" {
+       Name "cbx_CharacterAgents"
+       position 2 65
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Character Agents"
+      }
+      CheckBoxWidgetClass "{000000009E0E5581}" {
+       Name "cbx_CharacterLevels"
+       position 2 85
+       size 149.71 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Character Levels"
+      }
+      CheckBoxWidgetClass "{0000000034979EDA}" {
+       Name "cbx_CharacterStomach"
+       position 2 105
+       size 154.184 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Character Stomach"
+      }
+      CheckBoxWidgetClass "{00000000B895CF09}" {
+       Name "cbx_Version"
+       position 2 205
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Version"
+      }
+      CheckBoxWidgetClass "{0000000080B12690}" {
+       Name "cbx_Temp"
+       position 2 185
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Temperature"
+      }
+      CheckBoxWidgetClass "{000000005F3D7978}" {
+       Name "cbx_Health"
+       position 2 125
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Health"
+      }
+      CheckBoxWidgetClass "{0000000023B4C9AB}" {
+       Name "cbx_Horticulture"
+       position 0 25
+       size 0.4 20
+       halign right_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Horticulture"
+      }
+     }
+    }
+    PanelWidgetClass "{00000000CD6AA3F3}" {
+     Name "TeleportSettings"
+     clipchildren 0
+     ignorepointer 1
+     position 0 0.855
+     size 0.385 0.11
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style editor_quad
+     {
+      WindowWidgetClass "{00000000466A2643}" {
+       Name "TeleportBck"
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0 0 0 0.498
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 0
+       style Colorable
+      }
+      TextWidgetClass "{00000000AB69A9F0}" {
+       Name "TeleportPosLabelZ"
+       clipchildren 0
+       position 0.03 0.1
+       size 0.1 0.22
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Normal
+       text " DIR:"
+       "exact text" 0
+       "text valign" center
+      }
+      EditBoxWidgetClass "{00000000F480A9AD}" {
+       Name "TeleportHeading"
+       inheritalpha 1
+       color 1 1 1 1
+       position 0.14 0.1
+       size 0.83 0.22
+       halign left
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       priority 1
+       style Default
+       "exact text" 1
+       font "gui/fonts/Metron"
+       "text color" 1 1 1 1
+      }
+      TextWidgetClass "{0000000057614E45}" {
+       Name "TeleportPosLabelXYZ"
+       clipchildren 0
+       position 0.03 0.37
+       size 0.1 0.22
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Normal
+       text " XYZ:"
+       "exact text" 0
+       "text valign" center
+      }
+      EditBoxWidgetClass "{0000000076F719E9}" {
+       Name "TeleportXYZ"
+       inheritalpha 1
+       color 1 1 1 1
+       position 0.14 0.37
+       size 0.83 0.22
+       halign left
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       priority 1
+       style Default
+       "exact text" 1
+       font "gui/fonts/Metron"
+       "text color" 1 1 1 1
+      }
+      ButtonWidgetClass "{0000000039DDC17D}" {
+       Name "ButtonTeleport"
+       visible 1
+       position 0.1 0.7
+       size 0.8 0.2
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style MenuDefault
+       text "TELEPORT"
+       font "gui/fonts/Metron"
+      }
+     }
+    }
+    PanelWidgetClass "{000000004006C6AF}" {
+     Name "Map"
+     visible 1
+     ignorepointer 1
+     position 0.21 0.01
+     size 0.78 0.84
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style editor_quad
+     {
+      WindowWidgetClass "{00000000EE41909E}" {
+       Name "MapBackground"
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0 0 0 0.498
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Colorable
+      }
+      PanelWidgetClass "{0000000094F8A518}" {
+       Name "MapFrame"
+       visible 1
+       ignorepointer 1
+       position 0.008 0.01
+       size 0.985 0.91
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad
+      }
+      MapWidgetClass "{000000001E241C93}" {
+       Name "MapWidget"
+       visible 1
+       disabled 0
+       position 0.008 0.01
+       size 0.985 0.91
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      FrameWidgetClass "{000000008FD21B0B}" {
+       Name "PlayerPosFrame"
+       ignorepointer 1
+       position 0.005 0.01
+       size 0.3 0.025
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        TextWidgetClass "{000000007BA5A7F4}" {
+         Name "PlayerPosLabel"
+         position 0.1 0
+         size 0.9 1
+         valign bottom_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Normal
+         text "Current Pos:"
+         "exact text" 0
+         "text valign" center
+        }
+        ImageWidgetClass "{00000000AC04676F}" {
+         Name "CopyPic"
+         visible 1
+         ignorepointer 1
+         size 0.08 1
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "set:dayz_gui image:icon_copy"
+         mode additive
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        ButtonWidgetClass "{0000000097FD1989}" {
+         Name "Button_CopyPos"
+         visible 1
+         size 0.09 1
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Default
+         font "gui/fonts/Metron"
+        }
+       }
+      }
+      FrameWidgetClass "{000000001BC45D45}" {
+       Name "PlayerDirFrame"
+       ignorepointer 1
+       position 0.005 0.04
+       size 0.3 0.025
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        TextWidgetClass "{000000009F5A4610}" {
+         Name "PlayerDirLabel"
+         position 0.1 0
+         size 0.9 1
+         valign bottom_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Normal
+         text "Current Dir:"
+         "exact text" 0
+         "text valign" center
+        }
+       }
+      }
+      TextWidgetClass "{00000000D51B0A47}" {
+       Name "MousePosLabel"
+       position -0.065 0.01
+       size 0.25 0.025
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Normal
+       text "Mouse Pos:"
+       font "gui/fonts/Metron"
+       "exact text" 0
+       "text valign" center
+      }
+      TextWidgetClass "{0000000016AAD0B2}" {
+       Name "PlayerMouseDiff"
+       position -0.065 0.04
+       size 0.25 0.025
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Normal
+       text "Distance:"
+       font "gui/fonts/Metron"
+       "exact text" 0
+       "text valign" center
+      }
+      CheckBoxWidgetClass "{000000001A73F55F}" {
+       Name "ShowOthersCheckbox"
+       position 0.01 0.01
+       size 0.17 0.025
+       halign right_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Show Others"
+      }
+      TextWidgetClass "{00000000CFD016C9}" {
+       Name "CameraPosLabel"
+       position 0.19 0.01
+       size 0.25 0.025
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Normal
+       text "Camera Pos:"
+       font "gui/fonts/Metron"
+       "exact text" 0
+       "text valign" center
+      }
+      TextWidgetClass "{000000005BC65087}" {
+       Name "CameraDirLabel"
+       position 0.19 0.04
+       size 0.25 0.025
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Normal
+       text "Camera Dir:"
+       font "gui/fonts/Metron"
+       "exact text" 0
+       "text valign" center
+      }
+     }
+    }
+    PanelWidgetClass "{000000008AF7C577}" {
+     Name "TimeSettings"
+     ignorepointer 1
+     position 0.39 0.855
+     size 0.6 0.03
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style editor_quad
+     {
+      WindowWidgetClass "{00000000C6947290}" {
+       Name "TimeBck"
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0 0 0 0.498
+       position 0 -0.017
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 0
+       style debugUI
+       "title visible" 0
+      }
+      TextWidgetClass "{00000000E2577F89}" {
+       Name "Date Label"
+       position 0.005 0
+       size 61 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 0
+       scaled 0
+       style Normal
+       text "DATE:"
+       font "gui/fonts/Metron"
+       "exact text" 0
+       "text valign" center
+      }
+      EditBoxWidgetClass "{00000000C8CA5B25}" {
+       Name "DateDay"
+       clipchildren 0
+       position 70 0.01
+       size 26 0.9
+       hexactpos 1
+       vexactpos 0
+       hexactsize 1
+       vexactsize 0
+       scaled 0
+       style Default
+       text "22"
+       {
+        TextWidgetClass "{0000000053FB91A5}" {
+         Name "DateDayShort"
+         clipchildren 0
+         position 1.05 0.5
+         size 8 0.4
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         scaled 1
+         style Normal
+         text "d"
+         font "gui/fonts/Metron"
+         "exact text" 0
+         "text valign" center
+        }
+       }
+      }
+      EditBoxWidgetClass "{000000004DCF3D42}" {
+       Name "DateMonth"
+       clipchildren 0
+       position 110 0
+       size 26 0.9
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 0
+       scaled 0
+       style Default
+       text "12"
+       {
+        TextWidgetClass "{0000000078DFD57C}" {
+         Name "DateMonthShort"
+         clipchildren 0
+         position 1.05 0.5
+         size 10 0.4
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         style Normal
+         text "m"
+         font "gui/fonts/Metron"
+         "exact text" 0
+         "text valign" center
+        }
+       }
+      }
+      EditBoxWidgetClass "{00000000AFD8C2E8}" {
+       Name "DateYear"
+       clipchildren 0
+       position 150 0.01
+       size 55 0.9
+       hexactpos 1
+       vexactpos 0
+       hexactsize 1
+       vexactsize 0
+       scaled 0
+       style Default
+       text "2022"
+       {
+        TextWidgetClass "{000000001E3CA3E8}" {
+         Name "DateYearShort"
+         clipchildren 0
+         position 1.05 0.5
+         size 8 0.4
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         style Normal
+         text "y"
+         font "gui/fonts/Metron"
+         "exact text" 0
+         "text valign" center
+        }
+       }
+      }
+      TextWidgetClass "{000000006F12A2B9}" {
+       Name "TimeLabel"
+       position -50 0
+       size 61 1
+       halign center_ref
+       hexactpos 1
+       vexactpos 0
+       hexactsize 1
+       vexactsize 0
+       style Normal
+       text "TIME:"
+       font "gui/fonts/Metron"
+       "exact text" 0
+       "text valign" center
+      }
+      EditBoxWidgetClass "{00000000799FC9BD}" {
+       Name "DateHour"
+       clipchildren 0
+       position 0 0
+       size 30 0.9
+       halign center_ref
+       hexactpos 1
+       vexactpos 0
+       hexactsize 1
+       vexactsize 0
+       scaled 0
+       style Default
+       text "22"
+       {
+        TextWidgetClass "{0000000021D5A314}" {
+         Name "TimeDblDot"
+         position 32 0
+         size 6 0.9
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         style Normal
+         text ":"
+         font "gui/fonts/Metron"
+         "exact text" 0
+         "text halign" center
+         "text valign" center
+        }
+        EditBoxWidgetClass "{000000006BD55DB5}" {
+         Name "DateMinute"
+         clipchildren 0
+         position 40.148 0
+         size 29.704 1
+         halign center_ref
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         scaled 0
+         style Default
+         text "22"
+        }
+       }
+      }
+      FrameWidgetClass "{000000008339CF41}" {
+       Name "TimeSliderParent"
+       ignorepointer 1
+       size 320 1
+       halign right_ref
+       hexactpos 1
+       vexactpos 0
+       hexactsize 1
+       vexactsize 0
+       {
+        SliderWidgetClass "{00000000A75E33BC}" {
+         Name "TimeSlider"
+         position 0.1 0.05
+         size 240 0.9
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         scaled 0
+         style Default
+         step 0.5
+         "draw marker" 1
+        }
+        ImageWidgetClass "{0000000049ECB03B}" {
+         Name "Night0"
+         visible 1
+         ignorepointer 1
+         position 0.01 0
+         size 22 22
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+         image0 "set:dayz_gui image:icon_moon"
+         mode additive
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        ImageWidgetClass "{00000000ECB5854F}" {
+         Name "Day"
+         visible 1
+         ignorepointer 1
+         position 0 0
+         size 22 22
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+         image0 "set:dayz_gui image:icon_sun"
+         mode additive
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        ImageWidgetClass "{000000001F7BB0DE}" {
+         Name "Night1"
+         visible 1
+         ignorepointer 1
+         position 0.01 0
+         size 22 22
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+         image0 "set:dayz_gui image:icon_moon"
+         mode additive
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{00000000505733D4}" {
+   Name "OutputPanel"
+   visible 0
+   clipchildren 1
+   inheritalpha 1
+   position 0.005 0.04
+   size 0.99 0.878
+   priority 1
+   style rover_sim_black
+   {
+    TextListboxWidgetClass "{00000000A255F9DD}" {
+     Name "TextListbox"
+     position 0 0.013
+     size 0.984 0.899
+     style debugUI
+     "next down" ""
+     "title visible" 0
+     lines 50
+     "highlight row" 1
+    }
+    CheckBoxWidgetClass "{000000007D77B5CC}" {
+     Name "CheckBoxAutoScroll"
+     position 0.008 0.924
+     size 0.15 0.04
+     text "Auto Scroll"
+     checked 1
+    }
+    ButtonWidgetClass "{0000000012DF5555}" {
+     Name "ButtonClear"
+     position 0.919 0.937
+     size 0.065 0.051
+     style Default
+     text "CLEAR"
+    }
+   }
+  }
+  PanelWidgetClass "{000000000950157F}" {
+   Name "SoundsPanel"
+   visible 0
+   clipchildren 1
+   inheritalpha 0
+   color 0 0.223 0.055 0.627
+   position 0.005 0.04
+   size 0.99 0.9
+   priority 1
+   style DayZDefaultPanel
+   {
+    FrameWidgetClass "{000000003553F539}" {
+     Name "PlaySoundSetFrame"
+     ignorepointer 1
+     position 0.01 0.16
+     size 0.45 0.8
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      FrameWidgetClass "{000000006A9CD9AD}" {
+       Name "FilterFrame"
+       ignorepointer 1
+       position 0 0.04
+       size 1 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass "{000000005E473A77}" {
+         Name "FilterBackground0"
+         visible 1
+         ignorepointer 1
+         color 0.09 0.078 0.078 0.863
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         mode blend
+        }
+        EditBoxWidgetClass "{00000000A6BC528D}" {
+         Name "SoundsFilter"
+         inheritalpha 0
+         color 1 1 1 1
+         position 0 0.2
+         size 0.99 0.6
+         halign center_ref
+         valign bottom_ref
+         hexactsize 0
+         vexactsize 0
+         priority 1
+         style Default
+         text "Test"
+         "limit visible" 0
+         "exact text" 0
+         font "gui/fonts/sdf_MetronBook24"
+         "text color" 1 1 1 1
+        }
+       }
+      }
+      ImageWidgetClass "{000000008FF4B9B8}" {
+       Name "ItemsBackground0"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.627
+       position 0 0.08
+       size 1 0.92
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextListboxWidgetClass "{0000000001BE24C6}" {
+         Name "SoundsList"
+         visible 1
+         position 0 0.02
+         size 1 0.98
+         colums ""
+         lines 24
+        }
+       }
+      }
+      ImageWidgetClass "{00000000D6DE56E1}" {
+       Name "LabelBackground"
+       visible 1
+       ignorepointer 1
+       color 0.078 0.078 0.078 0.627
+       position 0 0
+       size 1 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextWidgetClass "{00000000AB6EB885}" {
+         Name "ListLabel"
+         ignorepointer 0
+         position 0 0.1
+         size 1 0.9
+         halign center_ref
+         valign bottom_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text " SoundSet"
+         "exact text" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    FrameWidgetClass "{00000000139B67F4}" {
+     Name "SoundSetButtons"
+     ignorepointer 1
+     position 0.01 0.01
+     size 0.45 0.03
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      ImageWidgetClass "{000000006F337920}" {
+       Name "ItemsBackground1"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.863
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+      }
+      ButtonWidgetClass "{000000002FA20EB1}" {
+       Name "PlaySoundset"
+       position 0.04 0.125
+       size 0.2 0.75
+       vexactsize 0
+       style Default
+       text "Play"
+       text_proportion 0.8
+      }
+      ButtonWidgetClass "{00000000A05915EB}" {
+       Name "PlaySoundsetLooped"
+       position 0.28 0.125
+       size 0.2 0.75
+       vexactsize 0
+       style Default
+       text "Play Looped"
+       text_proportion 0.8
+      }
+      ButtonWidgetClass "{000000008279E15F}" {
+       Name "StopSoundset"
+       position 0.52 0.125
+       size 0.2 0.75
+       vexactsize 0
+       style Default
+       text "Stop"
+       text_proportion 0.8
+      }
+      ButtonWidgetClass "{00000000CF2ED875}" {
+       Name "SoundsetCopy"
+       position 0.76 0.125
+       size 0.2 0.75
+       vexactsize 0
+       style Default
+       text "Copy To Clipboard"
+       text_proportion 0.8
+      }
+     }
+    }
+    WindowWidgetClass "{00000000DD20F8E4}" {
+     Name "MapWindow"
+     ignorepointer 1
+     position 0.01 0.01
+     size 0.52 0.98
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      MapWidgetClass "{000000001A7E3B06}" {
+       Name "MapSounds"
+       position 0 0
+       size 1 0.97
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass "{0000000058BE239E}" {
+       Name "MapSoundsDistance"
+       ignorepointer 1
+       position 0 0
+       size 0.2 0.03
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass "{00000000102AEF29}" {
+       Name "MapSoundsPos"
+       ignorepointer 1
+       position -0.05 0
+       size 0.44 0.03
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass "{0000000002A019D7}" {
+       Name "MapHeadingSounds"
+       ignorepointer 1
+       position 0 0
+       size 0.3 0.03
+       halign right_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+     }
+    }
+    ImageWidgetClass "{0000000050630500}" {
+     Name "SoundEventFrame"
+     visible 1
+     ignorepointer 1
+     color 0.078 0.078 0.078 0.627
+     position 0.01 0.01
+     size 0.45 0.14
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     mode blend
+     {
+      TextWidgetClass "{000000002C05DDB3}" {
+       Name "ListLabel0"
+       ignorepointer 0
+       position 0 0
+       size 1 0.18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text " SoundEvents"
+       "exact text" 0
+       "text halign" center
+       "text valign" center
+      }
+      ImageWidgetClass "{000000007B92ECFB}" {
+       Name "SoundEventType"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.98
+       position 0.05 0.22
+       size 0.22 0.2
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        ButtonWidgetClass "{00000000F734531C}" {
+         Name "ETSoundButton"
+         position 0 0
+         size 1 1
+         vexactsize 0
+         style Default
+         text "Sound"
+         text_proportion 0.8
+        }
+       }
+      }
+      ImageWidgetClass "{000000003E924D2C}" {
+       Name "SoundEventType0"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.98
+       position 0.05 0.48
+       size 0.22 0.2
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        ButtonWidgetClass "{00000000DFFF3EAE}" {
+         Name "ETSoundWeaponButton"
+         position 0 0
+         size 1 1
+         vexactsize 0
+         style Default
+         text "SoundWeapon"
+         text_proportion 0.8
+        }
+       }
+      }
+      ImageWidgetClass "{00000000320A1E8C}" {
+       Name "SoundEventType2"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.98
+       position 0.05 0.74
+       size 0.22 0.2
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        ButtonWidgetClass "{00000000388036FC}" {
+         Name "ETSoundVoiceButton"
+         position 0 0
+         size 1 1
+         vexactsize 0
+         style Default
+         text "SoundVoice"
+         text_proportion 0.8
+        }
+       }
+      }
+      ImageWidgetClass "{000000003446375C}" {
+       Name "SoundEventType3"
+       ignorepointer 1
+       color 0.078 0.078 0.078 0.98
+       position 0.16 0.6
+       size 0.15 0.26
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        ButtonWidgetClass "{000000001991DD80}" {
+         Name "ETSoundPlayButton"
+         position 0 0
+         size 1 1
+         vexactsize 0
+         style Default
+         text "Play"
+         text_proportion 0.8
+        }
+       }
+      }
+      ImageWidgetClass "{0000000038DE64FC}" {
+       Name "SoundEventType1"
+       clipchildren 0
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.98
+       position 0.3 0.22
+       size 0.22 0.2
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        ButtonWidgetClass "{0000000029784C45}" {
+         Name "ETSoundAttachmentButton"
+         position 0 0
+         size 1 1
+         vexactsize 0
+         style Default
+         text "SoundAttachment"
+         text_proportion 0.8
+        }
+       }
+      }
+      CheckBoxWidgetClass "{00000000A0C99BBB}" {
+       Name "CheckBoxShoulderAtt"
+       position 0.3 0.44
+       size 0.22 0.14
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "shoulder"
+      }
+      CheckBoxWidgetClass "{0000000098EDB95A}" {
+       Name "CheckBoxBodyAtt"
+       position 0.3 0.63
+       size 0.22 0.14
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "body"
+      }
+      CheckBoxWidgetClass "{0000000046A6B1D0}" {
+       Name "CheckBoxBackAtt"
+       position 0.3 0.82
+       size 0.22 0.14
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "back"
+      }
+      FrameWidgetClass "{000000008FC8296C}" {
+       Name "SoundIDFrame"
+       clipchildren 0
+       ignorepointer 1
+       position 0.16 0.22
+       size 0.15 0.24
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass "{00000000C1190568}" {
+         Name "SoundIDBackground"
+         visible 1
+         ignorepointer 1
+         color 0.09 0.078 0.078 0.863
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         mode blend
+        }
+        EditBoxWidgetClass "{000000001B52DDD3}" {
+         Name "SoundIDEditBox"
+         inheritalpha 0
+         color 1 1 1 1
+         position 0 0.15
+         size 0.9 0.7
+         halign center_ref
+         valign bottom_ref
+         hexactsize 0
+         vexactsize 0
+         priority 1
+         style Default
+         "limit visible" 0
+         "exact text" 0
+         font "gui/fonts/sdf_MetronBook24"
+         "text color" 1 1 1 1
+        }
+        TextWidgetClass "{00000000DACDFAAA}" {
+         Name "SoundIDLabel"
+         ignorepointer 0
+         position 1.06 0.05
+         size 1 0.9
+         halign right_ref
+         valign bottom_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "ID:"
+         "exact text" 0
+         "text halign" right
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  GridSpacerWidgetClass "{000000000BEAFF75}" {
+   Name "VicinityPanel"
+   visible 0
+   clipchildren 1
+   inheritalpha 1
+   position 0.005 0.049
+   size 0.99 0.878
+   priority 1
+   style Colorable
+   Columns 2
+   Rows 1
+   {
+    TextListboxWidgetClass "{000000001DE870C0}" {
+     Name "VicinityListbox"
+     size 0.497 0.899
+     valign center_ref
+     style Default
+     "next down" ""
+     "title visible" 1
+     colums "Item;50;Distance;50;"
+     lines 50
+     "highlight row" 1
+    }
+    FrameWidgetClass "{00000000172741BC}" {
+     Name "VicinityRightPanel"
+     ignorepointer 1
+     size 0.497 1
+     halign right_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      EditBoxWidgetClass "{000000005287BB0C}" {
+       Name "DistanceInput"
+       size 0.5 64
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       style Editor
+       text "test"
+       "exact text" 1
+       font "gui/fonts/Metron28"
+      }
+      TextWidgetClass "{00000000852DED84}" {
+       Name "DistanceText"
+       ignorepointer 1
+       size 0.5 64
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "radius in metres"
+       font "gui/fonts/Metron16"
+       "text offset" 10 0
+       "size to text h" 0
+       "size to text v" 1
+       "text valign" center
+      }
+      ScrollWidgetClass "{0000000081650F4C}" {
+       Name "VicinityContextMenu"
+       ignorepointer 1
+       position 0 64
+       size 1 0.82
+       halign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+      }
+      ButtonWidgetClass "{00000000641A176C}" {
+       Name "WatchItemButton"
+       size 0.41 0.088
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Watch"
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{000000009ECEA373}" {
+   Name "CameraPanel"
+   visible 0
+   ignorepointer 1
+   color 0 0.223 0.055 0
+   position 0.007 0.062
+   size 0.985 0.924
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   priority 1
+   style DayZDefaultPanel
+   {
+    PanelWidgetClass "{00000000D823E764}" {
+     Name "CameraRoot"
+     visible 1
+     ignorepointer 1
+     color 0 0.223 0.055 0
+     size 1 1
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     style DayZDefaultPanel
+     {
+      PanelWidgetClass "{000000008D570667}" {
+       Name "PanelWidget1"
+       ignorepointer 1
+       position 0 0
+       size 1 192
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       {
+        PanelWidgetClass "{000000005BF219C1}" {
+         Name "SliderFOVPanel"
+         visible 1
+         clipchildren 1
+         color 0.973 0.098 0.098 1
+         position 0.04 0
+         size 0.3 32
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         draggable 0
+         style blank
+         {
+          TextWidgetClass "{000000001D54B8F5}" {
+           Name "SliderFOVValue"
+           ignorepointer 1
+           color 0.784 0 0 1
+           size 1 32
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           priority 999
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "exact text size" 16
+           "text halign" center
+           "text valign" center
+          }
+          EditBoxWidgetClass "{00000000E31B9636}" {
+           Name "SliderFOVEditbox"
+           visible 0
+           ignorepointer 0
+           size 1 32
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           priority 999
+           style Editor
+           "Default text color" 0.784 0 0 1
+           "exact text" 1
+           font "gui/fonts/sdf_MetronBook24"
+           "text color" 0.784 0 0 1
+           "bold text" 1
+          }
+         }
+        }
+        TextWidgetClass "{00000000906E5CA7}" {
+         Name "FOVLabel"
+         ignorepointer 1
+         position 0 0
+         size 0.05 32
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "FOV:"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "size to text h" 1
+         "text valign" center
+        }
+        GridSpacerWidgetClass "{0000000077A1CA91}" {
+         Name "DOFSpacer"
+         ignorepointer 1
+         position 0.36 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         "Size To Content H" 1
+         "Size To Content V" 1
+         Columns 2
+         Rows 5
+         {
+          TextWidgetClass "{00000000630AB301}" {
+           Name "FocusDistanceLabel"
+           visible 1
+           ignorepointer 1
+           position 0.36 0
+           size 0.05 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           text "Focus Distance:"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          PanelWidgetClass "{000000003D1EDC3F}" {
+           Name "SliderFocusDistancePanel"
+           visible 1
+           clipchildren 1
+           color 0.973 0.098 0.098 1
+           position 0.512 0
+           size 0.3 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           draggable 0
+           style blank
+           {
+            TextWidgetClass "{000000004F8DF2CC}" {
+             Name "SliderFocusDistanceValue"
+             visible 1
+             ignorepointer 1
+             color 0.784 0 0 1
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             text "0"
+             font "gui/fonts/sdf_MetronBook24"
+             "exact text" 1
+             "exact text size" 16
+             "text halign" center
+             "text valign" center
+            }
+            EditBoxWidgetClass "{0000000011059E87}" {
+             Name "SliderFocusDistanceEditbox"
+             visible 0
+             ignorepointer 0
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             style Editor
+             "Default text color" 0.784 0 0 1
+             "exact text" 1
+             font "gui/fonts/sdf_MetronBook24"
+             "text color" 0.784 0 0 1
+             "bold text" 1
+            }
+           }
+          }
+          TextWidgetClass "{000000003B4769BB}" {
+           Name "FocusLengthLabel"
+           visible 1
+           ignorepointer 1
+           position 0.36 0.16
+           size 0.05 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           text "Focus Length:"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          PanelWidgetClass "{000000008807A13E}" {
+           Name "SliderFocusLengthPanel"
+           visible 1
+           clipchildren 1
+           color 0.973 0.098 0.098 1
+           position 0.512 0.16
+           size 0.3 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           draggable 0
+           style blank
+           {
+            TextWidgetClass "{0000000065A7915C}" {
+             Name "SliderFocusLengthValue"
+             ignorepointer 1
+             color 0.784 0 0 1
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             text "0"
+             font "gui/fonts/sdf_MetronBook24"
+             "exact text" 1
+             "exact text size" 16
+             "text halign" center
+             "text valign" center
+            }
+            EditBoxWidgetClass "{000000002F27D1F5}" {
+             Name "SliderFocusLengthEditbox"
+             visible 0
+             ignorepointer 0
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             style Editor
+             "Default text color" 0.784 0 0 1
+             "exact text" 1
+             font "gui/fonts/sdf_MetronBook24"
+             "text color" 0.784 0 0 1
+             "bold text" 1
+            }
+           }
+          }
+          TextWidgetClass "{00000000B5ED4F85}" {
+           Name "FocusLengthNearLabel"
+           visible 1
+           ignorepointer 1
+           position 0.36 0.16
+           size 0.05 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           text "Focus Length Near:"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          PanelWidgetClass "{00000000D9CDDCB5}" {
+           Name "SliderFocusLengthNearPanel"
+           visible 1
+           clipchildren 1
+           color 0.973 0.098 0.098 1
+           position 0.512 0.16
+           size 0.3 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           draggable 0
+           style blank
+           {
+            TextWidgetClass "{0000000087AAA267}" {
+             Name "SliderFocusLengthNearValue"
+             ignorepointer 1
+             color 0.784 0 0 1
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             text "0"
+             font "gui/fonts/sdf_MetronBook24"
+             "exact text" 1
+             "exact text size" 16
+             "text halign" center
+             "text valign" center
+            }
+            EditBoxWidgetClass "{00000000A9DEB9E5}" {
+             Name "SliderFocusLengthNearEditbox"
+             visible 0
+             ignorepointer 0
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             style Editor
+             "Default text color" 0.784 0 0 1
+             "exact text" 1
+             font "gui/fonts/sdf_MetronBook24"
+             "text color" 0.784 0 0 1
+             "bold text" 1
+            }
+           }
+          }
+          TextWidgetClass "{00000000E98E33CC}" {
+           Name "BlurLabel"
+           visible 1
+           ignorepointer 1
+           position 0.36 0.16
+           size 0.05 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           text "Blur:"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          PanelWidgetClass "{00000000AB5C98F5}" {
+           Name "SliderBlurPanel"
+           visible 1
+           clipchildren 1
+           color 0.973 0.098 0.098 1
+           position 0.512 0
+           size 0.3 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           draggable 0
+           style blank
+           {
+            TextWidgetClass "{00000000FA2F020A}" {
+             Name "SliderBlurValue"
+             ignorepointer 1
+             color 0.784 0 0 1
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             text "0"
+             font "gui/fonts/sdf_MetronBook24"
+             "exact text" 1
+             "exact text size" 16
+             "text halign" center
+             "text valign" center
+            }
+            EditBoxWidgetClass "{000000000663E494}" {
+             Name "SliderBlurEditbox"
+             visible 0
+             ignorepointer 0
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             style Editor
+             "Default text color" 0.784 0 0 1
+             "exact text" 1
+             font "gui/fonts/sdf_MetronBook24"
+             "text color" 0.784 0 0 1
+             "bold text" 1
+            }
+           }
+          }
+          TextWidgetClass "{00000000447B1606}" {
+           Name "FocusDepthOffsetLabel"
+           visible 1
+           ignorepointer 1
+           position 0.36 0.16
+           size 0.05 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           text "Focus Depth Offset:"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          PanelWidgetClass "{0000000008488DA0}" {
+           Name "SliderFocusDepthOffsetPanel"
+           visible 1
+           clipchildren 1
+           color 0.973 0.098 0.098 1
+           position 0.512 0
+           size 0.3 32
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           draggable 0
+           style blank
+           {
+            TextWidgetClass "{00000000044C4408}" {
+             Name "SliderFocusDepthOffsetValue"
+             ignorepointer 1
+             color 0.784 0 0 1
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             text "0"
+             font "gui/fonts/sdf_MetronBook24"
+             "exact text" 1
+             "exact text size" 16
+             "text halign" center
+             "text valign" center
+            }
+            EditBoxWidgetClass "{00000000D7FE2B07}" {
+             Name "SliderFocusDepthOffsetEditbox"
+             visible 0
+             ignorepointer 0
+             size 1 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             priority 999
+             style Editor
+             "Default text color" 0.784 0 0 1
+             "exact text" 1
+             font "gui/fonts/sdf_MetronBook24"
+             "text color" 0.784 0 0 1
+             "bold text" 1
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{0000000095D120DB}" {
+         Name "ResetDOFButton"
+         position 0.04 0
+         size 0.14 32
+         halign right_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         {
+          TextWidgetClass "{00000000261907A0}" {
+           Name "ResetDOFLabel"
+           ignorepointer 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Reset DOF"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "size to text h" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass "{00000000F2E8E07D}" {
+         Name "SaveDOFButton"
+         visible 0
+         position 0.04 0.6
+         size 0.14 32
+         halign right_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         {
+          TextWidgetClass "{000000008BA53716}" {
+           Name "SaveDOFLabel"
+           ignorepointer 1
+           position 0 0
+           size 1 0.98
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Save DOF"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "size to text h" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        EditBoxWidgetClass "{000000005D058DB2}" {
+         Name "DOFName"
+         visible 0
+         position 0.04 0.81
+         size 0.14 32
+         halign right_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         style Editor
+         "exact text" 1
+         font "gui/fonts/sdf_MetronBook24"
+        }
+        ButtonWidgetClass "{00000000356AF7B4}" {
+         Name "DOFPresetsButton"
+         visible 0
+         position 0.04 0.17
+         size 0.14 32
+         halign right_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         {
+          TextWidgetClass "{00000000248107A8}" {
+           Name "DOFPresetsLabel"
+           ignorepointer 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Show DOF Presets"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 1
+           "size to text h" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      TextListboxWidgetClass "{000000009AAB84DA}" {
+       Name "DOFPresets"
+       visible 0
+       color 1 1 1 0.502
+       position 0 0
+       size 0.26 0.73
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       lines 1000
+       "highlight row" 0
+       font "gui/fonts/etelkatextpro22"
+      }
+      PanelWidgetClass "{0000000053A46192}" {
+       Name "DOFPresetsPanel"
+       visible 0
+       ignorepointer 1
+       color 1 1 1 0.502
+       position 0 0
+       size 400 700
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       style blank
+      }
+      GridSpacerWidgetClass "{00000000290FD1EB}" {
+       Name "DOFPresetsButtons"
+       visible 0
+       ignorepointer 1
+       position 0 0.22
+       size 400 0.05
+       halign right_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 0
+       Columns 1
+       Rows 2
+       {
+        ButtonWidgetClass "{000000007555D200}" {
+         Name "DOFLoadPrefab"
+         position 10 10
+         size 48 48
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         text "Load Prefab"
+         font "gui/fonts/sdf_MetronBook24"
+        }
+        ButtonWidgetClass "{000000009AF2030B}" {
+         Name "DOFDeletePrefab"
+         position 10 10
+         size 48 48
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         text "Delete Prefab"
+         font "gui/fonts/sdf_MetronBook24"
+        }
+       }
+      }
+      TextWidgetClass "{00000000E5768920}" {
+       Name "CameraInfo1"
+       ignorepointer 1
+       color 0.784 0 0 1
+       position 0 89
+       size 0.35 32
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Hold SHIFT to enable camera movement"
+       "text valign" center
+      }
+      TextWidgetClass "{00000000621FEE08}" {
+       Name "CameraInfo2"
+       ignorepointer 1
+       color 0.784 0 0 1
+       position 0 56
+       size 0.35 32
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Press SPACE to show Camera Info while in Free Cam"
+       "text valign" center
+      }
+      TextWidgetClass "{00000000E378387D}" {
+       Name "CameraInfo3"
+       ignorepointer 1
+       color 0.784 0 0 1
+       position 0 24
+       size 0.35 32
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Hold CTRL to toggle value edit mode"
+       "text valign" center
+      }
+     }
+    }
+    ButtonWidgetClass "{00000000156F4041}" {
+     Name "ButtonHideC"
+     clipchildren 1
+     position 0.01 0
+     size 36 36
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     scriptclass ""
+     "no focus" 0
+     text_proportion 0.6
+     font "gui/fonts/sdf_MetronBook24"
+     {
+      ImageWidgetClass "{000000008C72579A}" {
+       Name "ButtonHideIconC"
+       ignorepointer 1
+       size 36 36
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       image0 "set:dayz_gui image:PasswordEyeClose"
+       mode blend
+       "src alpha" 1
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{000000000DD515D7}" {
+   Name "WeatherPanel"
+   visible 0
+   ignorepointer 1
+   color 0 0.223 0.055 0
+   position 0.007 0.062
+   size 0.985 0.924
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   priority 1
+   style DayZDefaultPanel
+   {
+    PanelWidgetClass "{000000005F7A2643}" {
+     Name "WeatherRoot"
+     visible 1
+     ignorepointer 1
+     color 0 0.223 0.055 0
+     size 1 1
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style DayZDefaultPanel
+     {
+      ImageWidgetClass "{00000000C69F8B55}" {
+       Name "ImageBackgroundOvercast"
+       visible 1
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.549
+       position 0.07 0.03
+       size 0.2 0.3
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextWidgetClass "{0000000016EB8DDD}" {
+         Name "TextOvercast"
+         clipchildren 0
+         ignorepointer 1
+         position 0 -0.1
+         size 1 0.1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "OVERCAST"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 0
+         text_proportion 0.5
+         "text halign" center
+         "text valign" center
+        }
+        SliderWidgetClass "{000000008D269887}" {
+         Name "SliderOvercastValue"
+         visible 1
+         clipchildren 0
+         color 0.973 0.098 0.098 1
+         position 0.05 0.2
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          SliderWidgetClass "{00000000A3960B8A}" {
+           Name "SliderOvercastActualValue"
+           visible 1
+           clipchildren 1
+           ignorepointer 1
+           color 0.812 0.737 0.506 1
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           draggable 0
+           style Default
+           current 30
+           vertical 0
+           flipped 0
+           "fill in" 1
+           "draw marker" 0
+           "listen to input" 1
+          }
+          TextWidgetClass "{00000000C889A0CF}" {
+           Name "TextMinOvercastValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000E3B4B360}" {
+           Name "TextMaxOvercastValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "1"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000000F52B1C0}" {
+           Name "TextTitleOvercastValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Value"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{0000000092D93E38}" {
+           Name "TextOvercastValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000664A6F5F}" {
+           Name "TextOvercastValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{00000000D3562C6F}" {
+           Name "EditBoxOvercastValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.419 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Default
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{00000000ECBCBC14}" {
+         Name "SliderOvercastTarget"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.5
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{000000008FE21792}" {
+           Name "EditBoxOvercastTarget"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{00000000C2646654}" {
+           Name "TextMinOvercastTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000EC34A7B0}" {
+           Name "TextMaxOvercastTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000001DBE2C72}" {
+           Name "TextTitleOvercastTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Target Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        SliderWidgetClass "{00000000A14B2CF5}" {
+         Name "SliderOvercastDuration"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.8
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{000000007BF21121}" {
+           Name "EditBoxOvercastDuration"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{00000000FFB7BAD0}" {
+           Name "TextMinOvercastDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000008084CCEA}" {
+           Name "TextMaxOvercastDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{00000000F9E4811F}" {
+           Name "TextTitleOvercastDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Duration"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      ImageWidgetClass "{000000007F31F1E5}" {
+       Name "ImageBackgroundRain"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.549
+       position 0.28 0.03
+       size 0.2 0.3
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextWidgetClass "{00000000824A89EB}" {
+         Name "TextRain"
+         clipchildren 0
+         ignorepointer 1
+         position 0 -0.1
+         size 1 0.1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "RAIN"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 0
+         text_proportion 0.5
+         "text halign" center
+         "text valign" center
+        }
+        SliderWidgetClass "{00000000D84B8E67}" {
+         Name "SliderRainValue"
+         clipchildren 0
+         color 0.973 0.098 0.098 1
+         position 0.05 0.2
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          SliderWidgetClass "{00000000B5129A01}" {
+           Name "SliderRainActualValue"
+           clipchildren 1
+           ignorepointer 1
+           color 0.812 0.737 0.506 1
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           draggable 0
+           style Default
+           current 30
+           vertical 0
+           flipped 0
+           "fill in" 1
+           "draw marker" 0
+           "listen to input" 1
+          }
+          TextWidgetClass "{0000000020A6FD72}" {
+           Name "TextMinRainValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000001492B9C0}" {
+           Name "TextMaxRainValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "1"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000023B5ADAE}" {
+           Name "TextTitleRainValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Value"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000000BD94157}" {
+           Name "TextRainValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000000DBFAF4D}" {
+           Name "TextRainValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{0000000007CC74E4}" {
+           Name "EditBoxRainValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.417 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{00000000C87D3370}" {
+         Name "SliderRainTarget"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.5
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{000000007BDEA0C4}" {
+           Name "EditBoxRainTarget"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{00000000660BF8D9}" {
+           Name "TextMinRainTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{0000000090596F09}" {
+           Name "TextMaxRainTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{00000000056E5AA3}" {
+           Name "TextTitleRainTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Target Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        SliderWidgetClass "{0000000021A8D83D}" {
+         Name "SliderRainDuration"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.8
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{00000000D7D200A0}" {
+           Name "EditBoxRainDuration"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{000000005E7A3EBE}" {
+           Name "TextMinRainDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{0000000028045ADE}" {
+           Name "TextMaxRainDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000083904E4F}" {
+           Name "TextTitleRainDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Duration"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      ImageWidgetClass "{00000000547D0076}" {
+       Name "ImageBackgroundSnowfall"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.549
+       position 0.49 0.03
+       size 0.2 0.3
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextWidgetClass "{00000000E4EEFE32}" {
+         Name "TextSnowfall"
+         clipchildren 0
+         ignorepointer 1
+         position 0 -0.1
+         size 1 0.1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "SNOWFALL"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 0
+         text_proportion 0.5
+         "text halign" center
+         "text valign" center
+        }
+        SliderWidgetClass "{0000000025748C40}" {
+         Name "SliderSnowfallValue"
+         color 0.973 0.098 0.098 1
+         position 0.05 0.2
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          SliderWidgetClass "{000000001CA4F8E3}" {
+           Name "SliderSnowfallActualValue"
+           clipchildren 0
+           ignorepointer 1
+           color 0.812 0.737 0.506 1
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           draggable 0
+           style Default
+           current 30
+           vertical 0
+           flipped 0
+           "fill in" 1
+           "draw marker" 0
+           "listen to input" 1
+          }
+          TextWidgetClass "{00000000678BB210}" {
+           Name "TextMinSnowfallValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000004CB6A1BF}" {
+           Name "TextMaxSnowfallValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "1"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{00000000A050A31F}" {
+           Name "TextTitleSnowfallValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Value"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{0000000079A58F4E}" {
+           Name "TextSnowfallValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000D9789C36}" {
+           Name "TextSnowfallValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{000000007C543EB0}" {
+           Name "EditBoxSnowfallValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.42 -1.6
+           size 0.142 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{0000000035796871}" {
+         Name "SliderSnowfallTarget"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.5
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         current 0
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          TextWidgetClass "{0000000052E1674C}" {
+           Name "TextMinSnowfallTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000007CB1A6A8}" {
+           Name "TextMaxSnowfallTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000008D3B2D6A}" {
+           Name "TextTitleSnowfallTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Target Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          EditBoxWidgetClass "{000000001F67168A}" {
+           Name "EditBoxSnowfallTarget"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.42 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{00000000536E31FE}" {
+         Name "SliderSnowfallDuration"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.8
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         current 100
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          TextWidgetClass "{000000001AF24075}" {
+           Name "TextMinSnowfallDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{0000000065C1364F}" {
+           Name "TextMaxSnowfallDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000001CA17BBA}" {
+           Name "TextTitleSnowfallDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Duration"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          EditBoxWidgetClass "{000000009EB7EB84}" {
+           Name "EditBoxSnowfallDuration"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.42 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+       }
+      }
+      ImageWidgetClass "{00000000B86CE40E}" {
+       Name "ImageBackgroundFog"
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.549
+       position 0.07 0.36
+       size 0.2 0.3
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextWidgetClass "{0000000069478982}" {
+         Name "TextFog"
+         clipchildren 0
+         ignorepointer 1
+         position 0 -0.1
+         size 1 0.1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "FOG"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 0
+         text_proportion 0.5
+         "text halign" center
+         "text valign" center
+        }
+        SliderWidgetClass "{0000000076705224}" {
+         Name "SliderFogValue"
+         color 0.973 0.098 0.098 1
+         position 0.05 0.2
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          SliderWidgetClass "{0000000063256AB8}" {
+           Name "SliderFogActualValue"
+           clipchildren 0
+           ignorepointer 1
+           color 0.812 0.737 0.506 1
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           draggable 0
+           style Default
+           current 30
+           vertical 0
+           flipped 0
+           "fill in" 1
+           "draw marker" 0
+           "listen to input" 1
+          }
+          TextWidgetClass "{00000000A4421FCF}" {
+           Name "TextMinFogValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000006EC0901F}" {
+           Name "TextMaxFogValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "1"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000004C39B901}" {
+           Name "TextTitleFogValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Value"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000639B8D0F}" {
+           Name "TextFogValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000006A033923}" {
+           Name "TextFogValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{00000000510CBA9A}" {
+           Name "EditBoxFogValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.42 -1.6
+           size 0.142 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{0000000055D9B8E0}" {
+         Name "SliderFogTarget"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.5
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         current 0
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          TextWidgetClass "{0000000064A26A87}" {
+           Name "TextMinFogTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000628CD88E}" {
+           Name "TextMaxFogTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000060B27DA1}" {
+           Name "TextTitleFogTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Target Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          EditBoxWidgetClass "{00000000ADFA436E}" {
+           Name "EditBoxFogTarget"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.42 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{00000000F55E571C}" {
+         Name "SliderFogDuration"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.8
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         current 100
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          TextWidgetClass "{00000000F7F32C5A}" {
+           Name "TextMinFogDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000365A4CE1}" {
+           Name "TextMaxFogDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000033B7B614}" {
+           Name "TextTitleFogDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Duration"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          EditBoxWidgetClass "{000000005F776CF9}" {
+           Name "EditBoxFogDuration"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.42 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+       }
+      }
+      ImageWidgetClass "{00000000AF976773}" {
+       Name "ImageBackgroundVolfog"
+       visible 1
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.549
+       position 0.28 0.36
+       size 0.41 0.3
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextWidgetClass "{00000000CD5343F2}" {
+         Name "TextVolfog"
+         clipchildren 0
+         ignorepointer 1
+         position 0 -0.1
+         size 1 0.1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "VOLFOG"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 0
+         text_proportion 0.5
+         "text halign" center
+         "text valign" center
+        }
+        SliderWidgetClass "{00000000D374A0EE}" {
+         Name "SliderVolfogDD"
+         visible 1
+         clipchildren 0
+         color 0.204 0.596 0.859 1
+         position 0.05 0.2
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          TextWidgetClass "{000000005779608D}" {
+           Name "TextMinVolfogDDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000F5F7B384}" {
+           Name "TextMaxVolfogDDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "1"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000006C5BF35B}" {
+           Name "TextTitleVolfogDDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Distance Density"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000D834CDF0}" {
+           Name "TextVolfogDDValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{0000000008F20FE9}" {
+           Name "TextVolfogDDValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{0000000045B55B53}" {
+           Name "EditBoxVolfogDDValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.419 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{000000006CF11958}" {
+         Name "SliderVolfogDDTime"
+         visible 1
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.2
+         size 0.4 0.045
+         halign right_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          TextWidgetClass "{000000003BBEEDCF}" {
+           Name "TextMinVolfogDDTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000E579393A}" {
+           Name "TextMaxVolfogDDTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{00000000B2FCCDCD}" {
+           Name "TextTitleVolfogDDTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "DD Transition Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000003381C1E6}" {
+           Name "TextVolfogDDTValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000DD84A3CC}" {
+           Name "TextVolfogDDTValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{000000004EAA4F8C}" {
+           Name "EditBoxVolfogDDTValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.419 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{000000009EA9FA42}" {
+         Name "SliderVolfogHD"
+         clipchildren 0
+         color 0.204 0.596 0.859 1
+         position 0.05 0.5
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{00000000B2F203EF}" {
+           Name "EditBoxVolfogHDValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{00000000A03E3831}" {
+           Name "TextMinVolfogHDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{0000000002B0EB38}" {
+           Name "TextMaxVolfogHDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "1"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000009B1CABE7}" {
+           Name "TextTitleVolfogHDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Height Density"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000CCDB342F}" {
+           Name "TextVolfogHDValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000002DD27D4D}" {
+           Name "TextVolfogHDValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+         }
+        }
+        SliderWidgetClass "{00000000D496F04E}" {
+         Name "SliderVolfogHDTime"
+         visible 1
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.49
+         size 0.4 0.045
+         halign right_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          TextWidgetClass "{00000000DAEBA7AA}" {
+           Name "TextMinVolfogHDTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000042C735F}" {
+           Name "TextMaxVolfogHDTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000053A987A8}" {
+           Name "TextTitleVolfogHDTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "HD Transition Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000007188BEE1}" {
+           Name "TextVolfogHDTValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000AD477005}" {
+           Name "TextVolfogHDTValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{00000000AFFF05E9}" {
+           Name "EditBoxVolfogHDTValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.419 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{0000000016C010E2}" {
+         Name "SliderVolfogHB"
+         clipchildren 0
+         color 0.204 0.596 0.859 1
+         position 0.05 0.8
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{00000000639CFA15}" {
+           Name "EditBoxVolfogHBValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{000000007150C1CB}" {
+           Name "TextMinVolfogHBValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "-500"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000D3DE12C2}" {
+           Name "TextMaxVolfogHBValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "500"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000004A72521D}" {
+           Name "TextTitleVolfogHBValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Height Bias"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000B1825AC6}" {
+           Name "TextVolfogHBValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000000B42488F}" {
+           Name "TextVolfogHBValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+         }
+        }
+        SliderWidgetClass "{00000000F1452567}" {
+         Name "SliderVolfogHBTime"
+         visible 1
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.8
+         size 0.4 0.045
+         halign right_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          TextWidgetClass "{000000000A08F6CA}" {
+           Name "TextMinVolfogHBTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000000E4D7E49}" {
+           Name "TextMaxVolfogHbTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{00000000834AD6C8}" {
+           Name "TextTitleVolfogHBTValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "HB Transition Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000005995F18B}" {
+           Name "TextVolfogHBTValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{0000000077C360FF}" {
+           Name "TextVolfogHBTValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{000000007F1C5489}" {
+           Name "EditBoxVolfogHBTValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.419 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+       }
+      }
+      PanelWidgetClass "{000000007D4A4DE2}" {
+       Name "WeatherPresetsPanel"
+       visible 1
+       ignorepointer 1
+       position 0.7 0.69
+       size 0.2 0.29
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        TextWidgetClass "{0000000029A224A6}" {
+         Name "TextWeatherPresets"
+         clipchildren 0
+         ignorepointer 1
+         position 0 -0.1
+         size 1 0.1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Presets"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 0
+         text_proportion 0.5
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ButtonWidgetClass "{00000000E1327436}" {
+       Name "ButtonLoadPreset"
+       clipchildren 1
+       position 0.01 0.83
+       size 0.08 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       "no focus" 0
+       text "Load Preset"
+       text_proportion 0.6
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      ButtonWidgetClass "{0000000064C15F59}" {
+       Name "ButtonDeletePreset"
+       clipchildren 1
+       position 0.01 0.87
+       size 0.08 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       "no focus" 0
+       text "Delete Preset"
+       text_proportion 0.6
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      EditBoxWidgetClass "{000000004B373FEC}" {
+       Name "WeatherPresetName"
+       clipchildren 1
+       position 0.01 0.91
+       size 0.08 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       style Editor
+       "no focus" 0
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      ButtonWidgetClass "{00000000DEBBB59A}" {
+       Name "ButtonSavePreset"
+       clipchildren 1
+       position 0.01 0.95
+       size 0.08 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       "no focus" 0
+       text "Save Prefab"
+       text_proportion 0.6
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      ButtonWidgetClass "{000000000715F0F2}" {
+       Name "ButtonCopy"
+       clipchildren 1
+       position 0.05 0.66
+       size 0.04 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       "no focus" 0
+       text "Copy"
+       text_proportion 0.6
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      ButtonWidgetClass "{000000005FE3B3F3}" {
+       Name "ButtonPaste"
+       clipchildren 1
+       position 0.01 0.66
+       size 0.04 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       "no focus" 0
+       text "Paste"
+       text_proportion 0.6
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      ButtonWidgetClass "{0000000039CCF950}" {
+       Name "ButtonReset"
+       clipchildren 1
+       position 0.01 0.7
+       size 0.08 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       "no focus" 0
+       text "Reset"
+       text_proportion 0.6
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      ButtonWidgetClass "{000000009EE42780}" {
+       Name "ButtonUpdate"
+       clipchildren 1
+       position 0.01 0.74
+       size 0.08 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       "no focus" 0
+       text "Update"
+       text_proportion 0.6
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      ButtonWidgetClass "{0000000066D400EB}" {
+       Name "ButtonApply"
+       clipchildren 1
+       position 0.01 0.78
+       size 0.08 0.03
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scriptclass ""
+       "no focus" 0
+       text "Apply"
+       text_proportion 0.6
+       font "gui/fonts/sdf_MetronBook24"
+      }
+      ImageWidgetClass "{000000007F60B5C1}" {
+       Name "ImageBackgroundWind"
+       visible 1
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.549
+       position 0.07 0.69
+       size 0.41 0.3
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextWidgetClass "{000000001176336E}" {
+         Name "TextWind"
+         clipchildren 0
+         ignorepointer 1
+         position 0 -0.1
+         size 1 0.1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "WIND"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 0
+         text_proportion 0.5
+         "text halign" center
+         "text valign" center
+        }
+        SliderWidgetClass "{000000004550A7BF}" {
+         Name "SliderWindMValue"
+         visible 1
+         clipchildren 0
+         color 0.973 0.098 0.098 1
+         position 0.05 0.2
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          SliderWidgetClass "{00000000D632F8E4}" {
+           Name "SliderWindMActualValue"
+           visible 1
+           clipchildren 1
+           ignorepointer 1
+           color 0.812 0.737 0.506 1
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           draggable 0
+           style Default
+           current 30
+           vertical 0
+           flipped 0
+           "fill in" 1
+           "draw marker" 0
+           "listen to input" 1
+          }
+          TextWidgetClass "{0000000064D3238B}" {
+           Name "TextMinWindMValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000009281B45B}" {
+           Name "TextMaxWindMValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "20"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000007B681F1}" {
+           Name "TextTitleWindMValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Wind Magnitude"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{0000000062397197}" {
+           Name "TextWindMValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{000000001A42133C}" {
+           Name "TextWindMValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{0000000079067B96}" {
+           Name "EditBoxWindMValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.419 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{0000000096913619}" {
+         Name "SliderWindMTarget"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.5
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{00000000D8910465}" {
+           Name "EditBoxWindMTarget"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{000000008BF61CD3}" {
+           Name "TextMinWindMTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000007BDD2AFD}" {
+           Name "TextMaxWindMTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000081E2B496}" {
+           Name "TextTitleWindMTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Target Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        SliderWidgetClass "{00000000D2CE9C1F}" {
+         Name "SliderWindMDuration"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.8
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{00000000E8252AE9}" {
+           Name "EditBoxWindMDuration"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{00000000DBC1CB49}" {
+           Name "TextMinWindMDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{00000000F7F9087B}" {
+           Name "TextMaxWindMDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{000000008FFDB706}" {
+           Name "TextTitleWindMDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Duration"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        SliderWidgetClass "{00000000387F233F}" {
+         Name "SliderWindDValue"
+         visible 1
+         clipchildren 0
+         color 0.973 0.098 0.098 1
+         position 0.54 0.2
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          SliderWidgetClass "{000000000BAAEFC4}" {
+           Name "SliderWindDActualValue"
+           visible 1
+           clipchildren 1
+           ignorepointer 1
+           color 0.812 0.737 0.506 1
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           draggable 0
+           style Default
+           current 30
+           vertical 0
+           flipped 0
+           "fill in" 1
+           "draw marker" 0
+           "listen to input" 1
+          }
+          TextWidgetClass "{00000000DE761B48}" {
+           Name "TextMinWindDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "-3.14"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{0000000028248C98}" {
+           Name "TextMaxWindDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "3.14"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{00000000BD13B932}" {
+           Name "TextTitleWindDValue"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Wind Direction"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000FC7EA884}" {
+           Name "TextWindDValueLabel"
+           clipchildren 0
+           ignorepointer 1
+           position 0.005 1.257
+           size 0.278 0.806
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Current:"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000C7DA041C}" {
+           Name "TextWindDValueActual"
+           clipchildren 0
+           ignorepointer 1
+           position 0.307 1.257
+           size 0.258 0.807
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook72"
+           "text valign" center
+          }
+          EditBoxWidgetClass "{00000000C3A34355}" {
+           Name "EditBoxWindDValue"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.419 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+         }
+        }
+        SliderWidgetClass "{00000000686C2D2D}" {
+         Name "SliderWindDTarget"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.54 0.5
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{0000000028ACE3C7}" {
+           Name "EditBoxWindDTarget"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{000000007BCBFB71}" {
+           Name "TextMinWindDTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{000000008BE0CD5F}" {
+           Name "TextMaxWindDTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000071DF5334}" {
+           Name "TextTitleWindDTarget"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Target Time"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        SliderWidgetClass "{00000000ED2902D0}" {
+         Name "SliderWindDDuration"
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.54 0.8
+         size 0.4 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style Default
+         "marker thickness" 0.03
+         vertical 0
+         flipped 0
+         "fill in" 0
+         "draw marker" 1
+         "listen to input" 1
+         {
+          EditBoxWidgetClass "{0000000077752786}" {
+           Name "EditBoxWindDDuration"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "no focus" 0
+           text "0"
+           "limit visible" 0
+           "Use default text" 0
+           "exact text" 0
+           font "gui/fonts/sdf_MetronBook24"
+          }
+          TextWidgetClass "{000000004491C626}" {
+           Name "TextMinWindDDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text valign" center
+          }
+          TextWidgetClass "{0000000068A90514}" {
+           Name "TextMaxWindDDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.95 -0.9
+           size 0.05 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "960"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+           text_proportion 0.5
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass "{0000000010ADBA69}" {
+           Name "TextTitleWindDDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Duration"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      ImageWidgetClass "{00000000B331A66B}" {
+       Name "ImageBackgroundSandstorm"
+       visible 1
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.549
+       position 0.7 0.03
+       size 0.2 0.3
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        TextWidgetClass "{00000000F07D98C6}" {
+         Name "TextSandstorm"
+         clipchildren 0
+         ignorepointer 1
+         position 0 -0.1
+         size 1 0.1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "SANDSTORM"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 0
+         text_proportion 0.5
+         "text halign" center
+         "text valign" center
+        }
+        PanelWidgetClass "{00000000B8B3C646}" {
+         Name "SandstormMagnitudePanel"
+         visible 1
+         clipchildren 0
+         color 0.973 0.098 0.098 1
+         position 0.05 0.2
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style blank
+         {
+          TextWidgetClass "{000000004FA22C98}" {
+           Name "TextTitleSandstormMagnitude"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Magnitude"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "{00000000E1BF35DF}" {
+           Name "TextSandstormMagnitude"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.419 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Normal
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+          }
+         }
+        }
+        PanelWidgetClass "{000000001A081709}" {
+         Name "SandstormSpeedPanel"
+         visible 1
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.5
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style blank
+         {
+          TextWidgetClass "{00000000E89FAF85}" {
+           Name "TextSandstormSpeed"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+          }
+          TextWidgetClass "{00000000741942C2}" {
+           Name "TextTitleSandstormSpeed"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Speed"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        PanelWidgetClass "{000000000F3A593B}" {
+         Name "SandstormDurationPanel"
+         visible 1
+         clipchildren 0
+         color 1 0.286 0.286 1
+         position 0.05 0.8
+         size 0.9 0.045
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style blank
+         {
+          TextWidgetClass "{00000000DEAE1CCB}" {
+           Name "TextSandstormDuration"
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           position 0.425 -1.6
+           size 0.15 1.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "gui/fonts/sdf_MetronBook24"
+           "exact text" 0
+          }
+          TextWidgetClass "{0000000070F03B7E}" {
+           Name "TextTitleSandstormDuration"
+           clipchildren 0
+           ignorepointer 1
+           position 0.25 -3
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Duration to end point"
+           font "gui/fonts/sdf_MetronBook72"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass "{000000008C58660E}" {
+         Name "ButtonStartSandstorm"
+         clipchildren 1
+         position -0.25 0.02
+         size 0.3 0.1
+         halign center_ref
+         valign bottom_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scriptclass ""
+         "no focus" 0
+         text "Start"
+         text_proportion 0.6
+         font "gui/fonts/sdf_MetronBook24"
+        }
+        ButtonWidgetClass "{00000000F2FB38C5}" {
+         Name "ButtonStopSandstorm"
+         clipchildren 1
+         position 0.25 0.02
+         size 0.3 0.1
+         halign center_ref
+         valign bottom_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scriptclass ""
+         "no focus" 0
+         text "Stop"
+         text_proportion 0.6
+         font "gui/fonts/sdf_MetronBook24"
+        }
+       }
+      }
+      ImageWidgetClass "{69C6A40363814B16}" {
+       Name "ImageBackgroundSandstorm0"
+       visible 1
+       ignorepointer 1
+       color 0.09 0.078 0.078 0.549
+       position 0.7 0.33
+       size 0.2 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       mode blend
+       {
+        ButtonWidgetClass "{69C6A40363814B35}" {
+         Name "ButtonStartSandstormWeather"
+         clipchildren 1
+         position 0.01 0
+         size 0.48 1
+         halign left
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scriptclass ""
+         "no focus" 0
+         text "Start from Weather"
+         text_proportion 0.6
+         font "gui/fonts/sdf_MetronBook24"
+        }
+        ButtonWidgetClass "{69C6A40363814B33}" {
+         Name "ButtonStopSandstormWeather"
+         clipchildren 1
+         position 0.01 0
+         size 0.48 1
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scriptclass ""
+         "no focus" 0
+         text "Stop from Weather"
+         text_proportion 0.6
+         font "gui/fonts/sdf_MetronBook24"
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass "{0000000015987DF1}" {
+     Name "ButtonHide"
+     clipchildren 1
+     position 0.01 0
+     size 36 36
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     scriptclass ""
+     "no focus" 0
+     text_proportion 0.6
+     font "gui/fonts/sdf_MetronBook24"
+     {
+      ImageWidgetClass "{00000000D1FB0B24}" {
+       Name "ButtonHideIcon"
+       ignorepointer 1
+       size 36 36
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       image0 "set:dayz_gui image:PasswordEyeClose"
+       mode blend
+       "src alpha" 1
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{00000000AE2C6AA1}" {
+   Name "MenuWindow"
+   ignorepointer 1
+   color 0 0 0 0.502
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style rover_sim_colorable
+  }
+ }
+}

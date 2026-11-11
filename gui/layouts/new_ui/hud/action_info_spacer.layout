@@ -1,0 +1,264 @@
+WrapSpacerWidgetClass MainWrap {
+ visible 1
+ clipchildren 0
+ inheritalpha 0
+ color 0 0 0 0
+ position 0 0
+ size 350 51
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ scaled 1
+ scriptclass ""
+ style Empty
+ Padding 0
+ Margin 0
+ "Size To Content V" 1
+ {
+  GridSpacerWidgetClass MainGrid {
+   ignorepointer 1
+   color 1 1 1 0
+   position 58.305 4.321
+   size 251.126 28.814
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   Padding 0
+   Margin 3
+   "Size To Content H" 1
+   "Size To Content V" 1
+   Columns 100
+   Rows 100
+   {
+    GridSpacerWidgetClass SecondaryGrid0 {
+     visible 1
+     ignorepointer 1
+     color 0 0 0 0
+     position 0 0
+     size 51 51
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     Padding 0
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     Rows 100
+     {
+      WrapSpacerWidgetClass IconMarginCard_Wrap4 {
+       visible 1
+       ignorepointer 1
+       color 0 0 0 0
+       position 0 0
+       size 55 55
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 0
+       {
+        ImageWidgetClass IconBg_Image4 {
+         visible 1
+         ignorepointer 1
+         color 0 0 0 0
+         size 51 51
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         mode blend
+        }
+       }
+      }
+      WrapSpacerWidgetClass IconMarginCard_Wrap5 {
+       visible 1
+       ignorepointer 1
+       color 0 0 0 0
+       position 0 0
+       size 55 55
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 0
+       {
+        ImageWidgetClass IconBg_Image5 {
+         visible 1
+         ignorepointer 1
+         color 0 0 0 0
+         size 51 51
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         mode blend
+        }
+       }
+      }
+      WrapSpacerWidgetClass IconMarginCard_Wrap6 {
+       visible 1
+       ignorepointer 1
+       color 0 0 0 0
+       position 0 0
+       size 55 55
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 0
+       {
+        ImageWidgetClass IconBg_Imag6 {
+         visible 1
+         ignorepointer 1
+         color 0 0 0 0
+         size 51 51
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         mode blend
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass Separator {
+     visible 1
+     ignorepointer 1
+     color 1 1 1 0
+     position 0 0
+     size 14 55
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass Spacer_Image {
+       visible 1
+       ignorepointer 1
+       color 1 1 1 0
+       size 3 15
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       image0 ""
+       mode blend
+      }
+     }
+    }
+    GridSpacerWidgetClass SecondaryGrid1 {
+     visible 1
+     ignorepointer 1
+     color 0 0 0 0
+     position 0 0
+     size 51 51
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     Padding 0
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     Columns 5
+     Rows 100
+     {
+      WrapSpacerWidgetClass IconMarginCard_Wrap1 {
+       visible 1
+       ignorepointer 1
+       color 0 0 0 0
+       position 0 0
+       size 55 55
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 0
+       {
+        ImageWidgetClass IconBg_Image1 {
+         visible 1
+         ignorepointer 1
+         color 0 0 0 0
+         size 51 51
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         mode blend
+        }
+       }
+      }
+      WrapSpacerWidgetClass IconMarginCard_Wrap2 {
+       visible 1
+       ignorepointer 1
+       color 0 0 0 0
+       position 0 0
+       size 55 55
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 0
+       {
+        ImageWidgetClass IconBg_Image2 {
+         visible 1
+         ignorepointer 1
+         color 0 0 0 0
+         size 51 51
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         mode blend
+        }
+       }
+      }
+      WrapSpacerWidgetClass IconMarginCard_Wrap3 {
+       visible 1
+       ignorepointer 1
+       color 0 0 0 0
+       position 0 0
+       size 55 55
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 0
+       {
+        ImageWidgetClass IconBg_Image3 {
+         visible 1
+         ignorepointer 1
+         color 0 0 0 0
+         size 51 51
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         mode blend
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

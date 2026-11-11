@@ -1,0 +1,23 @@
+MetaFileClass {
+ Name "{2AA6A3D3E97DF2C9}ui/fonts/robotomono_msdf_28.edds"
+ Configurations {
+  TGAResourceClass PC : "{F18523FA5BAAEA63}configs/ResourceTypes/PC/TextureFonts.conf" {
+   Conversion ColorHQCompression
+  }
+  TGAResourceClass XBOX_ONE : "{02B393E0229C74CB}configs/ResourceTypes/XBOX_ONE/TextureFonts.conf" {
+   Conversion ColorHQCompression
+  }
+  TGAResourceClass PS4 : "{3C102C974458DF07}configs/ResourceTypes/PS4/TextureFonts.conf" {
+   Conversion ColorHQCompression
+  }
+  TGAResourceClass HEADLESS : "{D20F8633D63483FA}configs/ResourceTypes/HEADLESS/TextureFonts.conf" {
+   Conversion ColorHQCompression
+  }
+  TGAResourceClass XBOX_SERIES : "{85ECC27BD918BA89}configs/ResourceTypes/XBOX_SERIES/TextureFonts.conf" {
+   Conversion ColorHQCompression
+  }
+  TGAResourceClass PS5 : "{863E314F45203AC4}configs/ResourceTypes/PS5/TextureFonts.conf" {
+   Conversion ColorHQCompression
+  }
+ }
+}

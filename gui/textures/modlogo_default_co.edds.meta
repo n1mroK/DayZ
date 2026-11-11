@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{9D87474F8D9236BF}Gui/textures/modlogo_default_co.edds"
+ Author "4941"
+ ChangeDate -759419158
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "modlogo_default_co.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

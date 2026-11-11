@@ -1,0 +1,2105 @@
+class TurnItemIntoItemLambda extends ReplaceItemWithNewLambda
+{
+	bool m_TransferAgents;
+	bool m_TransferVariables;
+	bool m_TransferHealth;
+	bool m_ExcludeQuantity;
+	float m_quantity_override;
+	
+	void TurnItemIntoItemLambda (EntityAI old_item, string new_item_type, PlayerBase player)
+	{
+		SetTransferParams();
+	}
+	
+	void SetTransferParams(bool transfer_agents = true, bool transfer_variables = true, bool transfer_health = true, bool exclude_quantity = false, float quantity_override = -1)
+	{
+		m_TransferAgents = transfer_agents;
+		m_TransferVariables = transfer_variables; 
+		m_TransferHealth = transfer_health;
+		m_ExcludeQuantity = exclude_quantity;
+		m_quantity_override = quantity_override;
+	}
+
+	override void CopyOldPropertiesToNew(notnull EntityAI old_item, EntityAI new_item)
+	{
+		super.CopyOldPropertiesToNew(old_item, new_item);
+
+		if (new_item) 
+		{
+			MiscGameplayFunctions.TransferItemProperties(old_item, new_item, m_TransferAgents, m_TransferVariables, m_TransferHealth, m_ExcludeQuantity);
+			MiscGameplayFunctions.TransferInventory(old_item, new_item, m_Player);
+			
+			//quantity override
+			if (ItemBase.Cast(new_item) && m_quantity_override != -1)
+			{
+				m_quantity_override = Math.Max(m_quantity_override,0);
+				ItemBase.Cast(new_item).SetQuantity(m_quantity_override);
+			}
+		}
+		else
+		{
+			Debug.LogError("TurnItemIntoItemLambda: failed to create new item","static");
+		}
+	}
+	
+	//! if attaching from att.slot to att.slot, skips the change to "ground" version. Allows for correct property transfers.
+	override void VerifyItemTypeBySlotType ()
+	{
+		if (m_NewLocation.GetType() == InventoryLocationType.ATTACHMENT && m_OldItem.ConfigIsExisting("ChangeIntoOnAttach"))
+		{
+			string str;
+			int idx = -1;
+			TStringArray inventory_slots = new TStringArray;
+			TIntArray inventory_slots_idx = new TIntArray;
+			TStringArray attach_types = new TStringArray;
+			
+			m_OldItem.ConfigGetTextArray("ChangeInventorySlot",inventory_slots);
+			if (inventory_slots.Count() < 1) //is string
+			{
+				inventory_slots_idx.Insert(InventorySlots.GetSlotIdFromString(m_OldItem.ConfigGetString("ChangeInventorySlot")));
+				attach_types.Insert(m_OldItem.ConfigGetString("ChangeIntoOnAttach"));
+			}
+			else //is array
+			{
+				inventory_slots_idx.Clear();
+				for (int i = 0; i < inventory_slots.Count(); ++i)
+				{
+					inventory_slots_idx.Insert(InventorySlots.GetSlotIdFromString(inventory_slots.Get(i)));
+				}
+				m_OldItem.ConfigGetTextArray("ChangeIntoOnAttach",attach_types);
+			}
+		
+			idx = m_NewLocation.GetSlot();
+			str = attach_types.Get(inventory_slots_idx.Find(idx));
+			if (str != "")
+			{
+				m_NewItemType = str;
+			}
+		}
+	}
+	
+	override void OnSuccess (EntityAI new_item)
+	{
+		super.OnSuccess(new_item);
+		if( m_Player )
+		{
+			m_Player.GetItemAccessor().OnItemInHandsChanged();
+		}
+	}
+};
+
+class TurnItemIntoItemLambdaAnimSysNotifyLambda extends TurnItemIntoItemLambda
+{
+	override void OnSuccess (EntityAI new_item)
+	{
+		super.OnSuccess(new_item);
+		if( m_Player )
+		{
+			m_Player.GetItemAccessor().OnItemInHandsChanged();
+		}
+	}
+}
+
+class TurnItemIntoItemLambdaRestrainLambda extends TurnItemIntoItemLambdaAnimSysNotifyLambda
+{
+	override void OnSuccess (EntityAI new_item)
+	{
+		super.OnSuccess(new_item);
+		m_Player.SetRestrained(true);
+	}
+}
+
+/**@class		DropEquipAndDestroyRootLambda
+ * @brief		this one is a bit special: it drops all items and destroys the ex-root of the hierarchy
+ **/
+class DropEquipAndDestroyRootLambda : ReplaceItemWithNewLambdaBase
+{
+	PlayerBase m_Player;
+
+	void DropEquipAndDestroyRootLambda (EntityAI old_item, string new_item_type, PlayerBase player)
+	{
+		m_Player = player;
+	}
+	
+	override void CopyOldPropertiesToNew (notnull EntityAI old_item, EntityAI new_item)
+	{
+		super.CopyOldPropertiesToNew(old_item, new_item);
+		
+		InventoryLocation understash_src = m_NewLocation; // m_NewLocation is a backup of original old_item's src before the operation started
+		
+		array<EntityAI> children = new array<EntityAI>;
+		old_item.GetInventory().EnumerateInventory(InventoryTraversalType.LEVELORDER, children);
+		int count = children.Count();
+		for (int i = 0; i < count; ++i)
+		{
+			EntityAI child = children.Get(i);
+			if (child)
+			{
+				InventoryLocation child_src = new InventoryLocation;
+				child.GetInventory().GetCurrentInventoryLocation(child_src);
+				
+				InventoryLocation child_dst = new InventoryLocation;
+				//@TODO: modify _dst with place on gnd?
+				
+				vector m4[4];
+				Math3D.MatrixIdentity4(m4);
+				
+				//! We don't care if a valid transform couldn't be found, we just want to preferably use it instead of placing on the old item
+				GameInventory.PrepareDropEntityPos(old_item, child, m4, false, -1);
+				
+				child_dst.SetGround(child,m4);
+				
+				m_Player.LocalTakeToDst(child_src, child_dst);
+												
+				g_Game.RemoteObjectTreeCreate(child); // this forces server to send CreateVehicle Message to client. This is needed for preserving the appearance of network operations on client (so that DeleteObject(old) arrives before CreateVehicle(new)). @NOTE: this does not delete the object on server, only it's network representation.
+			}
+		}
+	}
+}
+
+/**@class		MoveEquipToExistingItemAndDestroyOldRootLambda
+ * @brief		this one is a also bit special: it moves all items to already existing item and destroys the ex-root of the hierarchy
+ **/
+class MoveEquipToExistingItemAndDestroyOldRootLambda : ReplaceItemWithNewLambdaBase
+{
+	PlayerBase m_Player;
+	EntityAI m_NewItem;
+
+	void MoveEquipToExistingItemAndDestroyOldRootLambda (EntityAI old_item, string new_item_type, PlayerBase player, EntityAI new_item)
+	{
+		m_Player = player;
+		m_NewItem = new_item;
+		if (new_item_type != string.Empty)
+			Error("MoveEquipAndDestroyRootLambda expects new_item_type to be empty");
+	}
+	
+	override protected void RemoveNetworkObjectInfo ()
+	{
+		super.RemoveNetworkObjectInfo();
+		g_Game.RemoteObjectTreeDelete(m_NewItem);
+	}
+	override protected void UndoRemoveNetworkObjectInfo ()
+	{
+		super.UndoRemoveNetworkObjectInfo();
+		g_Game.RemoteObjectTreeCreate(m_NewItem);
+	}
+	
+	override void CopyOldPropertiesToNew (notnull EntityAI old_item, EntityAI new_item)
+	{
+		// @NOTE: new_item is NULL, this lambda does not create new entity
+		super.CopyOldPropertiesToNew(old_item, new_item);
+		
+		MiscGameplayFunctions.TransferInventory(old_item, m_NewItem, m_Player);		
+	}
+	
+	override protected void CreateNetworkObjectInfo (EntityAI new_item)
+	{
+		super.CreateNetworkObjectInfo(new_item);
+		g_Game.RemoteObjectTreeCreate(m_NewItem);
+	}
+};
+
+enum TransferInventoryResult
+{
+	Ok, DroppedSome
+};
+
+enum ThrowEntityFlags
+{
+	NONE = 0,
+	SPLIT = 1, //< Splits the item when it has quantity, recommended to use when called on an attachment
+}
+
+class MiscGameplayFunctions
+{
+	static const float OBJECT_OBSTRUCTION_MIN_DISTANCE_SQ = 0.0625; //! squared distance below which an obstruction raycast is pointless, nothing can fit in between [default 0.25m]
+	
+	//! truncate float to specified precision
+	static float Truncate(float value, int decimals = 2)
+	{
+		int multiplier = Math.Pow(10,decimals);
+		return Math.Clamp(Math.Floor(value * multiplier),float.LOWEST, float.MAX) / multiplier;
+	}
+	//! truncate float to specified precision, output as string
+	static string TruncateToS(float value, int decimals = 2)
+	{
+		return Truncate(value, decimals).ToString();
+	}
+	//! truncate float to specified precision
+	static vector TruncateVec(vector value, int decimals = 2)
+	{
+		int multiplier = Math.Pow(10,decimals);
+		float v1 = Math.Clamp(Math.Floor(value[0] * multiplier),float.LOWEST, float.MAX) / multiplier;
+		float v2 = Math.Clamp(Math.Floor(value[1] * multiplier),float.LOWEST, float.MAX) / multiplier;
+		float v3 = Math.Clamp(Math.Floor(value[2] * multiplier),float.LOWEST, float.MAX) / multiplier;
+		return Vector(v1,v2,v3);
+	}
+	
+	static string TruncateVecToS(vector value,int decimals = 2, string delimiter = " ")
+	{
+		return MiscGameplayFunctions.TruncateToS(value[0],decimals) + delimiter + MiscGameplayFunctions.TruncateToS(value[1],decimals) +delimiter + MiscGameplayFunctions.TruncateToS(value[2],decimals);
+	}
+	
+	static string GetColorString(float r, float g, float b, float a)
+	{
+		return string.Format("#(argb,8,8,3)color(%1,CO)", string.Format("%1,%2,%3,%4", r, g, b, a));
+	}
+	
+	//! Produces ACII "progress bar" based on an 0..1 'value' input
+	static string ValueToBar(float value, string bar = "[----------]", string mark = "x")
+	{
+		int length = bar.Length() - 2;
+		float index = Math.Lerp(0,length, value);
+		index = Math.Round(index);
+		index = Math.Clamp(index,0,length);
+		
+		return InsertAtPos(bar,mark,index);
+	}
+	
+	//! Insert 'insert' behind index 'pos' of the 'base' string
+	static string InsertAtPos(string base, string insert, int pos)
+	{
+		int length_first = pos+1;
+		int length_base = base.Length();
+		int length_second = length_base - length_first;
+		string first = base.Substring(0,length_first);
+		string second = base.Substring(pos+1,length_second);
+		return first + insert + second;
+	}
+	
+	//! will transform variables, agents and other local scripted properties as well as any relevant non-scripted properties like health
+	static void TransferItemProperties(EntityAI source, notnull EntityAI target, bool transfer_agents = true, bool transfer_variables = true, bool transfer_health = true, bool exclude_quantity = false)
+	{
+		ItemBase target_ib = ItemBase.Cast(target);
+		
+		if (transfer_agents && target_ib)
+			target_ib.TransferAgents(source.GetAgents());
+		
+		if (transfer_variables)
+			MiscGameplayFunctions.TransferEntityVariables(source, target, exclude_quantity);
+		
+		if (g_Game.IsServer() || !g_Game.IsMultiplayer())
+		{
+			if (transfer_health)
+			{
+				TransferEntityHealth(source,target,{"Health"});
+			}
+		}
+	}
+
+	static void TransferEntityVariables(EntityAI source, EntityAI target, bool exclude_quantity = false)
+	{
+		if (exclude_quantity)
+		{
+			int maskOriginal = source.m_VariablesMask;
+			source.RemoveItemVariable(VARIABLE_QUANTITY);
+			target.TransferVariablesFloat(source.GetVariablesFloat());
+			source.m_VariablesMask = maskOriginal;
+		}
+		else
+		{
+			target.TransferVariablesFloat(source.GetVariablesFloat());
+		}
+		
+		if (source.IsMagazine() && target.IsMagazine())
+		{
+			Magazine source_mag = Magazine.Cast(source);
+			Magazine target_mag = Magazine.Cast(target);
+			
+			target_mag.ServerSetAmmoCount(source_mag.GetAmmoCount());
+		}
+		
+		if (source.IsWeapon() && target.IsWeapon())
+		{
+			Weapon_Base source_wpn = Weapon_Base.Cast(source);
+			Weapon_Base target_wpn = Weapon_Base.Cast(target);
+			
+			target_wpn.CopyWeaponStateFrom(source_wpn);
+		}
+		
+		if (source.HasEnergyManager() && target.HasEnergyManager())
+		{
+			ComponentEnergyManager ems = source.GetCompEM();
+			ComponentEnergyManager emt = target.GetCompEM();
+			
+			emt.SetEnergy(ems.GetEnergy());
+			
+			if (ems.IsSwitchedOn())
+				emt.SwitchOn();
+		}
+		
+		Edible_Base source_edb = Edible_Base.Cast(source);
+		Edible_Base target_edb = Edible_Base.Cast(target);
+		if (Class.CastTo(source_edb,source) && Class.CastTo(target_edb,target))
+		{
+			if (source_edb.CanDecay() && target_edb.CanDecay())
+				target_edb.TransferFoodStage(source_edb);
+		}
+	}
+	
+	//! DEPRECATED
+	static void TransferItemVariables(ItemBase source, ItemBase target, bool exclude_quantity = false)
+	{
+		TransferEntityVariables(source,target,exclude_quantity);
+	}
+
+	static TransferInventoryResult TransferInventory( EntityAI sourceItem, EntityAI targetItem, PlayerBase player)
+	{
+		TransferInventoryResult result = TransferInventoryResult.Ok;
+
+		array<EntityAI> children = new array<EntityAI>;
+		sourceItem.GetInventory().EnumerateInventory(InventoryTraversalType.LEVELORDER, children);
+		int count = children.Count();
+		for (int i = 0; i < count; ++i)
+		{
+			EntityAI child = children.Get(i);
+			if (child)
+			{
+				InventoryLocation child_src = new InventoryLocation;
+				child.GetInventory().GetCurrentInventoryLocation( child_src );
+				
+				InventoryLocation child_dst = new InventoryLocation;
+				child_dst.Copy( child_src );
+				child_dst.SetParent( targetItem );
+
+				bool drop = false;
+
+				if (GameInventory.LocationCanAddEntity(child_dst))
+				{
+					// try to move it to the same exact place in dst
+					targetItem.GetInventory().TakeToDst(InventoryMode.LOCAL, child_src, child_dst);
+				}
+				else
+				{
+					drop = true; // or drop otherwise
+				}
+
+				if (drop)
+				{
+					player.LocalDropEntity(child);
+					g_Game.RemoteObjectTreeCreate(child);
+					result = TransferInventoryResult.DroppedSome;
+				}
+			}
+		}
+		return result;
+	}
+	
+	static void TransferEntityHealth(EntityAI source, EntityAI target, array<string> healthTypes = null, bool transferZoneDamage = true)
+	{
+		array<string> HPTypes = new array<string>;
+		if (!healthTypes || healthTypes.Count() == 0)
+			HPTypes.Insert("Health");
+		else
+			HPTypes.Copy(healthTypes);
+		
+		if (transferZoneDamage)
+		{
+			TStringArray zonesSrc = new TStringArray;
+			TStringArray zonesTgt = new TStringArray;
+			source.GetDamageZones(zonesSrc);
+			target.GetDamageZones(zonesTgt);
+			
+			foreach (string zone : zonesSrc)
+			{
+				if (zonesTgt.Find(zone) == -1)
+					continue;
+				
+				foreach (string health : HPTypes)
+				{
+					target.SetHealth01(zone,health,source.GetHealth01(zone,health));
+				}
+			}
+		}
+		
+		foreach (string gHealth : HPTypes)
+		{
+			target.SetHealth01("",gHealth,source.GetHealth01("",gHealth)); //global health last
+		}
+	}
+	
+	static void UnlimitedAmmoDebugCheck(Weapon_Base weapon)
+	{
+		if ( ItemBase.GetDebugActionsMask() & DebugActionType.UNLIMITED_AMMO )
+		{
+			Magazine magazine;
+			if ( g_Game.IsServer() )
+			{
+				magazine = weapon.GetMagazine(weapon.GetCurrentMuzzle());
+			
+				if (magazine)
+				{
+					if (magazine.GetAmmoCount() <= 5)
+					{
+						magazine.ServerSetAmmoMax();
+					}
+				}
+			}
+			else
+			{
+				magazine = weapon.GetMagazine(weapon.GetCurrentMuzzle());
+			
+				if (magazine)
+				{
+					if (magazine.GetAmmoCount() <= 5)
+					{
+						magazine.LocalSetAmmoMax();
+					}
+				}
+			
+			}
+		}
+	}
+	
+
+		
+	static void TurnItemIntoItem (notnull ItemBase old_item, string new_item_type, notnull PlayerBase player)
+	{
+		TurnItemIntoItemEx(player, new TurnItemIntoItemLambda(old_item, new_item_type, player));
+	}
+		
+	static void TurnItemIntoItemEx (notnull PlayerBase player, ReplaceItemWithNewLambdaBase lambda)
+	{
+		player.ServerReplaceItemWithNew(lambda);
+	}
+
+	static void TurnItemInHandsIntoItem (notnull ItemBase old_item, string new_item_type, notnull PlayerBase player)
+	{
+		TurnItemInHandsIntoItemEx(player, new TurnItemIntoItemLambda(old_item, new_item_type, player));
+	}
+	
+	static void TurnItemInHandsIntoItemEx (notnull PlayerBase player, ReplaceItemWithNewLambdaBase lambda)
+	{
+		player.ServerReplaceItemInHandsWithNew(lambda);
+	}
+
+	//!Spawns multiple piles of stackable ItemBase objects on ground (intended for generic use)
+	static array<ItemBase> CreateItemBasePiles(string item_name, vector ground_position, float quantity, float health, bool floaty_spawn = false)
+	{
+		return CreateItemBasePilesEx(item_name, ground_position, quantity, health, floaty_spawn);
+	}
+
+	static array<ItemBase> CreateItemBasePilesEx(string itemName, vector groundPosition, float quantity, float health, bool floatySpawn = false, bool throwAfterSpawn = false)
+	{
+		array<ItemBase>	itemPiles;
+		float maxStackSize;
+		ItemBase pile;
+		
+		itemPiles = new array<ItemBase>;
+		maxStackSize = g_Game.ConfigGetInt("cfgVehicles " + itemName + " varStackMax");
+		if( maxStackSize < 1)
+			maxStackSize = g_Game.ConfigGetInt("cfgVehicles " + itemName + " varQuantityMax");
+		if( maxStackSize < 1)
+			maxStackSize = 1;
+		
+		int fullPilesCount = Math.Floor(quantity/maxStackSize);
+		int rest = quantity - (fullPilesCount * maxStackSize);
+		
+		for (int i = 0; i < fullPilesCount; ++i)
+		{
+			if (floatySpawn)
+			{
+				pile = ItemBase.Cast(g_Game.CreateObjectEx(itemName, groundPosition, ECE_CREATEPHYSICS|ECE_UPDATEPATHGRAPH));
+			}
+			else
+			{
+				pile = ItemBase.Cast(g_Game.CreateObjectEx(itemName, groundPosition, ECE_PLACE_ON_SURFACE));
+			}
+			
+			pile.SetQuantity(maxStackSize);
+			pile.SetHealth(health);
+
+			if (throwAfterSpawn)
+			{
+				pile.ThrowPhysically(null, vector.Zero);
+			}
+
+			itemPiles.Insert(pile);
+		}
+		
+		if (rest > 0)
+		{
+			if (floatySpawn)
+			{
+				pile = ItemBase.Cast(g_Game.CreateObjectEx(itemName, groundPosition, ECE_CREATEPHYSICS|ECE_UPDATEPATHGRAPH));
+			}
+			else
+			{
+				pile = ItemBase.Cast(g_Game.CreateObjectEx(itemName, groundPosition, ECE_PLACE_ON_SURFACE));
+			}
+			
+			pile.SetQuantity(rest);
+			pile.SetHealth(health);
+
+			if (throwAfterSpawn)
+			{
+				pile.ThrowPhysically(null, vector.Zero);
+			}
+
+			itemPiles.Insert(pile);
+		}
+		
+		return itemPiles;
+	}
+	
+	//! creation method using raycast-dispersed positioning; ECE_TRACE not used as a result
+	static array<ItemBase> CreateItemBasePilesDispersed(string item_name, vector starPos, vector targetPos, float radius, float quantity, float health, Object ignoreObjectCollison)
+	{
+		array<ItemBase>	item_piles;
+		float max_stack_size;
+		ItemBase pile;
+		
+		item_piles = new array<ItemBase>;
+		max_stack_size = g_Game.ConfigGetInt("cfgVehicles " + item_name + " varStackMax");
+		if( max_stack_size < 1)
+			max_stack_size = g_Game.ConfigGetInt("cfgVehicles " + item_name + " varQuantityMax");
+		if( max_stack_size < 1)
+			max_stack_size = 1;
+		
+		int full_piles_count = Math.Floor(quantity/max_stack_size);
+		int rest = quantity - (full_piles_count*max_stack_size);
+		vector randomizedPos;
+		
+		for (int i = 0; i < full_piles_count; ++i)
+		{
+			randomizedPos = MiscGameplayFunctions.GetRandomizedPositionVerified(starPos,targetPos,radius,ignoreObjectCollison);
+			pile = ItemBase.Cast(g_Game.CreateObjectEx(item_name, randomizedPos, ECE_PLACE_ON_SURFACE));
+			pile.SetQuantity(max_stack_size);
+			pile.SetHealth(health);
+			item_piles.Insert(pile);
+		}
+		
+		if (rest > 0)
+		{
+			randomizedPos = MiscGameplayFunctions.GetRandomizedPositionVerified(starPos,targetPos,radius,ignoreObjectCollison);
+			pile = ItemBase.Cast(g_Game.CreateObjectEx(item_name, randomizedPos, ECE_PLACE_ON_SURFACE));
+			pile.SetQuantity(rest);
+			pile.SetHealth(health);
+			item_piles.Insert(pile);
+		}
+		return item_piles;
+	}
+	
+	static array<Magazine> CreateMagazinePiles(string item_name, vector ground_position, float quantity,  float health )
+	{
+		array<Magazine>	items;
+		float stack_size;
+		Magazine pile;
+		
+		items = new array<Magazine>;
+		stack_size = g_Game.ConfigGetInt("cfgMagazines " + item_name + " count");
+		
+		int piles_count = Math.Floor(quantity/stack_size);
+		int rest = quantity - (piles_count*stack_size);
+		
+		for (int i = 0; i < piles_count; ++i)
+		{
+			pile = Magazine.Cast(g_Game.CreateObjectEx(item_name, ground_position, ECE_PLACE_ON_SURFACE));
+			pile.ServerSetAmmoCount(stack_size);
+			items.Insert(pile);
+		}
+		if (rest > 0)
+		{
+			pile = Magazine.Cast(g_Game.CreateObjectEx(item_name, ground_position, ECE_PLACE_ON_SURFACE));
+			pile.ServerSetAmmoCount(rest);
+			items.Insert(pile);
+		}
+		return items;
+	}
+	
+	//! creation method using raycast-dispersed positioning; ECE_TRACE not used as a result
+	static array<Magazine> CreateMagazinePilesDispersed(string item_name, vector starPos, vector targetPos, float radius, float quantity, float health, Object ignoreObjectCollison)
+	{
+		array<Magazine>	items;
+		float stack_size;
+		Magazine pile;
+		
+		items = new array<Magazine>;
+		stack_size = g_Game.ConfigGetInt("cfgMagazines " + item_name + " count");
+		
+		int piles_count = Math.Floor(quantity/stack_size);
+		int rest = quantity - (piles_count*stack_size);
+		vector randomizedPos;
+		
+		for (int i = 0; i < piles_count; ++i)
+		{
+			randomizedPos = MiscGameplayFunctions.GetRandomizedPositionVerified(starPos,targetPos,radius,ignoreObjectCollison);
+			pile = Magazine.Cast(g_Game.CreateObjectEx(item_name, randomizedPos, ECE_CREATEPHYSICS|ECE_UPDATEPATHGRAPH));
+			pile.ServerSetAmmoCount(stack_size);
+			items.Insert(pile);
+		}
+		
+		if (rest > 0)
+		{
+			randomizedPos = MiscGameplayFunctions.GetRandomizedPositionVerified(starPos,targetPos,radius,ignoreObjectCollison);
+			pile = Magazine.Cast(g_Game.CreateObjectEx(item_name, randomizedPos, ECE_CREATEPHYSICS|ECE_UPDATEPATHGRAPH));
+			pile.ServerSetAmmoCount(rest);
+			items.Insert(pile);
+		}
+		return items;
+	}
+	
+	static array<Magazine> CreateMagazinePilesFromBullet(string bullet_type, vector ground_position, float quantity,  float health )
+	{
+		array<Magazine>	items;
+		items = new array<Magazine>;
+		float stack_size;
+		Magazine pile;
+		string item_name;
+		if (!g_Game.ConfigGetText("cfgAmmo " + bullet_type + " spawnPileType", item_name))
+			return items;
+		
+		stack_size = g_Game.ConfigGetInt("cfgMagazines " + item_name + " count");
+		
+		if (stack_size > 0)
+		{
+			int piles_count = Math.Floor(quantity/stack_size);
+			int rest = quantity - (piles_count*stack_size);
+		
+			for (int i = 0; i < piles_count; ++i)
+			{
+				pile = Magazine.Cast(g_Game.CreateObjectEx(item_name, ground_position, ECE_PLACE_ON_SURFACE));
+				pile.ServerSetAmmoCount(stack_size);
+				items.Insert(pile);
+			}
+			
+			if (rest > 0)
+			{
+				pile = Magazine.Cast(g_Game.CreateObjectEx(item_name, ground_position, ECE_PLACE_ON_SURFACE));
+				pile.ServerSetAmmoCount(rest);
+				items.Insert(pile);
+			}
+		}
+		return items;
+	}
+	
+	//CreateMagazinePilesDispersed(string item_name, vector starPos, vector targetPos, float radius, float quantity, float health, Object ignoreObjectCollison)
+	static array<Magazine> CreateMagazinePilesFromBulletDispersed(string bullet_type, vector starPos, vector targetPos, float radius, float quantity, float health, Object ignoreObjectCollison)
+	{
+		array<Magazine>	items = new array<Magazine>;
+		Magazine pile;
+		string item_name;
+		if (!g_Game.ConfigGetText("cfgAmmo " + bullet_type + " spawnPileType", item_name))
+			return items;
+		
+		items = CreateMagazinePilesDispersed(item_name,starPos,targetPos,radius,quantity,health,ignoreObjectCollison);
+		return items;
+	}
+	
+	static int GetHealthLevelForAmmo(string class_name, float health)
+	{
+		float health_normalized = health / 100;
+		string config_path = CFG_WEAPONSPATH + " " + class_name + " DamageSystem" + " GlobalHealth" + " healthLabels";
+		CachedObjectsArrays.ARRAY_FLOAT.Clear();
+		g_Game.ConfigGetFloatArray(config_path, CachedObjectsArrays.ARRAY_FLOAT);
+		for(int i = 0; i < CachedObjectsArrays.ARRAY_FLOAT.Count(); ++i)
+		{
+			if( health_normalized >= CachedObjectsArrays.ARRAY_FLOAT.Get(i) )
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	static float GetTypeMaxGlobalHealth(string class_name, string health_type = "Health")
+	{
+		float max_health;
+		string cfg_path;
+		
+		if ( g_Game.ConfigIsExisting(CFG_VEHICLESPATH+" "+class_name) )
+		{
+			cfg_path = CFG_VEHICLESPATH;
+		}
+		else if ( g_Game.ConfigIsExisting(CFG_WEAPONSPATH+" "+class_name) )
+		{
+			cfg_path = CFG_WEAPONSPATH;
+		}
+		else if ( g_Game.ConfigIsExisting(CFG_MAGAZINESPATH+" "+class_name) )
+		{
+			cfg_path = CFG_MAGAZINESPATH;
+		}
+		cfg_path = cfg_path + " "+class_name+" DamageSystem GlobalHealth " + health_type + " hitpoints";
+		max_health = g_Game.ConfigGetFloat(cfg_path);
+		
+		return max_health;
+	}
+	
+	static bool GetProjectedCursorPos3d (out vector position, Weapon_Base weapon)
+	{
+		vector usti_hlavne_position = weapon.GetSelectionPositionMS( "usti hlavne" );
+		vector konec_hlavne_position = weapon.GetSelectionPositionMS( "konec hlavne" );
+		vector end_point = weapon.ModelToWorld(usti_hlavne_position);
+		vector begin_point = weapon.ModelToWorld(konec_hlavne_position);
+		vector contact_dir;
+		int contact_component;
+		
+		vector aim_point = end_point - begin_point;
+		aim_point = aim_point.Normalized() * PROJECTED_CURSOR_DISTANCE;
+		aim_point = aim_point + end_point;
+		
+		if (DayZPhysics.RaycastRV(begin_point, aim_point, position, contact_dir, contact_component, null, null, null, false, false, ObjIntersectFire))
+			return true;
+		return false;
+	}
+	
+	static void GetHeadBonePos(notnull PlayerBase player, out vector pos)
+	{
+		// Get position of head for starting trace pos, otherwise use sane default
+		int headBoneIdx = player.GetBoneIndexByName("Head");
+		if ( headBoneIdx == -1 )
+			{ pos = player.GetPosition()[1] + 1.6; }
+		else
+			{ pos = player.GetBonePositionWS(headBoneIdx); }	
+	}
+
+	/*!
+		\brief Returns approximated height(from terrain) of head in WS which takes the player's stance into account
+		       Preferred method over GetHeadBonePos variant which can be expensive on perf
+		\param player Reference to player entity
+	*/
+	static float GetPlayerHeadHeight(notnull PlayerBase player)
+	{
+		if (player.IsPlayerInStance(DayZPlayerConstants.STANCEMASK_ERECT|DayZPlayerConstants.STANCEMASK_RAISEDERECT))
+			return PlayerConstants.HEAD_HEIGHT_ERECT;
+		if (player.IsPlayerInStance(DayZPlayerConstants.STANCEMASK_CROUCH|DayZPlayerConstants.STANCEMASK_RAISEDCROUCH))
+			return PlayerConstants.HEAD_HEIGHT_CROUCH;
+		if (player.IsPlayerInStance(DayZPlayerConstants.STANCEMASK_PRONE|DayZPlayerConstants.STANCEMASK_RAISEDPRONE))
+			return PlayerConstants.HEAD_HEIGHT_PRONE;
+		
+		return PlayerConstants.HEAD_HEIGHT_ERECT;
+	}
+
+	/*!
+		\brief Returns approximated position of head in WS which takes the player's stance into account
+		       Preferred method over GetHeadBonePos variant which can be expensive on perf
+		\param player Reference to player entity
+	*/
+	static vector GetPlayerHeadPosition(notnull PlayerBase player)
+	{
+		float headHeight = GetPlayerHeadHeight(player);
+		vector playerPosition = player.GetPosition();
+		vector headPosition = Vector(
+			playerPosition[0],
+			playerPosition[1] + headHeight,
+			playerPosition[2],
+		);
+		
+		return headPosition;
+	}
+
+	static vector GetHeadingVector(notnull PlayerBase player)
+	{
+		vector dir = vector.Zero;
+		float headingAngle = GetHeadingAngle(player);
+		dir[0] = Math.Cos(headingAngle + Math.PI_HALF);
+		dir[2] = Math.Sin(headingAngle + Math.PI_HALF);
+		
+		return dir.Normalized();
+	}
+
+	static float GetHeadingAngle(notnull DayZPlayerImplement player)
+	{
+		HumanInputController hic = player.GetInputController();
+		float headingAngle = hic.GetHeadingAngle();
+		
+		return headingAngle;
+	}
+	
+	static float GetEnergyMetabolicSpeed(int movement_speed)
+	{
+		float speed;
+		switch (movement_speed)
+		{
+		case DayZPlayerConstants.MOVEMENTIDX_WALK:
+			speed = PlayerConstants.METABOLIC_SPEED_ENERGY_WALK;
+		break;
+		case DayZPlayerConstants.MOVEMENTIDX_RUN:
+			speed = PlayerConstants.METABOLIC_SPEED_ENERGY_JOG;
+		break;
+		case DayZPlayerConstants.MOVEMENTIDX_SPRINT:
+			speed = PlayerConstants.METABOLIC_SPEED_ENERGY_SPRINT;
+		break;
+		default:
+			speed = 0;
+		break;
+		}
+
+		speed += PlayerConstants.METABOLIC_SPEED_ENERGY_BASAL;
+		return speed;
+	}
+	
+	static float GetWaterMetabolicSpeed(int movement_speed)
+	{
+		float speed;
+		switch (movement_speed)
+		{
+		case DayZPlayerConstants.MOVEMENTIDX_WALK:
+			speed = PlayerConstants.METABOLIC_SPEED_WATER_WALK;
+		break;
+		case DayZPlayerConstants.MOVEMENTIDX_RUN:
+			speed = PlayerConstants.METABOLIC_SPEED_WATER_JOG;
+		break;
+		case DayZPlayerConstants.MOVEMENTIDX_SPRINT:
+			speed = PlayerConstants.METABOLIC_SPEED_WATER_SPRINT;
+		break;
+		default:
+			speed = 0;
+		break;
+		}
+
+		speed += PlayerConstants.METABOLIC_SPEED_WATER_BASAL;
+		return speed;
+	}
+	
+	static string ObtainRestrainItemTargetClassname(notnull EntityAI entity)
+	{
+		return entity.ConfigGetString( "OnRestrainChange");
+	}
+	
+	static void TransformRestrainItem(EntityAI current_item, EntityAI tool, PlayerBase player_source, PlayerBase player_target, bool destroy = false)
+	{
+		bool type;
+		
+		if ( tool )
+		{
+			//is unrestrain and not struggle
+			type = tool.ConfigGetBool("RestrainUnlockType");
+		}
+		string new_item_name = current_item.ConfigGetString( "OnRestrainChange");
+		
+		if ( new_item_name != "" )
+		{
+			if ( player_target )
+			{
+				if (!player_target.IsAlive() || destroy)
+				{
+					MiscGameplayFunctions.TurnItemIntoItemEx(player_source, new DestroyItemInCorpsesHandsAndCreateNewOnGndLambda(current_item, new_item_name, player_target, type));
+				}
+				else
+				{
+					MiscGameplayFunctions.TurnItemIntoItemEx(player_target, new ReplaceAndDestroyLambdaEx(current_item, new_item_name, player_target, type));
+				}
+			}
+			else
+			{
+				MiscGameplayFunctions.TurnItemIntoItemEx(player_target, new ReplaceAndDestroyLambdaEx(current_item, new_item_name, player_target, type));
+			}
+		}
+		else
+		{
+			Error("current_item:" +current_item+ ", tool:" +tool +". No value for 'OnRestrainChange' config parameter");
+		}
+	}
+	
+	static bool IsValueInRange(float value, float from, float to)
+	{
+		return (value >= from) && (value <= to);
+	}
+
+	//! Check if player direction(based on cone of defined angle) is oriented to target position
+	static bool IsPlayerOrientedTowardPos(notnull DayZPlayerImplement player, vector target_pos, float cone_angle)
+	{
+		if (player)
+		{
+			vector player_dir = player.GetDirection();
+			vector to_target_dir = target_pos - player.GetPosition();
+	
+			player_dir[1] = 0;
+			to_target_dir[1] = 0;
+		
+			player_dir.Normalize();
+			to_target_dir.Normalize();
+		
+			float cos_fi = vector.Dot(player_dir, to_target_dir);
+			vector cross = player_dir * to_target_dir;
+		
+			int dir = Math.Acos(cos_fi) * Math.RAD2DEG;
+				
+			if( cross[1] < 0 )
+				dir = -dir;
+
+			//! dir in cone or in a tip of cone 
+			if( (dir <= cone_angle && dir >= -cone_angle) || Math.AbsFloat(dir) == 90 )
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	static string SanitizeString(string input)
+	{
+		int max_length = 512;
+		string output = input;
+		
+		output = output.Substring(0,Math.Clamp(max_length,0,output.Length()));
+		return output;
+	}
+
+	//! Returns true when the player stands on the opposite side of memPointEndName relative to memPointStartName (angle exceeds toleranceAngle)
+	//! Intentionally returns true (no restriction) when the check cannot be performed (missing player/entity or memory points)
+	//! Callers where a failed check must deny access have to verify the preconditions (e.g. MemoryPointExists) themselves
+	static bool MemPointDirectionalCheck(PlayerBase player, EntityAI targetEnt, string memPointStartName, string memPointEndName, float toleranceAngle = Math.PI_HALF)
+	{
+		if (player && targetEnt && memPointEndName != "" && targetEnt.MemoryPointExists(memPointEndName) && memPointStartName != "" && targetEnt.MemoryPointExists(memPointStartName))
+		{
+			vector memPointEndPos = targetEnt.ModelToWorld(targetEnt.GetMemoryPointPos(memPointEndName));
+			vector memPointStartPos = targetEnt.ModelToWorld(targetEnt.GetMemoryPointPos(memPointStartName));
+			vector playerPosition = player.GetPosition();
+			vector playerHeadPos = MiscGameplayFunctions.GetPlayerHeadPosition(player);
+			vector playerDir = vector.Direction(playerHeadPos, memPointStartPos);
+			playerDir.Normalize();
+			vector memDir = vector.Direction(memPointStartPos, memPointEndPos);
+			memDir.Normalize();
+			
+			/*
+			vector dbgPos = playerPosition;
+			Debug.DrawArrow(dbgPos, dbgPos + playerDir, 0.15, COLOR_YELLOW);
+			Debug.DrawArrow(memPointStartPos, memPointStartPos + memDir, 0.15, COLOR_GREEN);
+			
+			Debug.DrawSphere(memPointStartPos, 0.05, COLOR_YELLOW, ShapeFlags.TRANSP|ShapeFlags.NOOUTLINE);
+			Debug.DrawSphere(dbgPos, 0.05, COLOR_RED, ShapeFlags.TRANSP|ShapeFlags.NOOUTLINE);
+			*/
+			
+			return GenericDirectionalCheck(playerDir, memDir, toleranceAngle);
+		}
+		
+		return true;
+	}
+
+	//! just compares the angle
+	static bool GenericDirectionalCheck(vector dir1, vector dir2, float toleranceAngle)
+	{
+		float angleRad = Math.Acos(dir1 * dir2);
+		
+		//Print(angleRad);
+		//Print("result: " + (angleRad > toleranceAngle));
+
+		return angleRad > toleranceAngle;
+	}
+	
+	static bool ComplexBuildCollideCheckClient( PlayerBase player, ActionTarget target, ItemBase item, int constraction_index )
+	{
+		EntityAI ent;
+		if (Class.CastTo(ent,target.GetObject()) && ent.CanUseConstruction())
+		{
+			ConstructionBase construction = ConstructionBase.Cast(ent.GetConstructionBasic());
+			ConstructionActionData constructionActionData = player.GetConstructionActionData();
+			if (construction && BuildCondition(player, target, item, false, constraction_index))
+			{
+				string partName;
+				if (item)
+				{
+					partName = constructionActionData.GetBuildPartAtIndex(constraction_index).GetPartName();
+				}
+				
+				#ifdef DIAG_DEVELOPER
+				ConstructionPart debugPart = constructionActionData.GetBuildPartAtIndex(constraction_index);
+				if (debugPart)
+					construction.UpdateItemFallDebugVisuals(debugPart.GetPartName());
+				#endif
+					
+				BaseBuildingBase baseBuilding;
+				if (Class.CastTo(baseBuilding,ent))
+				{
+					bool boo;
+					if (baseBuilding.PerformRoofCheckForBase(partName,player,boo) && boo)
+						return false;
+				}
+				
+				if (player.IsPlacingLocal() || player.IsPlacingServer())
+					return false;
+				
+				CollisionCheckData checkData = new CollisionCheckData;
+				checkData.m_PartName = partName;
+				
+				return !construction.IsCollidingEx(checkData);
+			}
+		}
+		return false;
+	}
+
+	static bool BuildCondition( PlayerBase player, ActionTarget target, ItemBase item, bool camera_check, int constraction_index )
+	{
+		EntityAI ent = EntityAI.Cast(target.GetObject());
+		if (ent && ent.CanUseConstruction())
+		{
+			ConstructionActionData constructionActionData = player.GetConstructionActionData();
+			constructionActionData.SetTarget(ent);
+			
+			ConstructionPart part;
+			if (item)
+			{
+				part = constructionActionData.GetBuildPartAtIndex(constraction_index);
+			}
+			else
+			{
+				part = constructionActionData.GetBuildPartHandsGenericAtIndex(constraction_index);
+			}
+			
+			if (part)
+			{
+				//camera and position checks
+				
+				BaseBuildingBase baseBuilding;
+				if (Class.CastTo(baseBuilding,ent) && baseBuilding.MustBeBuiltFromOutside() && baseBuilding.IsPlayerInsideEx(player, part.GetMainPartName()))
+					return false;
+				
+				//Camera check (client-only)
+				if (camera_check && !GetGame().IsDedicatedServer())
+				{
+					if (ent.IsFacingCamera(part.GetMainPartName()))
+						return false;
+				}
+				
+				return !player.GetInputController().CameraIsFreeLook();
+			}
+		}
+		
+		return false;
+	}
+	
+	static void IsUnderRoofFromToCalculation(EntityAI entity, out vector from, out vector to, float height = GameConstants.ROOF_CHECK_RAYCAST_DIST)
+	{
+		vector minMax[2];
+		entity.GetCollisionBox(minMax);
+
+		vector size = Vector(0,0,0);
+		//size[1] = minMax[1][1] - minMax[0][1];
+		float from_override = entity.HeightStartCheckOverride();
+		if (from_override > 0.0)
+		{
+			size[1] = from_override;
+		}
+		else
+		{
+			size[1] = minMax[1][1] - minMax[0][1];
+		}
+		
+		from = entity.GetPosition() + size;  
+		if ( entity.HeightCheckOverride() > 0 )
+		{
+			to = entity.GetPosition() + Vector(0, entity.HeightCheckOverride(), 0);
+		}
+		else
+		{
+			vector ceiling = "0 0 0";
+			ceiling[1] = height;
+			to = from + ceiling; //+size ??? offset to cast same distance
+		}
+	}
+	
+	static bool IsUnderRoof(EntityAI entity, float height = GameConstants.ROOF_CHECK_RAYCAST_DIST) 
+	{
+		return IsUnderRoofEx(entity, height, ObjIntersectIFire);
+	}
+	
+	static bool IsUnderRoofEx(EntityAI entity, float height = GameConstants.ROOF_CHECK_RAYCAST_DIST, int geometry = ObjIntersectView) 
+	{
+		vector from;
+		vector to;
+		
+		IsUnderRoofFromToCalculation(entity, from, to, height);
+
+		vector contact_pos;
+		vector contact_dir;
+		int contact_component;
+		
+		return DayZPhysics.RaycastRV(from, to, contact_pos, contact_dir, contact_component, NULL, NULL, entity, false, false, geometry,0.25);
+	}
+
+	static bool IsUnder(EntityAI entity, array<typename> excludedTypes, out Object hitObj, float height = GameConstants.ROOF_CHECK_RAYCAST_DIST, int geometry = ObjIntersectIFire)
+	{
+		vector from;
+		vector to;
+		
+		IsUnderRoofFromToCalculation(entity, from, to, height);
+		
+		vector contactPos;
+		vector contactDir;
+		int contactComponent;
+		set<Object> objects = new set<Object>;
+		
+		if (DayZPhysics.RaycastRV(from, to, contactPos, contactDir, contactComponent, objects, NULL, entity, false, false, geometry, 0.25))
+		{
+			for (int i = 0; i < objects.Count(); ++i)
+			{
+				Object obj = objects.Get(i);
+				if (!obj)
+					continue;
+				
+				if (excludedTypes && excludedTypes.Count())
+				{
+					foreach (typename excludedType: excludedTypes)
+					{
+						if (obj.IsInherited(excludedType))
+							return false;
+					}
+				}
+			
+				hitObj = obj;
+				return true;
+			}
+		}
+		
+		return false;
+	}
+
+	// cooking equipment effects (get position for steam particle)
+	static vector GetSteamPosition( EntityAI parent )
+	{
+		vector particle_pos;
+		float steam_offset = 0;
+		
+		if ( parent )
+		{
+			particle_pos = parent.GetPosition();
+			
+			if ( parent.IsInherited( PortableGasStove ) )
+			{
+				steam_offset = 0.2;
+			}
+			else if ( parent.IsInherited( FireplaceBase ) )
+			{
+				FireplaceBase fireplace = FireplaceBase.Cast( parent );
+				
+				if ( fireplace.IsBaseFireplace() )
+				{
+					steam_offset = 0.8;
+				}
+				else if ( fireplace.IsBarrelWithHoles() )
+				{
+					steam_offset = 1.1;
+				}
+				else if ( fireplace.IsFireplaceIndoor() )
+				{
+					steam_offset = 0.45;
+				}
+				else if ( fireplace.IsIndoorOven() )
+				{
+					steam_offset = 0.9;
+				}
+			}
+		}
+		
+		particle_pos[1] = particle_pos[1] + steam_offset;
+		
+		return particle_pos;
+	}
+	
+	static vector GetRandomizedPosition(vector targetPos, float radius)
+	{
+		int angle = Math.RandomIntInclusive(1,360);
+		float usedRadius = Math.RandomFloat01() * radius;
+		vector randomPos = Vector(targetPos[0] + (Math.Cos(angle) * usedRadius), targetPos[1], targetPos[2] + (Math.Sin(angle) * usedRadius));
+		
+		return randomPos;
+	}
+	
+	static vector GetRandomizedPositionVerified(vector startPos, vector targetPos, float radius, Object ignore = null)
+	{
+		vector ret = GetRandomizedPosition(targetPos,radius);
+		RaycastRVParams params = new RaycastRVParams(startPos,ret,ignore);
+		params.type = ObjIntersectIFire;
+		array<ref RaycastRVResult> results = new array<ref RaycastRVResult>;
+		array<Object> excluded = new array<Object>;
+		if (DayZPhysics.RaycastRVProxy(params,results,excluded))
+		{
+			ret = results[0].pos;
+			ret[1] = targetPos[1];
+		}
+		return ret;
+	}
+	
+	static vector GetRandomizedPositionVerifiedPlayer(Man player, float distance, float radius, Object ignore)
+	{
+		vector playerPosition = player.GetPosition();
+		vector playerHeadPos = MiscGameplayFunctions.GetPlayerHeadPosition(PlayerBase.Cast(player));
+		vector targetPos = playerPosition + (player.GetDirection() * distance);
+		return GetRandomizedPositionVerified(playerHeadPos, targetPos, radius, ignore);
+	}
+	
+	static void DropAllItemsInInventoryInBounds(ItemBase ib, vector halfExtents)
+	{
+		if (!g_Game.IsServer())
+			return;
+		array<EntityAI> items = new array<EntityAI>;
+		GameInventory ibInventory = ib.GetInventory();
+		ibInventory.EnumerateInventory(InventoryTraversalType.LEVELORDER, items);
+		
+		vector direction = ib.GetDirection();
+		float dot = vector.Dot(direction, vector.Forward);
+		
+		float angle = Math.Acos(dot);	
+		if (direction[0] < 0)
+			angle = -angle;	
+
+		float cos = Math.Cos(angle);
+		float sin = Math.Sin(angle);
+		
+		EntityAI item;
+		int count = items.Count();
+		for ( int i = 0; i < count; ++i )
+		{
+			item = items.Get(i);
+			if ( item )
+				ibInventory.DropEntityInBounds(InventoryMode.SERVER, ib, item, halfExtents, angle, cos, sin);					
+		}
+	}
+	
+	static void ThrowAllItemsInInventory(notnull EntityAI parent, int flags)
+	{
+		ThrowAllItemsInInventoryEx(parent, flags, -GetVelocity(parent));
+	}
+
+	static void ThrowAllItemsInInventoryEx(notnull EntityAI parent, int flags, vector force)
+	{
+		vector position = parent.GetPosition();
+		vector orientation = parent.GetOrientation();
+		vector rotation_matrix[3];
+		float direction[4];
+		vector randomPos;
+		vector minmax[2];
+		parent.GetCollisionBox(minmax);
+
+		Math3D.YawPitchRollMatrix( orientation, rotation_matrix );
+		Math3D.MatrixToQuat( rotation_matrix, direction );
+		
+		//gather entities first
+		array<EntityAI> ents = new array<EntityAI>;
+		int count, i;
+		//atts
+		GameInventory parentInventory = parent.GetInventory();
+		if (parentInventory)
+		{
+			count = parentInventory.AttachmentCount();
+			for (i = 0; i < count; ++i)
+			{
+				ents.Insert(parentInventory.GetAttachmentFromIndex(i));
+			}
+		}
+		
+		//cargo
+		CargoBase parentCargo = parentInventory.GetCargo();
+		if (parentCargo)
+		{
+			count = parentCargo.GetItemCount();
+			for (i = 0; i < count; ++i)
+			{
+				ents.Insert(parentCargo.GetItem(i));
+			}
+		}
+		
+		//now throw them all
+		foreach (EntityAI ent : ents)
+		{
+			randomPos = Vector(position[0] + Math.RandomFloat(minmax[0][0], minmax[1][0]),
+								position[1] + Math.RandomFloat(minmax[0][1], minmax[1][1]),
+								position[2] + Math.RandomFloat(minmax[0][2], minmax[1][2]));
+			ThrowEntityFromInventory(ent, randomPos, direction, -GetVelocity(parent), ThrowEntityFlags.NONE);
+		}
+	}
+	
+	static void ThrowEntityFromInventory(notnull EntityAI entity, vector position, float direction[4], vector force, int flags)
+	{	
+		InventoryMode invMode = InventoryMode.SERVER;
+		if ( !g_Game.IsMultiplayer() )
+			invMode = InventoryMode.LOCAL;
+		
+		ItemBase entityIB;
+		GameInventory entityInventory = entity.GetInventory();
+		if (CastTo(entityIB, entity))
+		{
+			InventoryLocation dst = new InventoryLocation;	
+			dst.SetGroundEx(entity, position, direction);
+			
+			if ( (flags & ThrowEntityFlags.SPLIT) && entityIB.CanBeSplit() )
+			{
+				for (int l = 0; l < entityIB.GetQuantity(); ++l)
+				{
+					ItemBase new_item = ItemBase.Cast( GameInventory.LocationCreateEntity( dst, entityIB.GetType(), ECE_NONE, RF_DEFAULT ) );
+		
+					if ( new_item )
+					{
+						MiscGameplayFunctions.TransferItemProperties(entityIB, new_item);
+						entityIB.AddQuantity( -1 );
+						new_item.SetQuantity( 1 );
+						new_item.ThrowPhysically(null, force, false);
+					}
+				}
+			}
+			else
+			{
+				float stackable = entityIB.GetTargetQuantityMax();
+				if ( !(stackable == 0 || stackable >= entityIB.GetQuantity()) )
+				{					
+					while (entityIB.GetQuantity() > stackable)
+					{
+						InventoryLocation spltDst = new InventoryLocation;
+						position[1] = position[1] + 0.1;
+						spltDst.SetGroundEx(entity, position, direction);
+						
+						ItemBase splitItem = entityIB.SplitIntoStackMaxToInventoryLocationEx( spltDst );
+						splitItem.ThrowPhysically(null, force, false);
+					}
+				}
+				
+				InventoryLocation src = new InventoryLocation;
+				entityInventory.GetCurrentInventoryLocation(src);
+				
+				entityInventory.TakeToDst(invMode, src, dst);
+				entityIB.ThrowPhysically(null, force, false);
+			}
+		}
+		else
+		{
+			entityInventory.DropEntity(invMode, entity.GetHierarchyRoot(), entity);
+			dBodyApplyImpulse(entity, force);
+		}
+	}
+
+	static float GetCurrentItemHeatIsolation( ItemBase pItem )
+	{
+		float wetFactor;
+		float healthFactor;
+
+		float heatIsolation = pItem.GetHeatIsolation(); 	//! item heat isolation (from cfg)
+		float itemHealthLabel = pItem.GetHealthLevel();		//! item health (state)
+		float itemWetness = pItem.GetWet();					//! item wetness
+		
+		//! wet factor selection
+		if ( itemWetness >= GameConstants.STATE_DRY && itemWetness < GameConstants.STATE_DAMP )
+		{
+			wetFactor = GameConstants.ENVIRO_ISOLATION_WETFACTOR_DRY;
+		}
+		else if ( itemWetness >= GameConstants.STATE_DAMP && itemWetness < GameConstants.STATE_WET )
+		{
+			wetFactor = GameConstants.ENVIRO_ISOLATION_WETFACTOR_DAMP;
+		}
+		else if ( itemWetness >= GameConstants.STATE_WET && itemWetness < GameConstants.STATE_SOAKING_WET )
+		{
+			wetFactor = GameConstants.ENVIRO_ISOLATION_WETFACTOR_WET;
+		}
+		else if ( itemWetness >= GameConstants.STATE_SOAKING_WET && itemWetness < GameConstants.STATE_DRENCHED )
+		{
+			wetFactor = GameConstants.ENVIRO_ISOLATION_WETFACTOR_SOAKED;
+		}
+		else if ( itemWetness >= GameConstants.STATE_DRENCHED )
+		{
+			return GameConstants.ENVIRO_ISOLATION_WETFACTOR_DRENCHED;
+		}
+		
+		//! health factor selection
+		switch (itemHealthLabel)
+		{
+			case GameConstants.STATE_PRISTINE:
+				healthFactor = GameConstants.ENVIRO_ISOLATION_HEALTHFACTOR_PRISTINE;
+			break;
+			
+			case GameConstants.STATE_WORN:
+				healthFactor = GameConstants.ENVIRO_ISOLATION_HEALTHFACTOR_WORN;
+			break;
+			
+			case GameConstants.STATE_DAMAGED:
+				healthFactor = GameConstants.ENVIRO_ISOLATION_HEALTHFACTOR_DAMAGED;
+			break;
+			
+			case GameConstants.STATE_BADLY_DAMAGED:
+				healthFactor = GameConstants.ENVIRO_ISOLATION_HEALTHFACTOR_B_DAMAGED;
+			break;
+			
+			case GameConstants.STATE_RUINED:
+				healthFactor = GameConstants.ENVIRO_ISOLATION_HEALTHFACTOR_RUINED;
+			break;
+		}
+		
+		//! apply factors
+		heatIsolation *= healthFactor;
+		heatIsolation *= wetFactor;
+
+		return heatIsolation;
+	}
+	
+	static void FilterObstructingObjects(array<Object> potentiallyObstructingObjects, out array<Object> obstructingObjects)
+	{
+		if (!obstructingObjects)
+			obstructingObjects = new array<Object>;
+		
+		for ( int i = 0; i < potentiallyObstructingObjects.Count(); ++i )
+		{
+			Object obj = potentiallyObstructingObjects[i];
+			if ( obj && ( obj.CanObstruct() || obj.CanProxyObstruct() ) )
+				obstructingObjects.Insert(obj);
+		}
+	}
+	
+	static bool CanIgnoreDistanceCheck(Object obj)
+	{
+	    return obj.IsTransport() || obj.CanUseConstruction();
+	}
+	
+	//! filters out objects obstructed from 'origin' by a raycast per object
+	static void FilterObstructedObjectsByGrouping(vector origin, float range, float distanceDelta, array<Object> objects, array<Object> obstructingObjects, out array<Object> filteredObjects, bool doDistanceCheck = false, bool checkIfDistanceCanBeIgnored = false, float maxDist = 0)
+	{
+		if (!filteredObjects)
+			filteredObjects = new array<Object>();
+
+		if (!objects)
+			return;
+
+		int count = objects.Count();
+		float maxDistSq = maxDist * maxDist;
+
+		IsObjectObstructedCache cache = new IsObjectObstructedCache(origin, count);
+		for (int i = 0; i < count; ++i)
+		{
+			Object obj = objects[i];
+			if (!obj)
+				continue;
+
+			// Skip objects that are too far from the player anyways
+			if (doDistanceCheck && !CanIgnoreDistanceCheck(obj) && vector.DistanceSq(origin, obj.GetPosition()) > maxDistSq)
+				continue;
+
+			if (!IsObjectObstructedEx(obj, cache))
+				filteredObjects.Insert(obj);
+		}
+
+		cache.ClearCache();
+	}
+
+	static void SplitArrayIntoGroupsByDistance(array<Object> objects, array<ref array<Object>> objectGroups, float squaredDistanceDelta)
+	{
+		array<Object> group;
+		for ( int i = 0; i < objects.Count(); )
+		{
+			Object obj1 = objects[i];
+			if ( obj1 )
+			{
+				group = new array<Object>;
+				group.Insert(obj1);
+				for ( int j = objects.Count() - 1; j > i; --j )
+				{
+					Object obj2 = objects[j];
+					if ( obj1 && obj2 )
+					{
+						vector start = obj1.GetWorldPosition();
+						vector end = obj2.GetWorldPosition();
+
+						float distance = vector.DistanceSq(start, end);
+						if ( distance < squaredDistanceDelta )
+						{								
+							group.Insert(obj2);
+							objects.Remove(j);
+						}
+					}
+				}
+				objectGroups.Insert(group);
+				objects.Remove(i);
+				continue;
+			}
+			++i;
+		}
+	}
+	
+	static bool IsObjectObstructed(Object object, bool doDistanceCheck = false, vector distanceCheckPos = "0 0 0", float maxDist = 0)
+	{
+		PlayerBase player = PlayerBase.Cast(g_Game.GetPlayer());
+		vector rayStart = MiscGameplayFunctions.GetPlayerHeadPosition(player);
+		IsObjectObstructedCache cache = new IsObjectObstructedCache(rayStart, 1);
+
+		return IsObjectObstructedEx(object, cache, doDistanceCheck, distanceCheckPos, maxDist);
+	}
+
+	static bool IsObjectObstructedEx(Object object, IsObjectObstructedCache cache, bool doDistanceCheck = false, vector distanceCheckPos = "0 0 0", float maxDist = 0)
+	{
+		if (!object)
+			return true;
+		
+		PlayerBase player = PlayerBase.Cast(g_Game.GetPlayer());
+		if (doDistanceCheck && vector.DistanceSq(player.GetPosition(), distanceCheckPos) > maxDist * maxDist)
+			return true;
+
+		cache.ObjectCenterPos = object.GetCenter();
+
+		if (maxDist > 0 && vector.DistanceSq(cache.RaycastStart, cache.ObjectCenterPos) > maxDist * maxDist)
+		{
+			vector rayDir = cache.ObjectCenterPos - cache.RaycastStart;
+			rayDir.Normalize();
+			cache.RaycastEnd = cache.RaycastStart + rayDir * maxDist;
+		}
+		else
+		{
+			cache.RaycastEnd = cache.ObjectCenterPos;
+		}
+
+		return IsObjectObstructedFilterEx(object, cache, player);
+	}
+ 	
+	static bool IsObjectObstructedProxy(Object object, IsObjectObstructedCache cache, PlayerBase player)
+	{
+		if (object.CanProxyObstruct())
+		{
+			RaycastRVParams rayInput = new RaycastRVParams(cache.RaycastStart, cache.RaycastEnd, player);
+			DayZPhysics.RaycastRVProxy(rayInput, cache.HitProxyObjects);				
+			if (cache.HitProxyObjects)
+			{
+				if (cache.HitProxyObjects.Count() > 0)
+				{
+					if (cache.HitProxyObjects[0].hierLevel > 0)
+					{
+						// ignores attachments on player
+						if (!cache.HitProxyObjects[0].parent.IsMan())
+						{
+							if (cache.HitProxyObjects[0].parent)
+							{
+								EntityAI proxyParent = EntityAI.Cast(cache.HitProxyObjects[0].parent);
+								GameInventory proxyInventory = proxyParent.GetInventory();
+								if (proxyInventory && proxyInventory.GetCargo())
+									return true;
+							}
+						}	
+					}
+				}
+			}
+		}
+		return false;
+	}
+	
+	static bool IsObjectObstructedFilter(Object object, IsObjectObstructedCache cache, PlayerBase player)
+	{
+		for (int m = 0; m < cache.HitObjects.Count(); ++m)
+		{
+			Object hit_object = cache.HitObjects.Get(m);
+			
+			if ( hit_object.CanObstruct() )
+				return true;
+
+			//4.3. ignore item if items are big and heavy >= OBJECT_OBSTRUCTION_WEIGHT 
+			//EntityAI eai;
+			//if ( Class.CastTo( eai, hit_object ) )
+			//{					
+			//	if ( eai.GetWeight() >= OBJECT_OBSTRUCTION_WEIGHT )
+			//	{
+			//		if ( eai != filtered_object && eai.GetHierarchyRoot() != filtered_object )
+			//		{
+			//			//Print("!!!!!obstacle vaha: " + hit_object);
+			//			is_obstructed = true;
+			//		}
+			//	}
+			//}
+		}
+		
+		return false;
+	}
+	
+	//! groups 'RaycastRVProxy' and 'RaycastRV' approaches into one method, allowes for comprehensive geometry override, if desired
+	static bool IsObjectObstructedFilterEx(Object object, IsObjectObstructedCache cache, PlayerBase player, int geometryTypeOverride = -1)
+	{
+		//nothing can fit between the ray start and the target, skip the raycasts entirely
+		if (vector.DistanceSq(cache.RaycastStart, cache.ObjectCenterPos) < OBJECT_OBSTRUCTION_MIN_DISTANCE_SQ)
+			return false;
+		
+		int count;
+		int i;
+		
+		//first, regular raycast (cheaper)
+		int geometry = ObjIntersectFire; //default for the RV raycast
+		if (geometryTypeOverride != -1)
+			geometry = geometryTypeOverride;
+
+		//ALLOBJECTS colllision check here
+		DayZPhysics.RaycastRV(cache.RaycastStart, cache.RaycastEnd, cache.ObjectContactPos, cache.ObjectContactDir, cache.ContactComponent, cache.HitObjects, object, player, false, false, geometry, 0.0, CollisionFlags.ALLOBJECTS);
+		count = cache.HitObjects.Count();
+		for (i = 0; i < count; ++i)
+		{
+			Object hitObject = cache.HitObjects[i];
+			if (hitObject && hitObject.CanObstruct())
+				return true;
+		}
+		
+		//second, proxy geometries
+		RaycastRVParams rayInput = cache.GetRaycastParams(cache.RaycastStart, cache.RaycastEnd, player);
+		if (geometryTypeOverride != -1)
+			rayInput.type = geometryTypeOverride; //default 'ObjIntersectView'
+	
+		//! uses the NEARESTCONTACT collision check from RaycastParams
+		DayZPhysics.RaycastRVProxy(rayInput, cache.HitProxyObjects);
+		
+		if (cache.HitProxyObjects)
+		{
+			count = cache.HitProxyObjects.Count();
+			Object parent;
+			for (i = 0; i < count; ++i)
+			{
+				RaycastRVResult result = cache.HitProxyObjects[i];
+				if (result.hierLevel > 0) //parent has to exist, skipping nullcheck
+				{
+					parent = result.parent;
+					if (parent && !parent.IsMan() && parent.CanProxyObstruct())
+					{
+						if (parent != object || (parent == object && object.CanProxyObstructSelf()))
+							return true;
+					}	
+				}
+			}
+		}
+		
+		return false;
+	}
+
+	//Inflict damage to item based on environmental temperature and surface type
+	static void DealEvinronmentAdjustedDmg(ItemBase item, PlayerBase player, float baseDamage)
+	{
+		string surfaceType;
+		int liquidType;
+		float adjustedDamage;
+		
+		g_Game.SurfaceUnderObject(player, surfaceType, liquidType);
+		float modifierSurface = Surface.GetParamFloat(surfaceType, "toolDamage"); // toolDamage
+		if (modifierSurface == 0)
+			modifierSurface = 1;
+		
+		if (player.GetInColdArea())
+			adjustedDamage = baseDamage * (modifierSurface + g_Game.GetMission().GetWorldData().GetColdAreaToolDamageModifier());
+		else 
+			adjustedDamage = baseDamage * modifierSurface;
+			
+		DealAbsoluteDmg(item, adjustedDamage);
+	}
+	
+	//Inflict absolute damage to item (used on tools when completing actions)
+	static void DealAbsoluteDmg(ItemBase item, float dmg)
+	{
+		item.DecreaseHealth(dmg, false);
+	}
+	
+	//Function used to normailze values, enter the used value and the max value (max will become 1)
+	static float Normalize(int val, int maxVal)
+	{
+		if (maxVal == 0)
+		{
+			Debug.LogError("Division by 0 is not allowed");
+			return 0;
+		}
+		
+		return val / maxVal;
+	}
+	
+	static float Bobbing(float period, float amplitude, float elapsedTime)
+	{
+		//Prevent division by 0
+		if ( period == 0 )
+			period = 1;
+		
+		elapsedTime /= period;
+		
+		float cycle;
+		cycle += elapsedTime;
+		cycle = FModulus(cycle, 360);
+		cycle = Math.Sin(cycle) * amplitude;
+		
+		return cycle;
+	}
+	
+	// DEPRECATED, use Math.ModFloat directly instead
+	static float FModulus(float x, float y)
+	{
+		return Math.ModFloat(x, y);
+	}
+	
+	static void RemoveSplint( PlayerBase player )
+	{
+		EntityAI entity = player.GetInventory().CreateInInventory("Splint");
+		if (!entity)
+			entity = player.SpawnEntityOnGroundOnCursorDir("Splint", 0.5);
+		
+		EntityAI attachment;
+		ItemBase new_item = ItemBase.Cast(entity);
+		Class.CastTo(attachment, player.GetItemOnSlot("Splint_Right"));
+		if ( attachment && attachment.GetType() == "Splint_Applied" )
+		{
+			if (new_item)
+			{	
+				MiscGameplayFunctions.TransferItemProperties(attachment,new_item);
+				
+				if (g_Game.IsServer())
+				{
+					//Lower health level of splint after use
+					if (new_item.GetHealthLevel() < 4)
+					{
+						int newDmgLevel = new_item.GetHealthLevel() + 1;
+						
+						float max = new_item.GetMaxHealth("","");
+						
+						switch ( newDmgLevel )
+						{
+							case GameConstants.STATE_BADLY_DAMAGED:
+								new_item.SetHealth( "", "", max * GameConstants.DAMAGE_BADLY_DAMAGED_VALUE );
+								break;
+		
+							case GameConstants.STATE_DAMAGED:
+								new_item.SetHealth( "", "", max * GameConstants.DAMAGE_DAMAGED_VALUE );
+								break;
+		
+							case GameConstants.STATE_WORN:
+								new_item.SetHealth( "", "", max * GameConstants.DAMAGE_WORN_VALUE );
+								break;
+							
+							case GameConstants.STATE_RUINED:
+								new_item.SetHealth( "", "", max * GameConstants.DAMAGE_RUINED_VALUE );
+								break;
+							
+							default:
+								break;
+						}
+					}
+				}
+			}
+			
+			attachment.Delete();
+		}
+	}
+	
+	//! checks if we should teleport the player to a safe location and if so, performs the teleportation
+	static void TeleportCheck(notnull PlayerBase player, notnull array<ref array<float>> safe_positions)
+	{
+		if( player.GetSimulationTimeStamp() < 20 && !player.IsPersistentFlag(PersistentFlag.AREA_PRESENCE) )
+		{
+			//simulation time is bellow a threshold, which means the player has recently connected,
+			//the player does not have the AREA_PRESENCE flag set, which means they were not inside the area when they disconnected,
+			//that means they just spawned into a contaminated area, lets move them somewhere safe
+			vector player_pos = player.GetPosition();
+			vector closest_safe_pos = MiscGameplayFunctions.GetClosestSafePos(player_pos, safe_positions);
+			
+			if (player_pos!=closest_safe_pos)
+			{
+				closest_safe_pos[1] = g_Game.SurfaceY(closest_safe_pos[0], closest_safe_pos[2]);
+				
+				player.SetPosition( closest_safe_pos );//...so lets teleport them somewhere safe
+				//DeveloperTeleport.SetPlayerPosition(player, closest_safe_pos);
+				g_Game.RPCSingleParam(player, ERPCs.RPC_WARNING_TELEPORT, null, true, player.GetIdentity());
+				
+				PluginAdminLog adminLog = PluginAdminLog.Cast(GetPlugin(PluginAdminLog));
+				if (adminLog)
+					adminLog.PlayerTeleportedLog(player,player_pos,closest_safe_pos,"Unwillingly spawning in contaminated area.");
+			}
+			
+			player.SetPersistentFlag(PersistentFlag.AREA_PRESENCE, false);
+		}
+	}
+	
+	static vector GetClosestSafePos(vector to_pos, notnull array<ref array<float>> positions)
+	{
+		vector closest_pos = to_pos;
+		float smallest_dist = float.MAX;
+		foreach( array<float> pos:positions)
+		{
+			vector vpos = "0 0 0";
+			vpos[0] = pos[0];
+			vpos[2] = pos[1];
+
+			to_pos[1] = 0;
+			float dist = vector.DistanceSq(to_pos, vpos);//2d dist sq
+			if ( dist < smallest_dist)
+			{
+				smallest_dist = dist;
+				closest_pos = vpos;
+			}
+		}
+		return closest_pos;
+	}
+	
+	//! 'stupider' teleport method, does not touch flag management. Applies Y from the position as well!
+	static bool TeleportPlayerToSafeLocation3D(notnull PlayerBase player, vector safePos)
+	{
+		vector playerPos = player.GetPosition();
+		if (playerPos != safePos)
+		{
+			player.SetPosition(safePos);
+			g_Game.RPCSingleParam(player, ERPCs.RPC_WARNING_TELEPORT, null, true, player.GetIdentity());
+			
+			return true;
+		}
+		
+		return false;
+	}
+
+	static void GenerateAINoiseAtPositionEx(notnull Object source, float lifeTime, NoiseParams noiseParams)
+	{
+		if (g_Game.IsServer())
+		{
+			NoiseSystem noise = g_Game.GetNoiseSystem();
+			if (noise)
+			{
+				noise.AddNoiseTarget(source.GetPosition(), lifeTime, noiseParams);
+			}
+		}
+	}
+	
+	static float GetMinValue(array<float> pArray)
+	{
+		float minValue = 0.0;
+		for (int i = 0; i < pArray.Count(); ++i)
+		{
+			if (minValue == 0 || pArray.Get(i) < minValue)
+			{
+				minValue = pArray.Get(i);
+			}
+		}
+		
+		return minValue;
+	}
+	
+	static float GetMaxValue(array<float> pArray)
+	{
+		float maxValue = 0.0;
+		for (int i = 0; i < pArray.Count(); ++i)
+		{
+			if (maxValue == 0 || pArray.Get(i) > maxValue)
+			{
+				maxValue = pArray.Get(i);
+			}
+		}
+		
+		return maxValue;
+	}
+		
+	static string GetItemDisplayName(string type)
+	{
+		return g_Game.ConfigGetTextOut("CfgVehicles " + type + " displayName");
+	}
+
+	static bool IsComponentInSelection(array<Selection> pSelection, string pCompName)
+	{
+		if (pSelection.Count() == 0 || pCompName.Length() == 0)
+		{
+			return false;
+		}
+
+		for (int i = 0; i < pSelection.Count(); ++i)
+		{
+			pCompName.ToLower();
+			if (pSelection[i] && pSelection[i].GetName() == pCompName)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+	
+	static int GetComponentIndex(array<Selection> pSelection, string pCompName)
+	{
+		if (!MiscGameplayFunctions.IsComponentInSelection(pSelection, pCompName))
+		{
+			return INDEX_NOT_FOUND;
+		}
+
+		for (int i = 0; i < pSelection.Count(); ++i)
+		{
+			pCompName.ToLower();
+			if (pSelection[i] && pSelection[i].GetName() == pCompName)
+			{
+				return i;
+			}
+		}
+
+		return INDEX_NOT_FOUND;
+	}
+	
+	static void RemoveAllAttachedChildrenByTypename(notnull EntityAI parent, array<typename> listOfTypenames)
+	{
+		if (listOfTypenames.Count() > 0)
+		{
+			Object child = Object.Cast(parent.GetChildren());
+			while (child)
+			{
+				Object childToRemove = child;
+				child = Object.Cast(child.GetSibling());
+	
+				if (childToRemove.IsAnyInherited(listOfTypenames))
+				{
+					vector pos = parent.GetPosition();			
+					parent.RemoveChild(childToRemove, false);
+	
+					vector m4[4];
+					Math3D.MatrixIdentity4(m4);
+					m4[3] = pos;
+					childToRemove.SetTransform(m4);
+					childToRemove.PlaceOnSurface();
+				}
+			}
+		}
+	}
+	
+	static void DeleteAttachedChildrenByTypename(notnull EntityAI parent, array<typename> listOfTypenames)
+	{
+		if (listOfTypenames.Count() > 0)
+		{
+			Object child = Object.Cast(parent.GetChildren());
+			while (child)
+			{
+				Object childToRemove = child;
+				child = Object.Cast(child.GetSibling());
+	
+				if (childToRemove.IsAnyInherited(listOfTypenames))
+				{			
+					parent.RemoveChild(childToRemove, false);
+					childToRemove.Delete();
+				}
+			}
+		}
+	}
+	
+	//! Fills the provided array with all children entities in hierarchy of this entity
+	static void GetAttachedChildren(IEntity parent, array<IEntity> outputObjects)
+	{
+		IEntity child = parent.GetChildren();
+		while (child)
+		{
+			outputObjects.Insert(child);
+			child = child.GetSibling();
+		}
+	}
+	
+	static void SoakItemInsideParentContainingLiquidAboveThreshold(notnull ItemBase item, notnull ItemBase parent, float liquidQuantityThresholdPercentage = 0.05)
+	{
+		if (g_Game.IsServer())
+		{
+			if (parent.GetLiquidType() != 0 && parent.GetQuantityNormalized() > liquidQuantityThresholdPercentage && !parent.GetIsFrozen())
+				item.SetWetMax();
+		}
+	}
+
+	static float GetCombinedSnowfallWindValue()
+	{
+		float windMin;
+		float windMax;
+		g_Game.GetWeather().GetWindMagnitude().GetLimits(windMin, windMax);
+		float snowfall = g_Game.GetWeather().GetSnowfall().GetActual();
+		float value = snowfall + g_Game.GetWeather().GetWindMagnitude().GetActual() / windMax;
+		
+		return value;
+	}
+
+	static bool ComponentIdxContainsSelection(Object obj, int compIdx, string selName)
+	{
+		array<string> compNames = new array<string>;
+		obj.GetActionComponentNameList(compIdx, compNames);
+		foreach (string selection : compNames)
+		{
+			if (selection.Contains(selName))
+				return true;
+		}
+		
+		return false;
+	}
+
+	////////////////////////////
+	// deprecated - do not use
+	////////////////////////////
+	[Obsolete("Obsolete collision checking method, use the other 'ComplexBuildCollideCheckClient'")]
+	static bool ComplexBuildCollideCheckClient( PlayerBase player, ActionTarget target, ItemBase item, string partName = "" )
+	{
+		return true;
+	}
+	
+	[Obsolete("Obsolete collision checking method, use the other 'BuildCondition'")]
+	static bool BuildCondition( PlayerBase player, ActionTarget target, ItemBase item, bool camera_check )
+	{
+		return true;
+	}
+
+	[Obsolete("Use MiscGameplayFunctions.GenerateAINoiseAtPositionEx instead!")]
+	static void GenerateAINoiseAtPosition(vector position, float lifeTime, NoiseParams noiseParams)
+	{
+		if (GetGame().IsServer())
+		{
+			NoiseSystem noise = GetGame().GetNoiseSystem();
+			if (noise)
+			{
+				noise.AddNoiseTarget(position, lifeTime, noiseParams);
+			}
+		}
+	}
+}
+
+class DestroyItemInCorpsesHandsAndCreateNewOnGndLambda : ReplaceAndDestroyLambda
+{
+	// @NOTE m_Player == target player - i.e. restrained one
+	void DestroyItemInCorpsesHandsAndCreateNewOnGndLambda(EntityAI old_item, string new_item_type, PlayerBase player, bool destroy = false)
+	{
+		InventoryLocation gnd = new InventoryLocation;
+		vector mtx[4];
+		if (old_item)
+			old_item.GetTransform(mtx);
+		else
+			player.GetTransform(mtx);
+		gnd.SetGround(NULL, mtx);
+		OverrideNewLocation(gnd);
+	}
+	
+	protected override void RemoveOldItemFromLocation()
+	{
+		super.RemoveOldItemFromLocation();
+		m_Player.GetHumanInventory().OnEntityInHandsDestroyed(m_OldLocation);
+	}
+}
+
+// This was created since IsObjectObstructed is often called multiple times in one frame
+// And apparently it seems that keeping this data in one struct seems to be more efficient than creating the variables dozens of times per frame
+class IsObjectObstructedCache // Pretending this is a struct
+{
+	// Outside data
+	vector RaycastStart = "0 0 0";
+	int TotalObjects = 0;
+	
+	// Inside data
+	vector ObjectCenterPos = "0 0 0";
+	vector RaycastEnd = "0 0 0"; // actual raycast end point, optionally clamped to the caller-provided maxDist from RaycastStart; ObjectCenterPos remains the true, unclamped object center
+	vector ObjectContactPos = "0 0 0";
+	vector ObjectContactDir = "0 0 0";
+	int ContactComponent = -1;
+	ref array<ref RaycastRVResult> HitProxyObjects = new array<ref RaycastRVResult>();	
+	ref set<Object> HitObjects = new set<Object>();
+	//! reused between calls
+	private ref RaycastRVParams RaycastParams = new RaycastRVParams("0 0 0", "0 0 0");
+	
+	void IsObjectObstructedCache(vector rayCastStart, int totalObjects)
+	{
+		RaycastStart = rayCastStart;
+		TotalObjects = totalObjects;
+	}
+	
+	//! returns the cached instance re-initialized to the given values, instead of allocating a new one
+	RaycastRVParams GetRaycastParams(vector begPos, vector endPos, Object ignore)
+	{
+		RaycastParams.begPos = begPos;
+		RaycastParams.endPos = endPos;
+		RaycastParams.ignore = ignore;
+		RaycastParams.with = null;
+		RaycastParams.radius = 0.0;
+		//deliberate: the proxy obstruction check only needs the nearest contact, so its result loop is single-iteration
+		RaycastParams.flags = CollisionFlags.NEARESTCONTACT;
+		RaycastParams.type = ObjIntersectView;
+		RaycastParams.sorted = false;
+		RaycastParams.groundOnly = false;
+		
+		return RaycastParams;
+	}
+	
+	// Only inside data
+	void ClearCache()
+	{
+		ObjectCenterPos = "0 0 0";
+		RaycastEnd = "0 0 0";
+		ObjectContactPos = "0 0 0";
+		ObjectContactDir = "0 0 0";
+		ContactComponent = -1;
+		HitProxyObjects.Clear();
+		HitObjects.Clear();
+	}
+}

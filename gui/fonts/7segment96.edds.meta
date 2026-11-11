@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{5085518527AA472D}Gui/fonts/7segment96.edds"
+ Author "9206"
+ ChangeDate -1701055892
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "7segment96.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

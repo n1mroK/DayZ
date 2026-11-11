@@ -1,0 +1,21 @@
+MetaFileClass {
+ Name "{140AB63FA23E666F}Gui/textures/Rangefinder_reticle_e_ca.tga"
+ Author "9206"
+ ChangeDate -1132744083
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "Rangefinder_reticle_e_ca.tga"
+   FormatCompress Best
+   CompressTreshold 71
+   Conversion DXTCompression
+   ConversionQuality 1
+   TiledTexture 0
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

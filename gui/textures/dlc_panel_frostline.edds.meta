@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{E0C0E089DAF634B7}Gui/textures/dlc_panel_frostline.edds"
+ Author "9702"
+ ChangeDate 728379647
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "dlc_panel_frostline.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

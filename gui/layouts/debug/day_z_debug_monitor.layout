@@ -1,0 +1,600 @@
+FrameWidgetClass "{00000000EE70746B}" {
+ Name "HudDebugFrameWidget"
+ visible 1
+ position 0.352 -1.352
+ size 1 1
+ halign right_ref
+ hexactpos 1
+ vexactpos 1
+ hexactsize 0
+ vexactsize 0
+ {
+  WindowWidgetClass "{000000007BEF443C}" {
+   Name "StatusWindowWidget"
+   visible 1
+   clipchildren 1
+   position 0.004 0.01
+   size 346 300
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+   scriptclass ""
+   style rover_sim_black_2
+   "title visible" 0
+   "text color" 0.635 0.635 0.635 1
+   "disabled text color" 0.635 0.635 0.635 1
+   {
+    TextWidgetClass "{000000003DB016A1}" {
+     Name "WindowLabel"
+     disabled 0
+     position 0 0.02
+     size 1 0.09
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     fixaspect fixwidth
+     draggable 0
+     style Bold
+     text "STATUS"
+     font "gui/fonts/sdf_MetronBook24"
+     "exact text" 0
+     "exact text size" 22
+     "size to text h" 0
+     "size to text v" 0
+     "text halign" center
+     "text valign" center
+    }
+    PanelWidgetClass "{000000003143BC4E}" {
+     Name "WindowSpacer"
+     color 0.635 0.635 0.635 1
+     position 0 0.12
+     size 0.966 1
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     style editor_quad
+    }
+    GridSpacerWidgetClass "{00000000D7D484D1}" {
+     Name "NamesListboxWidget"
+     visible 1
+     disabled 1
+     clipchildren 0
+     position 0.015 0.14
+     size 0.34 0.84
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     scriptclass ""
+     style Colorable
+     Padding 4
+     Margin 0
+     "Size To Content V" 1
+     Columns 1
+     Rows 9
+     {
+      TextWidgetClass "{00000000B5FE8D77}" {
+       Name "VersionLabel"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "EXECUTABLE:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{000000005EA9A288}" {
+       Name "ScriptsLabel"
+       visible 0
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "SCRIPTS:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{0000000009AF3773}" {
+       Name "FPSLabel"
+       ignorepointer 1
+       size 1 16
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "FPS:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+      }
+      TextWidgetClass "{00000000D528F4DA}" {
+       Name "FPSLabelHint"
+       ignorepointer 1
+       color 0.784 0.784 0.784 1
+       size 1 14
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "(of last 64 frames)"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 13
+       "size to text h" 0
+      }
+      TextWidgetClass "{00000000F1B02536}" {
+       Name "HealthLabel"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "HEALTH:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{000000009B4D8897}" {
+       Name "BloodLabel"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "BLOOD:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{6910D426B2427803}" {
+       Name "TemperatureLabel"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "ENV TEMP:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{6910D42766D24E8C}" {
+       Name "HeatComfortLabel"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "HEAT COMF:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{6910D42769D01A8C}" {
+       Name "ThermalBiasLabel"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "THERM BIAS:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{00000000018E2BE6}" {
+       Name "DmgSourceLabel"
+       ignorepointer 1
+       position 0.101 0.063
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       text "LAST DAMAGE:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{000000008B52FA75}" {
+       Name "MapTileLabel"
+       ignorepointer 1
+       size 1 18
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "MAP TILE:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+      TextWidgetClass "{000000005F9AA941}" {
+       Name "PositionLabel"
+       ignorepointer 1
+       size 1 18
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "POSITION:"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "size to text h" 0
+       "text valign" center
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000080471FD0}" {
+     Name "ValuesListboxWidget"
+     visible 1
+     disabled 1
+     clipchildren 0
+     position 0.36 0.14
+     size 0.62 0.84
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     scriptclass ""
+     style Colorable
+     "no focus" 0
+     Padding 4
+     Margin 0
+     "Size To Content V" 1
+     Columns 1
+     Rows 9
+     {
+      TextWidgetClass "{000000002B7073FF}" {
+       Name "VersionValue"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{0000000092BD61E7}" {
+       Name "ScriptsValue"
+       visible 0
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      GridSpacerWidgetClass "{00000000ABFC31F2}" {
+       Name "FPSValueLabelGap"
+       ignorepointer 1
+       position 10 10
+       size 48 12
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 0
+       Margin 0
+       "Size To Content V" 1
+       Columns 4
+       Rows 1
+       {
+        TextWidgetClass "{0000000004E9543C}" {
+         Name "FPSCurrentValueLabel"
+         ignorepointer 1
+         color 0.784 0.784 0.784 1
+         position 0 0
+         size 1.002 12
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "Current"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 13
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass "{000000000DFA6FFA}" {
+         Name "FPSMinValueLabel"
+         ignorepointer 1
+         color 0.784 0.784 0.784 1
+         position 0 0
+         size 1 12
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "Min"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 13
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass "{00000000C778E02A}" {
+         Name "FPSMaxValueLabel"
+         ignorepointer 1
+         color 0.784 0.784 0.784 1
+         position 0 0
+         size 1 12
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "Max"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 13
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass "{00000000085C0B9F}" {
+         Name "FPSAvgValueLabel"
+         ignorepointer 1
+         color 0.784 0.784 0.784 1
+         position 0 0
+         size 1 12
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         text "Avg"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 13
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      GridSpacerWidgetClass "{0000000098CD6A2F}" {
+       Name "FPSSpacer"
+       ignorepointer 1
+       position 10 10
+       size 48 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       Padding 0
+       Margin 0
+       "Size To Content V" 1
+       Columns 4
+       Rows 1
+       {
+        TextWidgetClass "{00000000C76757A3}" {
+         Name "FPSCurrentValue"
+         ignorepointer 1
+         position 0 0
+         size 1 18
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 16
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass "{0000000029EE8196}" {
+         Name "FPSMinValue"
+         ignorepointer 1
+         position 0 0
+         size 1 18
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 16
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass "{00000000A152DD0E}" {
+         Name "FPSMaxValue"
+         ignorepointer 1
+         position 0 0
+         size 1 18
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 16
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass "{00000000442777B6}" {
+         Name "FPSAvgValue"
+         ignorepointer 1
+         position 0 0
+         size 1 18
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 16
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      TextWidgetClass "{00000000425A3454}" {
+       Name "HealthValue"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{000000003CD88515}" {
+       Name "BloodValue"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{6910D426814056F4}" {
+       Name "TemperatureValue"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{6910D4269430C9DD}" {
+       Name "HeatComfortValue"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{6910D4269690A755}" {
+       Name "ThermalBiasValue"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{00000000F5EC195D}" {
+       Name "DmgSourceValue"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{000000006FBBBC65}" {
+       Name "MapTileValue"
+       ignorepointer 1
+       position 0 0
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{00000000A577B550}" {
+       Name "PositionValue"
+       ignorepointer 1
+       position 0 0
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      TextWidgetClass "{0000000001D691DD}" {
+       Name "CopyPositionInfo"
+       ignorepointer 1
+       size 1 18
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+     }
+    }
+   }
+  }
+ }
+}

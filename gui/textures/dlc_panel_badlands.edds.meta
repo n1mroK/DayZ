@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{E2791C1949551CA5}Gui/textures/dlc_panel_badlands.png"
+ Author "9702"
+ ChangeDate -917294376
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "dlc_panel_badlands.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

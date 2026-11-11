@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{CFB9777C69079462}Gui/textures/Marker.edds"
+ Author "4948"
+ ChangeDate -442815281
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Marker.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

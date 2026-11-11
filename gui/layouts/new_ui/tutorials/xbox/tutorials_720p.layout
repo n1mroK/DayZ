@@ -1,0 +1,5570 @@
+FrameWidgetClass "{0000000091DCC1B8}" {
+ Name "rootFrame"
+ ignorepointer 1
+ position 0 0
+ size 1 1
+ hexactpos 1
+ vexactpos 1
+ hexactsize 0
+ vexactsize 0
+ priority 951
+ {
+  FrameWidgetClass "{0000000023F12A37}" {
+   Name "InfoTextRight"
+   visible 1
+   clipchildren 0
+   ignorepointer 1
+   position 100 0
+   size 360 760
+   halign left
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 2
+   {
+    GridSpacerWidgetClass "{0000000085869A9E}" {
+     Name "PanelWidget0"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 0
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000EBB528D1}" {
+       Name "TextWidget0"
+       visible 1
+       ignorepointer 1
+       size 1 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "0"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000005163AF9}" {
+     Name "PanelWidget1"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 50
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{0000000098A73F44}" {
+       Name "TextWidget1"
+       visible 1
+       ignorepointer 1
+       size 1 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "1"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000008066C7E7}" {
+     Name "PanelWidget2"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 100
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000000D9107FB}" {
+       Name "TextWidget2"
+       visible 1
+       ignorepointer 1
+       size 1 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "2"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000000F66780}" {
+     Name "PanelWidget3"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 150
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000007E83106E}" {
+       Name "TextWidget3"
+       visible 1
+       ignorepointer 1
+       size 1 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "3"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000008E46206C}" {
+     Name "PanelWidget4"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 200
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000233C6B32}" {
+       Name "TextWidget4"
+       visible 1
+       ignorepointer 1
+       position 0 0
+       size 1 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "4"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000000ED6800B}" {
+     Name "PanelWidget5"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 250
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000502E7CA7}" {
+       Name "TextWidget5"
+       visible 1
+       ignorepointer 1
+       size 1 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "5"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000008BA67D15}" {
+     Name "PanelWidget6"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 300
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000C5184418}" {
+       Name "TextWidget6"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "6"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000000B36DD72}" {
+     Name "PanelWidget7"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 350
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000B60A538D}" {
+       Name "TextWidget7"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "7"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000009207EF7A}" {
+     Name "PanelWidget8"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 400
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000007E66B2A0}" {
+       Name "TextWidget8"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "8"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000012974F1D}" {
+     Name "PanelWidget9"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 450
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000000D74A535}" {
+       Name "TextWidget9"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "9"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000095BFD046}" {
+     Name "PanelWidget10"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 500
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000008A256E8E}" {
+       Name "TextWidget10"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "10"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000152F7021}" {
+     Name "PanelWidget11"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 550
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000000CF9E739}" {
+       Name "TextWidget11"
+       visible 1
+       ignorepointer 1
+       position 0 0
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "11"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000905F8D3F}" {
+     Name "PanelWidget12"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 600
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000835D6057}" {
+       Name "TextWidget12"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "12"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000010CF2D58}" {
+     Name "PanelWidget13"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 650
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000000581E9E0}" {
+       Name "TextWidget13"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "13"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000009E7F6AB4}" {
+     Name "PanelWidget14"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 700
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{0000000098D5733C}" {
+       Name "TextWidget14"
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "14"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+   }
+  }
+  FrameWidgetClass "{0000000047C4592D}" {
+   Name "InfoTextLeft"
+   visible 1
+   clipchildren 0
+   ignorepointer 1
+   position 100 0
+   size 360 760
+   halign right_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 2
+   {
+    GridSpacerWidgetClass "{00000000C9ACC58D}" {
+     Name "PanelWidget15"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 0
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000E11208E6}" {
+       Name "TextWidget15"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "15"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000DB6C2690}" {
+     Name "PanelWidget16"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 50
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000E3942E5A}" {
+       Name "TextWidget16"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "16"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000296C8CF6}" {
+     Name "PanelWidget17"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 100
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000E21633CE}" {
+       Name "TextWidget17"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "17"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000070AFE39F}" {
+     Name "PanelWidget18"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 150
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000EA888F82}" {
+       Name "TextWidget18"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "18"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000082AF49F9}" {
+     Name "PanelWidget19"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 200
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000EB0A9216}" {
+       Name "TextWidget19"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "19"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000007B9D1DB4}" {
+     Name "PanelWidget20"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 250
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000693CE44C}" {
+       Name "TextWidget20"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "20"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000899DB7D2}" {
+     Name "PanelWidget21"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 300
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{0000000068BEF9D8}" {
+       Name "TextWidget21"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "21"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000009B5D54CF}" {
+     Name "PanelWidget22"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 350
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000006A38DF64}" {
+       Name "TextWidget22"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "22"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000695DFEA9}" {
+     Name "PanelWidget23"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 400
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000006BBAC2F0}" {
+       Name "TextWidget23"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "23"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000BEDC92F5}" {
+     Name "PanelWidget24"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 450
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000006F34921C}" {
+       Name "TextWidget24"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "24"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000004CDC3893}" {
+     Name "PanelWidget25"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 500
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000006EB68F88}" {
+       Name "TextWidget25"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "25"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{000000005E1CDB8E}" {
+     Name "PanelWidget26"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 550
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000006C30A934}" {
+       Name "TextWidget26"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "26"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000AC1C71E8}" {
+     Name "PanelWidget27"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 600
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{000000006DB2B4A0}" {
+       Name "TextWidget27"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "27"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000F5DF1E81}" {
+     Name "PanelWidget28"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 650
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{00000000652C08EC}" {
+       Name "TextWidget28"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "28"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+    GridSpacerWidgetClass "{0000000007DFB4E7}" {
+     Name "PanelWidget29"
+     visible 1
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 700
+     size 1 86
+     hexactpos 0
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 1
+     Rows 1
+     {
+      RichTextWidgetClass "{0000000064AE1578}" {
+       Name "TextWidget29"
+       visible 1
+       ignorepointer 1
+       size 320 74
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "29"
+       font "gui/fonts/sdf_MetronLight24"
+       "text spacing" 0 5
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{000000001BB02B29}" {
+   Name "Tabber"
+   position 0 0
+   size 1 1
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   priority 1
+   scriptclass "TabberUI"
+   {
+    PanelWidgetClass "{00000000ACA0C920}" {
+     Name "TabControls"
+     visible 1
+     clipchildren 0
+     ignorepointer 1
+     position 150 80
+     size 890 60
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      PanelWidgetClass "{00000000AF06958F}" {
+       Name "TabBar"
+       clipchildren 0
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass "{0000000019E523A6}" {
+         Name "Tabs_Background"
+         visible 0
+         ignorepointer 1
+         color 1 1 1 0.51
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{5A89D58DD2276E85}Gui/textures/SerratedBlack2.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        GridSpacerWidgetClass "{000000004A397627}" {
+         Name "Tab_Control_Container"
+         ignorepointer 1
+         color 0 0 0 0.549
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         style DayZDefaultPanel
+         Padding 0
+         Margin 0
+         "Size To Content H" 1
+         Columns 10
+         Rows 1
+         {
+          PanelWidgetClass "{000000002C0EA87B}" {
+           Name "Tab_Control_0"
+           visible 1
+           clipchildren 1
+           color 0 0 0 0
+           position 0 0
+           size 270 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           priority 200
+           userID 0
+           style DayZDefaultPanel
+           "next down" "XComboBoxWidget1"
+           {
+            TextWidgetClass "{0000000073CE5E16}" {
+             Name "Tab_Control_0_Title"
+             ignorepointer 1
+             size 1 0.42
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             priority 250
+             text "#tutorial_title_healthSystem"
+             font "gui/fonts/sdf_MetronLight72"
+             "italic text" 0
+             "bold text" 0
+             "exact text" 0
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+            ImageWidgetClass "{00000000EDE8E415}" {
+             Name "Tab_Control_0_Background"
+             visible 0
+             disabled 0
+             inheritalpha 0
+             ignorepointer 1
+             color 1 1 1 0.784
+             position 0 0
+             size 890 1
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             draggable 0
+             imageTexture "{5A89D58DD2276E85}Gui/textures/SerratedBlack2.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{00000000EC5DF026}" {
+           Name "Tab_Control_1"
+           visible 1
+           clipchildren 1
+           color 0 0 0 0
+           position 250 0
+           size 250 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           priority 200
+           userID 0
+           style DayZDefaultPanel
+           "next down" "XComboBoxWidget1"
+           {
+            TextWidgetClass "{00000000A81C7ED0}" {
+             Name "Tab_Control_1_Title"
+             ignorepointer 1
+             size 1 0.42
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             priority 250
+             text "#tutorial_title_melee"
+             font "gui/fonts/sdf_MetronLight72"
+             "italic text" 0
+             "bold text" 0
+             "exact text" 0
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+            ImageWidgetClass "{000000007A13F81D}" {
+             Name "Tab_Control_1_Background"
+             visible 0
+             disabled 0
+             inheritalpha 0
+             ignorepointer 1
+             color 1 1 1 0.784
+             position -270 0
+             size 890 1
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             draggable 0
+             imageTexture "{5A89D58DD2276E85}Gui/textures/SerratedBlack2.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{00000000A8690576}" {
+           Name "Tab_Control_2"
+           visible 1
+           clipchildren 1
+           color 0 0 0 0
+           position 700 0
+           size 200 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           priority 200
+           userID 0
+           style DayZDefaultPanel
+           "next down" "XComboBoxWidget1"
+           {
+            TextWidgetClass "{00000000C0AB022D}" {
+             Name "Tab_Control_2_Title"
+             ignorepointer 1
+             size 1 0.42
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             priority 250
+             text "#tutorial_title_guns"
+             font "gui/fonts/sdf_MetronLight72"
+             "italic text" 0
+             "bold text" 0
+             "exact text" 0
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+            ImageWidgetClass "{00000000C6DFC1B2}" {
+             Name "Tab_Control_2_Background"
+             visible 0
+             disabled 0
+             inheritalpha 0
+             ignorepointer 1
+             color 1 1 1 0.784
+             position -420 0
+             size 890 1
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             draggable 0
+             imageTexture "{5A89D58DD2276E85}Gui/textures/SerratedBlack2.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{00000000683A5D2B}" {
+           Name "Tab_Control_3"
+           visible 1
+           clipchildren 1
+           color 0 0 0 0
+           position 930 0
+           size 250 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           priority 200
+           userID 0
+           style DayZDefaultPanel
+           "next down" "XComboBoxWidget1"
+           {
+            TextWidgetClass "{000000001B7922EB}" {
+             Name "Tab_Control_3_Title"
+             ignorepointer 1
+             size 1 0.42
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             priority 250
+             text "#tutorial_title_infected"
+             font "gui/fonts/sdf_MetronLight72"
+             "italic text" 0
+             "bold text" 0
+             "exact text" 0
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+            ImageWidgetClass "{000000005124DDBA}" {
+             Name "Tab_Control_3_Background"
+             visible 0
+             disabled 0
+             inheritalpha 0
+             ignorepointer 1
+             color 1 1 1 0.784
+             position -560 0
+             size 890 1
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             draggable 0
+             imageTexture "{5A89D58DD2276E85}Gui/textures/SerratedBlack2.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{000000002000EFD6}" {
+           Name "Tab_Control_4"
+           visible 1
+           clipchildren 1
+           color 0 0 0 0
+           position 930 0
+           size 200 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           priority 200
+           userID 0
+           style DayZDefaultPanel
+           "next down" "XComboBoxWidget1"
+           {
+            TextWidgetClass "{0000000011C5FBD7}" {
+             Name "Tab_Control_4_Title"
+             ignorepointer 1
+             size 1 0.42
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             priority 250
+             text "#tutorial_inventory7"
+             font "gui/fonts/sdf_MetronLight72"
+             "italic text" 0
+             "bold text" 0
+             "exact text" 0
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+            ImageWidgetClass "{00000000BB86AF5B}" {
+             Name "Tab_Control_4_Background"
+             visible 0
+             disabled 0
+             inheritalpha 0
+             ignorepointer 1
+             color 1 1 1 0.784
+             position -750 0
+             size 890 1
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             draggable 0
+             imageTexture "{5A89D58DD2276E85}Gui/textures/SerratedBlack2.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{00000000E053B78B}" {
+           Name "Tab_Control_5"
+           visible 1
+           clipchildren 1
+           color 0 0 0 0
+           position 930 0
+           size 200 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           priority 200
+           userID 0
+           style DayZDefaultPanel
+           "next down" "XComboBoxWidget1"
+           {
+            TextWidgetClass "{00000000CA17DB11}" {
+             Name "Tab_Control_5_Title"
+             ignorepointer 1
+             size 1 0.42
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             priority 250
+             text "#tutorial_title_loot"
+             font "gui/fonts/sdf_MetronLight72"
+             "italic text" 0
+             "bold text" 0
+             "exact text" 0
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+            ImageWidgetClass "{000000002C7DB353}" {
+             Name "Tab_Control_5_Background"
+             visible 0
+             disabled 0
+             inheritalpha 0
+             ignorepointer 1
+             color 1 1 1 0.784
+             position -750 0
+             size 890 1
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             draggable 0
+             imageTexture "{5A89D58DD2276E85}Gui/textures/SerratedBlack2.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{00000000A46742DB}" {
+           Name "Tab_Control_6"
+           visible 0
+           clipchildren 1
+           color 0 0 0 0
+           position 0 0
+           size 200 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 0
+           priority 200
+           userID 0
+           style DayZDefaultPanel
+           "no focus" 1
+           "next down" "XComboBoxWidget1"
+           {
+            TextWidgetClass "{00000000A2A0A7EC}" {
+             Name "Tab_Control_6_Title"
+             ignorepointer 1
+             position 0 0
+             size 1 0.42
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             priority 250
+             text "#layout_pc_keybinding_desc"
+             font "gui/fonts/sdf_MetronLight72"
+             "size to text h" 1
+             "text halign" center
+             "text valign" center
+            }
+            ImageWidgetClass "{0000000090B18AFC}" {
+             Name "Tab_Control_6_Background"
+             visible 0
+             disabled 0
+             inheritalpha 0
+             ignorepointer 1
+             color 1 1 1 0.784
+             position -330 0
+             size 550 1
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             draggable 0
+             imageTexture "{5A89D58DD2276E85}Gui/textures/SerratedBlack2.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      FrameWidgetClass "{000000005BA59C20}" {
+       Name "ConsoleControls"
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       {
+        RichTextWidgetClass "{00000000D3DB6A3E}" {
+         Name "TabLeftControl"
+         visible 1
+         clipchildren 1
+         ignorepointer 1
+         position -100 0
+         size 100 80
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         text "LB"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 24
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" right
+         "text valign" center
+         wrap 0
+        }
+        RichTextWidgetClass "{00000000537B29FD}" {
+         Name "TabRightControl"
+         visible 1
+         clipchildren 1
+         inheritalpha 1
+         ignorepointer 1
+         position -100 0
+         size 100 80
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         text "RB"
+         font "gui/fonts/sdf_MetronBook24"
+         "exact text" 1
+         "exact text size" 24
+         "size to text h" 0
+         "size to text v" 0
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass "{000000007374E35B}" {
+     Name "Tab_0"
+     ignorepointer 1
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     {
+      ImageWidgetClass "{0000000014A5E396}" {
+       Name "ImageWidget_0"
+       visible 1
+       ignorepointer 1
+       position 0 119
+       size 1352 800.7
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{3A40B4F14DF4CA15}Gui/textures/tutorials/health.edds"
+       "stretch mode" stretch_w_h
+      }
+      CanvasWidgetClass "{00000000ED80D4F8}" {
+       Name "CanvasWidget_0"
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       position 4.096 1.024
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+      }
+      PanelWidgetClass "{000000006DAA3DA8}" {
+       Name "PanelWidget"
+       visible 1
+       ignorepointer 1
+       size 429 162
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       priority 99
+       style blank
+       {
+        FrameWidgetClass "{000000006E27F3C5}" {
+         Name "Markers_0"
+         visible 1
+         clipchildren 0
+         ignorepointer 1
+         size 418 162
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         priority 100
+         {
+          PanelWidgetClass "{00000000ADE7CD1D}" {
+           Name "Health0"
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           position 0 0
+           size 70 162
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{00000000AEAF2328}" {
+             Name "IconHealth0"
+             disabled 0
+             clipchildren 0
+             inheritalpha 0
+             ignorepointer 1
+             keepsafezone 0
+             color 0.863 0.863 0.863 1
+             position 0 0
+             size 70 70
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconHealth0"
+             mode blend
+             "src alpha" 1
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              PanelWidgetClass "{00000000DEBA5AD7}" {
+               Name "button_marker_health_indicator"
+               visible 1
+               ignorepointer 1
+               position 0 -10
+               size 12 12
+               halign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style rover_sim_colorable
+              }
+             }
+            }
+            ImageWidgetClass "{000000009929EEEB}" {
+             Name "HealthArrowUp0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000F038C112}" {
+             Name "HealthArrowUp4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000292C435A}" {
+             Name "HealthArrowUp5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000F2631F16}" {
+             Name "HealthArrowDown0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000009B7230EF}" {
+             Name "HealthArrowDown4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000004266B2A7}" {
+             Name "HealthArrowDown5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{000000001E7BFBF9}" {
+           Name "Blood0"
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           position 86 0
+           size 70 162
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{00000000FD29438F}" {
+             Name "IconBlood0"
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 0
+             size 70 70
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconBlood0"
+             mode blend
+             "src alpha" 1
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              TextWidgetClass "{000000008F81C7CD}" {
+               Name "BloodType0"
+               visible 0
+               ignorepointer 1
+               color 0.863 0.863 0.863 1
+               position -8 -4
+               size 34 24
+               halign right_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "AB"
+               font "gui/fonts/sdf_MetronLight24"
+               "text halign" center
+              }
+              TextWidgetClass "{00000000C623507D}" {
+               Name "BloodPosType0"
+               visible 0
+               ignorepointer 1
+               color 0.863 0.863 0.863 1
+               position -8 16
+               size 34 24
+               halign right_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "+"
+               font "gui/fonts/sdf_MetronLight24"
+               "text halign" center
+              }
+              PanelWidgetClass "{000000001F4D28F6}" {
+               Name "button_marker_blood_indicator"
+               visible 1
+               ignorepointer 1
+               position 0 -10
+               size 12 12
+               halign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style rover_sim_colorable
+              }
+             }
+            }
+            ImageWidgetClass "{00000000F5EBFBF3}" {
+             Name "BloodArrowUp0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000009727CD21}" {
+             Name "BloodArrowUp4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000000DF44E4E}" {
+             Name "BloodArrowUp5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+             {
+              PanelWidgetClass "{000000005E31B32F}" {
+               Name "button_marker_raising_tendency"
+               visible 1
+               ignorepointer 1
+               position 0 -7
+               size 12 12
+               halign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style blank
+              }
+             }
+            }
+            ImageWidgetClass "{000000008E035F8C}" {
+             Name "BloodArrowDown0"
+             visible 0
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000ECCF695E}" {
+             Name "BloodArrowDown4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000761CEA31}" {
+             Name "BloodArrowDown5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{00000000F98E5700}" {
+           Name "NotifierDivider0"
+           ignorepointer 1
+           color 1 1 1 0.294
+           position 161 0
+           size 5 38
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           style rover_sim_colorable
+          }
+          PanelWidgetClass "{00000000A53DD26D}" {
+           Name "Temperature0"
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 1
+           position 172 0
+           size 70 162
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{00000000DF9D80BE}" {
+             Name "IconTemperature0"
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 0
+             size 70 70
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconTemperature0"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              PanelWidgetClass "{0000000032C5A657}" {
+               Name "button_marker_temperature_indicator"
+               visible 1
+               ignorepointer 1
+               position 0 -10
+               size 12 12
+               halign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style rover_sim_colorable
+              }
+             }
+            }
+            ImageWidgetClass "{00000000290744BB}" {
+             Name "TemperatureArrowUp0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000009487B9F7}" {
+             Name "TemperatureArrowUp4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000BBE786A4}" {
+             Name "TemperatureArrowUp5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000008FF6B2F0}" {
+             Name "TemperatureArrowDown0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000032764FBC}" {
+             Name "TemperatureArrowDown4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000001D1670EF}" {
+             Name "TemperatureArrowDown5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{0000000035D74794}" {
+           Name "Hungry0"
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           position 258 0
+           size 70 162
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{000000000D017900}" {
+             Name "IconHungry0"
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0 0 1
+             position 0 0
+             size 70 70
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconHungry3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              PanelWidgetClass "{000000004D66D160}" {
+               Name "button_marker_food_indicator"
+               visible 1
+               ignorepointer 1
+               position 0 -10
+               size 12 12
+               halign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style rover_sim_colorable
+              }
+             }
+            }
+            ImageWidgetClass "{00000000055BFCD5}" {
+             Name "HungryArrowUp0"
+             visible 0
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000006C4AD32C}" {
+             Name "HungryArrowUp4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000B55E5164}" {
+             Name "HungryArrowUp5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000008AC4FF2F}" {
+             Name "HungryArrowDown0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000E3D5D0D6}" {
+             Name "HungryArrowDown4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000003AC1529E}" {
+             Name "HungryArrowDown5"
+             visible 1
+             clipchildren 0
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              PanelWidgetClass "{00000000C5990D4A}" {
+               Name "button_marker_strong_raising_tendency"
+               visible 0
+               clipchildren 1
+               inheritalpha 0
+               ignorepointer 1
+               position 0 -10
+               size 12 12
+               halign center_ref
+               valign bottom_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               priority 1
+               style rover_sim_colorable
+              }
+              PanelWidgetClass "{00000000DF497158}" {
+               Name "button_marker_strong_decrease_tendency"
+               visible 1
+               ignorepointer 1
+               position 0 -10
+               size 12 12
+               halign center_ref
+               valign bottom_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style rover_sim_colorable
+              }
+             }
+            }
+           }
+          }
+          PanelWidgetClass "{0000000004080144}" {
+           Name "Thirsty0"
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 1
+           position 344 0
+           size 70 162
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{0000000014F5F464}" {
+             Name "IconThirsty0"
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0.863 0 1
+             position 0 0
+             size 70 70
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconThirsty2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              PanelWidgetClass "{0000000007078442}" {
+               Name "button_marker_hydration_indicator"
+               visible 1
+               ignorepointer 1
+               position 0 -10
+               size 12 12
+               halign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style rover_sim_colorable
+              }
+             }
+            }
+            ImageWidgetClass "{000000002C2EFB98}" {
+             Name "ThirstyArrowUp0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000B36D3400}" {
+             Name "ThirstyArrowUp4"
+             visible 0
+             clipchildren 0
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000094BDC7E6}" {
+             Name "ThirstyArrowUp5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000FC59A04D}" {
+             Name "ThirstyArrowDown0"
+             visible 1
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              PanelWidgetClass "{00000000F9CF76E3}" {
+               Name "button_marker_decrease_tendency"
+               visible 1
+               ignorepointer 1
+               position 0 -10
+               size 12 12
+               halign center_ref
+               valign bottom_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style rover_sim_colorable
+              }
+             }
+            }
+            ImageWidgetClass "{00000000631A6FD5}" {
+             Name "ThirstyArrowDown4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000044CA9C33}" {
+             Name "ThirstyArrowDown5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{00000000CD7CA772}" {
+           Name "Bacteria0"
+           visible 0
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 1
+           position 430 0
+           size 70 162
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{0000000053902D1B}" {
+             Name "IconBacteria0"
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 0
+             size 70 70
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconBacteria"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              PanelWidgetClass "{000000005947B358}" {
+               Name "button_marker_sickness_indicator"
+               visible 0
+               ignorepointer 1
+               position 0 0
+               size 12 12
+               halign center_ref
+               valign bottom_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               fixaspect fixwidth
+               style rover_sim_colorable
+              }
+             }
+            }
+            ImageWidgetClass "{000000001C6EE97C}" {
+             Name "BacteriaArrowUp0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000042F3F75F}" {
+             Name "BacteriaArrowUp4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000001464F7BA}" {
+             Name "BacteriaArrowUp5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000B3E5E641}" {
+             Name "BacteriaArrowDown0"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 44
+             size 60 20
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000ED78F862}" {
+             Name "BacteriaArrowDown4"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 50
+             size 60 32
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000BBEFF887}" {
+             Name "BacteriaArrowDown5"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 54
+             size 60 46
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      FrameWidgetClass "{000000004E116149}" {
+       Name "HUDPanel"
+       visible 0
+       clipchildren 0
+       ignorepointer 1
+       position 0 -0.02
+       size 0.9 0.82
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        FrameWidgetClass "{0000000019EB8E3A}" {
+         Name "NotifiersPanel"
+         visible 1
+         clipchildren 1
+         ignorepointer 1
+         position 0 0
+         size 260 81
+         halign right_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         priority 100
+         {
+          PanelWidgetClass "{00000000430FC323}" {
+           Name "Health"
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 1
+           position 0 0
+           size 35 81
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{000000006CFE064C}" {
+             Name "IconHealth"
+             disabled 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             keepsafezone 0
+             color 0.863 0.863 0.863 1
+             position 0 0
+             size 52 52
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconHealth0"
+             mode blend
+             "src alpha" 1
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000226B3A45}" {
+             Name "HealthArrowUp3"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000005BBC9A3}" {
+             Name "HealthArrowUp2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000006DCADD89}" {
+             Name "HealthArrowUp1"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000A0D52D7F}" {
+             Name "HealthArrowDown1"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000C8A43955}" {
+             Name "HealthArrowDown2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000EF74CAB3}" {
+             Name "HealthArrowDown3"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{000000006F448C84}" {
+           Name "Blood"
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           position 43 0
+           size 35 81
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{00000000F3E27679}" {
+             Name "IconBlood"
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 0
+             size 52 52
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconBlood0"
+             mode blend
+             "src alpha" 1
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+             {
+              TextWidgetClass "{000000007365EE9E}" {
+               Name "BloodType"
+               visible 0
+               ignorepointer 1
+               color 0.863 0.863 0.863 1
+               position -4 -2
+               size 17 12
+               halign right_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "AB"
+               font "gui/fonts/sdf_MetronLight24"
+               "text halign" center
+              }
+              TextWidgetClass "{0000000022501ABF}" {
+               Name "BloodPosType"
+               visible 0
+               ignorepointer 1
+               color 0.863 0.863 0.863 1
+               position -4 8
+               size 17 12
+               halign right_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "+"
+               font "gui/fonts/sdf_MetronLight24"
+               "text halign" center
+              }
+             }
+            }
+            ImageWidgetClass "{000000007E5AF0F3}" {
+             Name "BloodArrowUp3"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000A74E72BB}" {
+             Name "BloodArrowUp2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000C8B2E9D4}" {
+             Name "BloodArrowUp1"
+             visible 1
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000EBE94052}" {
+             Name "BloodArrowDown1"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000008415DB3D}" {
+             Name "BloodArrowDown2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000005D015975}" {
+             Name "BloodArrowDown3"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{00000000410603F8}" {
+           Name "NotifierDivider"
+           ignorepointer 1
+           color 1 1 1 0.294
+           position 86 30
+           size 3 19
+           halign right_ref
+           valign bottom_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           style rover_sim_colorable
+          }
+          PanelWidgetClass "{00000000BF185E9B}" {
+           Name "Temperature"
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 1
+           position 96 0
+           size 35 81
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{000000007548F6C3}" {
+             Name "IconTemperature"
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 0
+             size 52 52
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconTemperature0"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000009DBA0641}" {
+             Name "TemperatureArrowUp3"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000005DE95E1C}" {
+             Name "TemperatureArrowUp2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000019DDAB4C}" {
+             Name "TemperatureArrowUp1"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000000382FBF0}" {
+             Name "TemperatureArrowDown1"
+             visible 1
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000047B60EA0}" {
+             Name "TemperatureArrowDown2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000087E556FD}" {
+             Name "TemperatureArrowDown3"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{0000000070909C05}" {
+           Name "Hungry"
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 1
+           position 139 0
+           size 35 81
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{0000000064FF89CB}" {
+             Name "IconHungry"
+             ignorepointer 1
+             color 0.863 0 0 1
+             position 0 0
+             size 52 52
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconHungry3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000004068A4BF}" {
+             Name "HungryArrowUp3"
+             visible 0
+             clipchildren 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000067B85759}" {
+             Name "HungryArrowUp2"
+             visible 1
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000000FC94373}" {
+             Name "HungryArrowUp1"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000C189E420}" {
+             Name "HungryArrowDown1"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000A9F8F00A}" {
+             Name "HungryArrowDown2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000008E2803EC}" {
+             Name "HungryArrowDown3"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{000000007F253C22}" {
+           Name "Thirsty"
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 1
+           position 182 0
+           size 35 81
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{000000007BDCBE86}" {
+             Name "IconThirsty"
+             ignorepointer 1
+             color 0.863 0.863 0 1
+             position 0 0
+             size 52 52
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconThirsty2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000001C4DBA55}" {
+             Name "ThirstyArrowUp3"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000004ADABAB0}" {
+             Name "ThirstyArrowUp2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000B163BB9F}" {
+             Name "ThirstyArrowUp1"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000D7A32576}" {
+             Name "ThirstyArrowDown1"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000002C1A2459}" {
+             Name "ThirstyArrowDown2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000007A8D24BC}" {
+             Name "ThirstyArrowDown3"
+             visible 1
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{0000000074C06AB4}" {
+           Name "Bacteria"
+           visible 0
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 1
+           position 225 0
+           size 35 81
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           {
+            ImageWidgetClass "{00000000B14EC971}" {
+             Name "IconBacteria"
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 0
+             size 52 52
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             fixaspect fixwidth
+             image0 "set:dayz_gui image:iconBacteria"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000068262B82}" {
+             Name "BacteriaArrowUp3"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000009D372837}" {
+             Name "BacteriaArrowUp2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000086C5315F}" {
+             Name "BacteriaArrowUp1"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 -22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 1
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000C4AAE7EC}" {
+             Name "BacteriaArrowDown1"
+             visible 0
+             clipchildren 1
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 22
+             size 30 10
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp1"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000DF58FE84}" {
+             Name "BacteriaArrowDown2"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 25
+             size 30 16
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp2"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000002A49FD31}" {
+             Name "BacteriaArrowDown3"
+             visible 0
+             clipchildren 1
+             inheritalpha 0
+             ignorepointer 1
+             color 0.863 0.863 0.863 1
+             position 0 27
+             size 30 22
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             priority 999
+             image0 "set:dayz_gui image:iconArrowUp3"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip v" 0
+             filter 1
+             nocache 0
+            }
+           }
+          }
+         }
+        }
+        WrapSpacerWidgetClass "{00000000877BA493}" {
+         Name "LeftHUDPanel"
+         visible 1
+         clipchildren 0
+         ignorepointer 1
+         position 0 0
+         size 0.2 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         priority 100
+         Padding 10
+         Margin 0
+         content_valign bottom
+         {
+          PanelWidgetClass "{00000000DB0000C5}" {
+           Name "StancePanel"
+           visible 1
+           ignorepointer 1
+           position 0 0
+           size 32 32
+           valign bottom_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           style blank
+           {
+            ImageWidgetClass "{00000000B3083597}" {
+             Name "StanceProne"
+             visible 0
+             ignorepointer 1
+             position 0 0
+             size 1 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             draggable 0
+             image0 "set:dayz_gui image:stance_prone"
+             mode additive
+             "src alpha" 1
+             "clamp mode" clamp
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{000000004040F307}" {
+             Name "StanceCrouch"
+             visible 1
+             ignorepointer 1
+             size 1 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             draggable 0
+             image0 "set:dayz_gui image:stance_crouch"
+             mode additive
+             "src alpha" 1
+             "clamp mode" clamp
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{00000000BCE988F0}" {
+             Name "StanceStand"
+             visible 0
+             ignorepointer 1
+             position 0 0
+             size 1 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             draggable 0
+             image0 "set:dayz_gui image:stance_walk"
+             mode additive
+             "src alpha" 1
+             "clamp mode" clamp
+             filter 1
+             nocache 0
+            }
+            ImageWidgetClass "{0000000069272D33}" {
+             Name "StanceCar"
+             visible 0
+             ignorepointer 1
+             position 0 0
+             size 32 32
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 1
+             vexactsize 1
+             draggable 0
+             image0 "set:dayz_gui image:stance_car"
+             mode additive
+             "src alpha" 1
+             "clamp mode" clamp
+             filter 1
+             nocache 0
+            }
+           }
+          }
+          PanelWidgetClass "{0000000030BEFF1B}" {
+           Name "PlayerPanel"
+           visible 1
+           clipchildren 1
+           ignorepointer 1
+           position 40 0
+           size 180 32
+           valign bottom_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           style blank
+           "next left" "StancePanel"
+           {
+            ProgressBarWidgetClass "{00000000C2816FC1}" {
+             Name "StaminaBar"
+             visible 1
+             ignorepointer 1
+             position 0 0
+             size 1 5
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             priority 1
+             style Stamina
+             current 100
+             vertical 0
+             flipped 0
+            }
+            PanelWidgetClass "{0000000025C38926}" {
+             Name "StaminaBackground"
+             visible 1
+             ignorepointer 1
+             color 0 0 0 0.502
+             position 0 0
+             size 1 5
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             style rover_sim_colorable
+            }
+           }
+          }
+         }
+        }
+        PanelWidgetClass "{00000000DC1452DC}" {
+         Name "PanelWidget01"
+         visible 1
+         ignorepointer 1
+         position -20 -9.5
+         size 260 100
+         halign right_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         style Outline
+        }
+        ImageWidgetClass "{00000000D0D6EABF}" {
+         Name "ImageWidget1"
+         visible 0
+         ignorepointer 1
+         position 240 40.5
+         size 620 2
+         halign right_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+        }
+        ImageWidgetClass "{00000000FF615585}" {
+         Name "ImageWidget0"
+         visible 0
+         ignorepointer 1
+         position 860 40.5
+         size 2 301
+         halign right_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass "{0000000072AC4FDC}" {
+     Name "Tab_1"
+     visible 0
+     ignorepointer 1
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     {
+      PanelWidgetClass "{0000000052B80E17}" {
+       Name "Markers_1"
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 50
+       {
+        PanelWidgetClass "{0000000094C1E432}" {
+         Name "button_marker_axe"
+         visible 1
+         ignorepointer 1
+         position 121.671 810.26
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{00000000B77E9553}" {
+         Name "button_marker_hand"
+         visible 1
+         ignorepointer 1
+         position 16.219 726.74
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{0000000020CE1832}" {
+         Name "button_marker_hammer"
+         visible 1
+         ignorepointer 1
+         position -10.288 253.63
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+       }
+      }
+      CanvasWidgetClass "{00000000B7F9A4B5}" {
+       Name "CanvasWidget_1"
+       visible 1
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       priority 500
+      }
+      ImageWidgetClass "{000000004EDC93DB}" {
+       Name "ImageWidget_1"
+       visible 1
+       ignorepointer 1
+       position 0 119
+       size 1352 800.7
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{92EF7001B2ABF5C3}Gui/textures/tutorials/melee.edds"
+       "stretch mode" stretch_w_h
+       filter 1
+      }
+     }
+    }
+    PanelWidgetClass "{0000000070C5BA55}" {
+     Name "Tab_2"
+     visible 0
+     ignorepointer 1
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     {
+      CanvasWidgetClass "{0000000059723462}" {
+       Name "CanvasWidget_2"
+       visible 1
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       priority 500
+      }
+      PanelWidgetClass "{00000000BC339EC0}" {
+       Name "Markers_2"
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 50
+       {
+        PanelWidgetClass "{00000000DD6999DE}" {
+         Name "button_marker_scope"
+         visible 0
+         ignorepointer 1
+         position -201.641 600.923
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{0000000053A9B81D}" {
+         Name "button_marker_suppressor"
+         visible 1
+         ignorepointer 1
+         position 172.172 603.714
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{000000002223D375}" {
+         Name "button_marker_trigger"
+         visible 1
+         ignorepointer 1
+         position -203.98 527.677
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{0000000013014936}" {
+         Name "button_marker_magazine"
+         visible 1
+         ignorepointer 1
+         position -131.287 505.01
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+       }
+      }
+      ImageWidgetClass "{00000000A057030C}" {
+       Name "ImageWidget_2"
+       visible 1
+       ignorepointer 1
+       position 0 119
+       size 1352 800.7
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{1EAE6D8A6359889C}Gui/textures/tutorials/guns.edds"
+       "stretch mode" stretch_w_h
+      }
+     }
+    }
+    PanelWidgetClass "{00000000711D16D2}" {
+     Name "Tab_3"
+     visible 0
+     ignorepointer 1
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     {
+      CanvasWidgetClass "{00000000030B442F}" {
+       Name "CanvasWidget_3"
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 10
+      }
+      PanelWidgetClass "{00000000E64AEE8D}" {
+       Name "Markers_3"
+       visible 1
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 50
+       {
+        PanelWidgetClass "{0000000059044F7F}" {
+         Name "button_marker_infected1"
+         visible 1
+         ignorepointer 1
+         position 26.271 541.618
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{0000000061711C98}" {
+         Name "button_marker_infected2"
+         visible 1
+         ignorepointer 1
+         position 230.084 634.063
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+       }
+      }
+      ImageWidgetClass "{00000000FA2E7341}" {
+       Name "ImageWidget_3"
+       visible 1
+       ignorepointer 1
+       position 0 119
+       size 1352 800.7
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{2E141DDA4A41B752}Gui/textures/tutorials/infected.edds"
+       "stretch mode" stretch_w_h
+      }
+     }
+    }
+    PanelWidgetClass "{0000000074165147}" {
+     Name "Tab_4"
+     visible 0
+     ignorepointer 1
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     {
+      CanvasWidgetClass "{0000000080A4087B}" {
+       Name "CanvasWidget_4"
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 10
+      }
+      PanelWidgetClass "{0000000065E5A2D9}" {
+       Name "Markers_4"
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 50
+       {
+        PanelWidgetClass "{000000002894C2F5}" {
+         Name "button_marker_inv1"
+         visible 1
+         ignorepointer 1
+         position -441 765.599
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{000000000732A04F}" {
+         Name "button_marker_inv3"
+         visible 1
+         ignorepointer 1
+         position -438.42 223.64
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{00000000600B36DC}" {
+         Name "button_marker_inv4"
+         visible 1
+         ignorepointer 1
+         position 158.21 332
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{0000000077D80781}" {
+         Name "button_marker_inv5"
+         visible 1
+         ignorepointer 1
+         position 268.273 674.204
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{000000004FAD5466}" {
+         Name "button_marker_inv6"
+         visible 1
+         ignorepointer 1
+         position 273.422 767.53
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+       }
+      }
+      ImageWidgetClass "{0000000079813F15}" {
+       Name "ImageWidget_4"
+       visible 1
+       ignorepointer 1
+       position 0 119
+       size 1352 800.7
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{EC7C660B3E068A83}Gui/textures/tutorials/inventory.edds"
+       "stretch mode" stretch_w_h
+       {
+        FrameWidgetClass "{0000000046530D52}" {
+         Name "height_wrapper"
+         visible 1
+         clipchildren 1
+         ignorepointer 1
+         position 6 565.695
+         size 376 36
+         halign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         {
+          TextWidgetClass "{0000000098F54B5F}" {
+           Name "hands_title"
+           ignorepointer 1
+           color 0 0 0 1
+           position 0 0
+           size 1 0.6
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           style Normal
+           text "#container_hands"
+           font "gui/fonts/sdf_MetronBook72"
+           "bold text" 1
+           "text sharpness" 0.5
+           "exact text" 1
+           "exact text size" 24
+           "size to text h" 0
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass "{00000000015D0886}" {
+         Name "height_wrapper0"
+         visible 1
+         clipchildren 1
+         ignorepointer 1
+         position 66 90
+         size 364 36
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         {
+          TextWidgetClass "{00000000EDE6B156}" {
+           Name "vicnity_title0"
+           ignorepointer 1
+           color 0 0 0 1
+           position 0 0
+           size 1 0.6
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           style Normal
+           text "#container_vicinity"
+           font "gui/fonts/sdf_MetronBook72"
+           "bold text" 1
+           "text sharpness" 0.5
+           "exact text" 1
+           "exact text size" 24
+           "size to text h" 0
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass "{00000000C4E4C5CA}" {
+         Name "height_wrapper1"
+         visible 1
+         clipchildren 1
+         ignorepointer 1
+         position 62 90
+         size 364 36
+         halign right_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         {
+          TextWidgetClass "{00000000F5B30EBA}" {
+           Name "equiipment_title1"
+           ignorepointer 1
+           color 0 0 0 1
+           position 0 0
+           size 1 0.6
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           style Normal
+           text "#container_inventory"
+           font "gui/fonts/sdf_MetronBook72"
+           "bold text" 1
+           "text sharpness" 0.5
+           "exact text" 1
+           "exact text size" 24
+           "size to text h" 0
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass "{000000008EEF8FA9}" {
+         Name "height_wrapper2"
+         visible 1
+         clipchildren 1
+         ignorepointer 1
+         position 432 223
+         size 362 32
+         halign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         scaled 1
+         {
+          TextWidgetClass "{000000002FF9F0EB}" {
+           Name "item_title0"
+           ignorepointer 1
+           position 0 0
+           size 1 0.6
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           style Normal
+           text "#str_cfgvehicles_hoodie_colorbase0 (11/20)"
+           font "gui/fonts/sdf_MetronLight24"
+           "bold text" 0
+           "text sharpness" 0.5
+           "exact text" 1
+           "exact text size" 20
+           "size to text h" 0
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass "{0000000075CEFDC0}" {
+     Name "Tab_5"
+     visible 0
+     ignorepointer 1
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     {
+      CanvasWidgetClass "{00000000DADD7836}" {
+       Name "CanvasWidget_5"
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 10
+      }
+      PanelWidgetClass "{000000003F9CD294}" {
+       Name "Markers_5"
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 50
+       {
+        PanelWidgetClass "{00000000EBC42BAB}" {
+         Name "button_marker_loot1"
+         visible 1
+         ignorepointer 1
+         position -286.311 355.714
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+        PanelWidgetClass "{00000000D3B1784C}" {
+         Name "button_marker_loot2"
+         visible 1
+         ignorepointer 1
+         position 336.6 431.117
+         size 12 12
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         style rover_sim_colorable
+        }
+       }
+      }
+      ImageWidgetClass "{0000000023F84F58}" {
+       Name "ImageWidget_5"
+       visible 1
+       ignorepointer 1
+       position 0 119
+       size 1350 800.7
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{F0E95E39B3D3FE0C}Gui/textures/tutorials/loot.edds"
+       "stretch mode" stretch_w_h
+      }
+     }
+    }
+    FrameWidgetClass "{0000000077A70849}" {
+     Name "Tab_6"
+     visible 0
+     ignorepointer 1
+     position 100 160
+     size 1720 800
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+    }
+   }
+  }
+  ImageWidgetClass "{000000007BAC940A}" {
+   Name "vignette"
+   visible 1
+   ignorepointer 1
+   color 0 0 0 0.784
+   position 0 0
+   size 1.6 0.9
+   halign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   fixaspect outside
+   imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+   mode blend
+   "src alpha" 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
+   filter 0
+   nocache 1
+  }
+  TextWidgetClass "{00000000CAA13C19}" {
+   Name "TutorialsTextWidget"
+   ignorepointer 1
+   position 0.05 80
+   size 0.35 50
+   halign right_ref
+   hexactpos 0
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   priority 1
+   style Normal
+   text "#STR_rootFrame_TutorialsTextWidget0"
+   font "gui/fonts/sdf_MetronLight72"
+   "text color" 0.816 0.125 0.784 1
+   "exact text" 0
+   "text halign" right
+   "text valign" center
+  }
+  PanelWidgetClass "{0000000032B2B07B}" {
+   Name "toolbar_bg"
+   visible 1
+   inheritalpha 0
+   ignorepointer 1
+   color 0 0 0 0.549
+   size 1 0.1
+   halign center_ref
+   valign bottom_ref
+   hexactpos 0
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   priority 3
+   style ToolbarWidget
+   {
+    WrapSpacerWidgetClass "{00000000DD541869}" {
+     Name "ConsoleToolbar"
+     clipchildren 0
+     ignorepointer 1
+     position 100 11
+     size 840 48
+     halign right_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     priority 100
+     "no focus" 1
+     Padding 20
+     Margin 0
+     "Size To Content V" 1
+     content_halign right
+     content_valign center
+     {
+      RichTextWidgetClass "{00000000E5631E98}" {
+       Name "ContextToolbarText"
+       clipchildren 0
+       position 0 0
+       size 1 48
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "#layout_console_inventory_toolbar_context"
+       font "gui/fonts/sdf_MetronLight42"
+       "italic text" 0
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" right
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+   }
+  }
+  WrapSpacerWidgetClass "{0000000067673146}" {
+   Name "play_panel_root"
+   visible 1
+   ignorepointer 1
+   position 100 130
+   size 400 400
+   halign right_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 2
+   Padding 0
+   Margin 0
+   content_halign center
+   content_valign bottom
+   {
+    WrapSpacerWidgetClass "{00000000612D4339}" {
+     Name "bottom"
+     color 0 0 0 0.549
+     position 0 0
+     size 1 90
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     style DayZDefaultPanel
+     "no focus" 0
+     "next left" "news_main"
+     "next right" "news_main"
+     "next up" ""
+     "next down" "exit_button"
+     Padding 0
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     {
+      ButtonWidgetClass "{00000000DAC5DFE5}" {
+       Name "back"
+       color 0 0 0 0
+       position 0 0
+       size 1 90
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style Empty
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       {
+        PanelWidgetClass "{0000000016FCFE1D}" {
+         Name "back_panel"
+         ignorepointer 1
+         color 0 0 0 0
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style DayZDefaultPanel
+         {
+          TextWidgetClass "{0000000008D7ACED}" {
+           Name "back_label"
+           clipchildren 0
+           ignorepointer 1
+           size 1 0.65
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "#layout_pc_keybinding_play_pannel_back"
+           font "gui/fonts/sdf_MetronLight42"
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

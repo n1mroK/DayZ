@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{8497AF7F607AF0FF}Gui/textures/video_player/Load.edds"
+ Author "4761"
+ ChangeDate 865873649
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Load.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

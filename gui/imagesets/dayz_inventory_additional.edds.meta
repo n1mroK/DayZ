@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{37C4C7A7C90E3F51}Gui/imagesets/dayz_inventory_additional.tga"
+ Author "ntb-7446"
+ ChangeDate -291769559
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "dayz_inventory_additional.tga"
+   Conversion DXTCompression
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

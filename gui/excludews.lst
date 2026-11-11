@@ -1,0 +1,7 @@
+exclude.lst
+excludePS4.lst
+excludeXbox.lst
+
+*.tga
+*.png
+*.fbx

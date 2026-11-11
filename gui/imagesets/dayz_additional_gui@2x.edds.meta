@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{D5A62471693CF252}Gui/imagesets/dayz_additional_gui@2x.tga"
+ Author "ntb-7446"
+ ChangeDate 1953723170
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "dayz_additional_gui@2x.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

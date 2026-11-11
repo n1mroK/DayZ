@@ -1,0 +1,204 @@
+ImageSetClass {
+ Name "dayz_inventory_additional"
+ RefSize 2048 2048
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{37C4C7A7C90E3F51}Gui/imagesets/dayz_inventory_additional.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass mortarmix {
+   Name "mortarmix"
+   Pos 0 512
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass buttpack {
+   Name "buttpack"
+   Pos 171 512
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass motorcycle_chassis {
+   Name "motorcycle_chassis"
+   Pos 341 512
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass motorcycle_body {
+   Name "motorcycle_body"
+   Pos 512 512
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass motorcycle_front_wheel {
+   Name "motorcycle_front_wheel"
+   Pos 683 512
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass motorcycle_back_wheel {
+   Name "motorcycle_back_wheel"
+   Pos 853 512
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass cat_bb_watchtower_wall_4 {
+   Name "cat_bb_watchtower_wall_4"
+   Pos 0 683
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass cat_bb_watchtower_base {
+   Name "cat_bb_watchtower_base"
+   Pos 171 683
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass cat_bb_watchtower_stairs {
+   Name "cat_bb_watchtower_stairs"
+   Pos 341 683
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass beltholster {
+   Name "beltholster"
+   Pos 512 683
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass glowplug {
+   Name "glowplug"
+   Pos 683 683
+   Size 170 170
+   Flags 0
+  }
+  ImageSetDefClass "big stone" {
+   Name "big stone"
+   Pos 853 683
+   Size 170 170
+   Flags 0
+  }
+ }
+ Groups {
+  ImageSetGroupClass "Rebuilding Group" {
+   Name "Rebuilding Group"
+   Images {
+    ImageSetDefClass wall_brick {
+     Name "wall_brick"
+     Pos 0 0
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass wall_wood {
+     Name "wall_wood"
+     Pos 171 0
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass wall_windowframe_brick {
+     Name "wall_windowframe_brick"
+     Pos 341 0
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass wall_windowframe_wood {
+     Name "wall_windowframe_wood"
+     Pos 512 0
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass wall_doorframe_brick {
+     Name "wall_doorframe_brick"
+     Pos 683 0
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass wall_doorframe_wood {
+     Name "wall_doorframe_wood"
+     Pos 853 0
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass window_wood {
+     Name "window_wood"
+     Pos 0 171
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass window_metal {
+     Name "window_metal"
+     Pos 171 171
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass door_brickbarricade {
+     Name "door_brickbarricade"
+     Pos 341 171
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass door_wood {
+     Name "door_wood"
+     Pos 512 171
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass door_metal {
+     Name "door_metal"
+     Pos 683 171
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass door {
+     Name "door"
+     Pos 853 171
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass roof {
+     Name "roof"
+     Pos 0 341
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass rope_ladder {
+     Name "rope_ladder"
+     Pos 171 341
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass well {
+     Name "well"
+     Pos 341 341
+     Size 170 170
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass "Motorcycle Group" {
+   Name "Motorcycle Group"
+   Images {
+    ImageSetDefClass motorcycle_right {
+     Name "motorcycle_right"
+     Pos 512 341
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass motorcycle_front {
+     Name "motorcycle_front"
+     Pos 683 341
+     Size 170 170
+     Flags 0
+    }
+    ImageSetDefClass motorcycle_left {
+     Name "motorcycle_left"
+     Pos 853 341
+     Size 170 170
+     Flags 0
+    }
+   }
+  }
+ }
+}

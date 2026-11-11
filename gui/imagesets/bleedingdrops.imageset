@@ -1,0 +1,110 @@
+ImageSetClass {
+ Name "BleedingDrops"
+ RefSize 512 512
+ Textures {
+  ImageSetTextureClass {
+   mpix 0
+   path "{35363C01F72D2EBE}Gui/imagesets/BleedingDrops.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass Bleeding1 {
+   Name "Bleeding1"
+   Pos 0 0
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding2 {
+   Name "Bleeding2"
+   Pos 128 0
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding3 {
+   Name "Bleeding3"
+   Pos 256 0
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding4 {
+   Name "Bleeding4"
+   Pos 384 0
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding5 {
+   Name "Bleeding5"
+   Pos 0 128
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding6 {
+   Name "Bleeding6"
+   Pos 128 128
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding7 {
+   Name "Bleeding7"
+   Pos 256 128
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding8 {
+   Name "Bleeding8"
+   Pos 384 128
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding9 {
+   Name "Bleeding9"
+   Pos 0 256
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding10 {
+   Name "Bleeding10"
+   Pos 128 256
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding11 {
+   Name "Bleeding11"
+   Pos 256 256
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding12 {
+   Name "Bleeding12"
+   Pos 384 256
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding13 {
+   Name "Bleeding13"
+   Pos 0 384
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding14 {
+   Name "Bleeding14"
+   Pos 128 384
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding15 {
+   Name "Bleeding15"
+   Pos 256 384
+   Size 128 128
+   Flags 0
+  }
+  ImageSetDefClass Bleeding16 {
+   Name "Bleeding16"
+   Pos 384 384
+   Size 128 128
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

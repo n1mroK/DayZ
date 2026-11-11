@@ -1,0 +1,43 @@
+GridSpacerWidgetClass "{000000004A944DF0}" {
+ Name "root"
+ size 1 0.04
+ scaled 1
+ style Empty
+ "Size To Content H" 1
+ "Size To Content V" 1
+ Columns 1
+ Rows 1
+ {
+  ButtonWidgetClass "{0000000087979E0A}" {
+   Name "button"
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   style Colorable
+   text_halign left
+   font "gui/fonts/sdf_MetronBook24"
+   {
+    TextWidgetClass "{0000000040A6A742}" {
+     Name "text"
+     ignorepointer 1
+     position 0 0
+     size 1 1
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     text "button"
+     font "gui/fonts/sdf_MetronBook24"
+     "exact text" 1
+     "exact text size" 16
+     "size to text v" 1
+    }
+   }
+  }
+ }
+}

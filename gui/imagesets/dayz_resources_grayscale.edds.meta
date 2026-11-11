@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{8A1E8EEA7DB4F5DE}Gui/imagesets/dayz_resources_grayscale.tga"
+ Author "ntb-7446"
+ ChangeDate 656175901
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "dayz_resources_grayscale.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

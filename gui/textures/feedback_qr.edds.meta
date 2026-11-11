@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{E04AAD962DAA3549}Gui/textures/feedback_qr.edds"
+ Author "9214"
+ ChangeDate 1361835223
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "feedback_qr.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

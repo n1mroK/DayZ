@@ -1,0 +1,24 @@
+ImageSetClass {
+ Name "playstation_buttons2"
+ RefSize 64 64
+ Textures {
+  ImageSetTextureClass {
+   mpix 0
+   path "Gui/imagesets/playstation_buttons2.edds"
+  }
+  ImageSetTextureClass {
+   mpix 1
+   path "Gui/imagesets/playstation_buttons2@2x.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass DPAD_all_directions {
+   Name "DPAD_all_directions"
+   Pos 1 1
+   Size 44 44
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

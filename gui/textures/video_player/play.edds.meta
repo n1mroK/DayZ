@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C0FD32C41205D820}Gui/textures/video_player/Play.edds"
+ Author "4761"
+ ChangeDate -1532760335
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Play.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{9F640B3B4CDC2A81}Gui/textures/dlc_panel_livonia.edds"
+ Author "4930"
+ ChangeDate 749367039
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "dlc_panel_livonia.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

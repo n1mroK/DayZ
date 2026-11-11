@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{A0EE88E1C39FB226}Gui/textures/modlogo_default_hover_co.edds"
+ Author "4941"
+ ChangeDate -860082454
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "modlogo_default_hover_co.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

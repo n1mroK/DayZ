@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{4899E9E5639DF6C5}Gui/textures/video_player/Repeat.edds"
+ Author "4761"
+ ChangeDate 1062366962
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Repeat.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

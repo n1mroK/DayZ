@@ -1,0 +1,38 @@
+ImageSetClass {
+ Name "Map2D_UI"
+ RefSize 1024 640
+ Textures {
+  ImageSetTextureClass {
+   mpix 0
+   path "{15F9C38BC27D2985}Gui/imagesets/Map2D_UI.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass CompassBase {
+   Name "CompassBase"
+   Pos 0 0
+   Size 512 512
+   Flags 0
+  }
+  ImageSetDefClass CompassArrow {
+   Name "CompassArrow"
+   Pos 512 0
+   Size 512 512
+   Flags 0
+  }
+  ImageSetDefClass MapScale {
+   Name "MapScale"
+   Pos 0 512
+   Size 502 14
+   Flags 0
+  }
+  ImageSetDefClass MapLegendBackground {
+   Name "MapLegendBackground"
+   Pos 719 512
+   Size 305 128
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

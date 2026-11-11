@@ -1,0 +1,331 @@
+ImageSetClass {
+ Name "dayz_additional_gui_unique"
+ RefSize 256 256
+ Textures {
+  ImageSetTextureClass {
+   mpix 0
+   path "{FA415A902B2C80D7}Gui/imagesets/dayz_additional_gui.edds"
+  }
+  ImageSetTextureClass {
+   mpix 1
+   path "{D5A62471693CF252}Gui/imagesets/dayz_additional_gui@2x.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass Empty {
+   Name "Empty"
+   Pos 0 0
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass ButtonIconKey {
+   Name "ButtonIconKey"
+   Pos 53 2
+   Size 38 38
+   Flags 0
+  }
+  ImageSetDefClass ButtonIconCorrect {
+   Name "ButtonIconCorrect"
+   Pos 93 2
+   Size 38 38
+   Flags 0
+  }
+ }
+ Groups {
+  ImageSetGroupClass ButtonDisabled_Default {
+   Name "ButtonDisabled_Default"
+   Images {
+    ImageSetDefClass ButtonDisabled_DefaultLeftTop {
+     Name "ButtonDisabled_DefaultLeftTop"
+     Pos 15 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DefaultLeft {
+     Name "ButtonDisabled_DefaultLeft"
+     Pos 12 2
+     Size 4 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DefaultLeftBottom {
+     Name "ButtonDisabled_DefaultLeftBottom"
+     Pos 15 19
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DefaultTop {
+     Name "ButtonDisabled_DefaultTop"
+     Pos 16 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DefaultCenter {
+     Name "ButtonDisabled_DefaultCenter"
+     Pos 15 2
+     Size 2 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DefaultBottom {
+     Name "ButtonDisabled_DefaultBottom"
+     Pos 16 19
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DefaultRightTop {
+     Name "ButtonDisabled_DefaultRightTop"
+     Pos 17 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DefaultRight {
+     Name "ButtonDisabled_DefaultRight"
+     Pos 16 2
+     Size 4 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DefaultRightBottom {
+     Name "ButtonDisabled_DefaultRightBottom"
+     Pos 17 19
+     Size 1 1
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass ButtonDisabled_Disabled {
+   Name "ButtonDisabled_Disabled"
+   Images {
+    ImageSetDefClass ButtonDisabled_DisabledLeftTop {
+     Name "ButtonDisabled_DisabledLeftTop"
+     Pos 25 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DisabledLeft {
+     Name "ButtonDisabled_DisabledLeft"
+     Pos 22 2
+     Size 4 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DisabledLeftBottom {
+     Name "ButtonDisabled_DisabledLeftBottom"
+     Pos 25 19
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DisabledTop {
+     Name "ButtonDisabled_DisabledTop"
+     Pos 26 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DisabledCenter {
+     Name "ButtonDisabled_DisabledCenter"
+     Pos 25 2
+     Size 2 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DisabledBottom {
+     Name "ButtonDisabled_DisabledBottom"
+     Pos 26 19
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DisabledRightTop {
+     Name "ButtonDisabled_DisabledRightTop"
+     Pos 27 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DisabledRight {
+     Name "ButtonDisabled_DisabledRight"
+     Pos 26 2
+     Size 4 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_DisabledRightBottom {
+     Name "ButtonDisabled_DisabledRightBottom"
+     Pos 27 19
+     Size 1 1
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass ButtonDisabled_Highlight {
+   Name "ButtonDisabled_Highlight"
+   Images {
+    ImageSetDefClass ButtonDisabled_HighlightLeftTop {
+     Name "ButtonDisabled_HighlightLeftTop"
+     Pos 5 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_HighlightLeft {
+     Name "ButtonDisabled_HighlightLeft"
+     Pos 2 2
+     Size 4 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_HighlightLeftBottom {
+     Name "ButtonDisabled_HighlightLeftBottom"
+     Pos 5 19
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_HighlightTop {
+     Name "ButtonDisabled_HighlightTop"
+     Pos 6 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_HighlightCenter {
+     Name "ButtonDisabled_HighlightCenter"
+     Pos 5 2
+     Size 2 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_HighlightBottom {
+     Name "ButtonDisabled_HighlightBottom"
+     Pos 6 19
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_HighlightRightTop {
+     Name "ButtonDisabled_HighlightRightTop"
+     Pos 7 3
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_HighlightRight {
+     Name "ButtonDisabled_HighlightRight"
+     Pos 6 2
+     Size 4 19
+     Flags 0
+    }
+    ImageSetDefClass ButtonDisabled_HighlightRightBottom {
+     Name "ButtonDisabled_HighlightRightBottom"
+     Pos 7 19
+     Size 1 1
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass ButtonDigitalLock_Highlight {
+   Name "ButtonDigitalLock_Highlight"
+   Images {
+    ImageSetDefClass ButtonDigitalLock_HighlightLeftTop {
+     Name "ButtonDigitalLock_HighlightLeftTop"
+     Pos 32 2
+     Size 8 7
+     Flags 0
+    }
+    ImageSetDefClass ButtonDigitalLock_HighlightLeft {
+     Name "ButtonDigitalLock_HighlightLeft"
+     Pos 32 9
+     Size 8 6
+     Flags ISVerticalTile
+    }
+    ImageSetDefClass ButtonDigitalLock_HighlightLeftBottom {
+     Name "ButtonDigitalLock_HighlightLeftBottom"
+     Pos 32 15
+     Size 8 7
+     Flags 0
+    }
+    ImageSetDefClass ButtonDigitalLock_HighlightTop {
+     Name "ButtonDigitalLock_HighlightTop"
+     Pos 40 2
+     Size 3 7
+     Flags ISHorizontalTile
+    }
+    ImageSetDefClass ButtonDigitalLock_HighlightCenter {
+     Name "ButtonDigitalLock_HighlightCenter"
+     Pos 40 9
+     Size 3 6
+     Flags 3
+    }
+    ImageSetDefClass ButtonDigitalLock_HighlightBottom {
+     Name "ButtonDigitalLock_HighlightBottom"
+     Pos 40 15
+     Size 3 7
+     Flags ISHorizontalTile
+    }
+    ImageSetDefClass ButtonDigitalLock_HighlightRightTop {
+     Name "ButtonDigitalLock_HighlightRightTop"
+     Pos 43 2
+     Size 8 7
+     Flags 0
+    }
+    ImageSetDefClass ButtonDigitalLock_HighlightRight {
+     Name "ButtonDigitalLock_HighlightRight"
+     Pos 43 9
+     Size 8 6
+     Flags ISVerticalTile
+    }
+    ImageSetDefClass ButtonDigitalLock_HighlightRightBottom {
+     Name "ButtonDigitalLock_HighlightRightBottom"
+     Pos 43 15
+     Size 8 7
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass ButtonDigitalLock_Pressed {
+   Name "ButtonDigitalLock_Pressed"
+   Images {
+    ImageSetDefClass ButtonDigitalLock_PressedLeftTop {
+     Name "ButtonDigitalLock_PressedLeftTop"
+     Pos 32 24
+     Size 8 8
+     Flags 0
+    }
+    ImageSetDefClass ButtonDigitalLock_PressedLeft {
+     Name "ButtonDigitalLock_PressedLeft"
+     Pos 32 32
+     Size 8 6
+     Flags ISVerticalTile
+    }
+    ImageSetDefClass ButtonDigitalLock_PressedLeftBottom {
+     Name "ButtonDigitalLock_PressedLeftBottom"
+     Pos 32 38
+     Size 8 7
+     Flags 0
+    }
+    ImageSetDefClass ButtonDigitalLock_PressedTop {
+     Name "ButtonDigitalLock_PressedTop"
+     Pos 40 24
+     Size 3 8
+     Flags ISHorizontalTile
+    }
+    ImageSetDefClass ButtonDigitalLock_PressedCenter {
+     Name "ButtonDigitalLock_PressedCenter"
+     Pos 40 32
+     Size 3 6
+     Flags 3
+    }
+    ImageSetDefClass ButtonDigitalLock_PressedBottom {
+     Name "ButtonDigitalLock_PressedBottom"
+     Pos 40 38
+     Size 3 7
+     Flags ISHorizontalTile
+    }
+    ImageSetDefClass ButtonDigitalLock_PressedRightTop {
+     Name "ButtonDigitalLock_PressedRightTop"
+     Pos 43 24
+     Size 8 8
+     Flags 0
+    }
+    ImageSetDefClass ButtonDigitalLock_PressedRight {
+     Name "ButtonDigitalLock_PressedRight"
+     Pos 43 32
+     Size 8 6
+     Flags ISVerticalTile
+    }
+    ImageSetDefClass ButtonDigitalLock_PressedRightBottom {
+     Name "ButtonDigitalLock_PressedRightBottom"
+     Pos 43 38
+     Size 8 7
+     Flags 0
+    }
+   }
+  }
+ }
+}

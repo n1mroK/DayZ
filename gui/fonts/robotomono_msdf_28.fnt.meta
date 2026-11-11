@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0E041C5B1F27DCEA}ui/fonts/robotomono_msdf_28.fnt"
+ Configurations {
+  FNTResourceClass PC {
+  }
+  FNTResourceClass XBOX_ONE : PC {
+  }
+  FNTResourceClass PS4 : PC {
+  }
+  FNTResourceClass HEADLESS : PC {
+  }
+  FNTResourceClass XBOX_SERIES : PC {
+  }
+  FNTResourceClass PS5 : PC {
+  }
+ }
+}

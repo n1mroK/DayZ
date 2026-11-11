@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0C4B4C0442BD5884}Gui/imagesets/dayz_resources_grayscale@2x.tga"
+ Author "ntb-7446"
+ ChangeDate 488403741
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "dayz_resources_grayscale@2x.tga"
+   Conversion DXTCompression
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

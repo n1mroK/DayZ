@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C1B3283734F04D70}Gui/textures/Marker_Arrow.edds"
+ Author "4948"
+ ChangeDate -476369713
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Marker_Arrow.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

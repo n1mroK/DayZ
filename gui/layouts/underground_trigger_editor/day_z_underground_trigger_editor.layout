@@ -1,0 +1,545 @@
+FrameWidgetClass "{000000004A944DF0}" {
+ Name "root"
+ visible 1
+ clipchildren 1
+ position 0 0
+ size 1 1
+ hexactpos 1
+ vexactpos 1
+ hexactsize 0
+ vexactsize 0
+ priority 10
+ {
+  PanelWidgetClass "{00000000723035A7}" {
+   Name "panels"
+   visible 1
+   position 0 0
+   size 1 1
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   {
+    PanelWidgetClass "{00000000B8EFC9BE}" {
+     Name "panel_top"
+     visible 1
+     disabled 0
+     position 0 0
+     size 1 0.05
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     style rover_sim_black
+     {
+      ButtonWidgetClass "{000000007E279E5D}" {
+       Name "btn_top_editor_settings"
+       visible 0
+       disabled 0
+       position 10 0
+       size 200 20
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Editor
+       text "Editor Settings"
+       font "gui/fonts/sdf_MetronBook24"
+      }
+     }
+    }
+    GridSpacerWidgetClass "{00000000B86DF404}" {
+     Name "panel_left"
+     clipchildren 1
+     color 0.282 0.282 0.282 0.804
+     position 0 0.05
+     size 0.225 0.95
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style DayZDefaultPanel
+     Padding 0
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     Columns 1
+     Rows 2
+     {
+      GridSpacerWidgetClass "{00000000CC000010}" {
+       Name "triggers_section"
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Empty
+       Padding 0
+       Margin 0
+       "Size To Content H" 1
+       "Size To Content V" 1
+       Columns 1
+       Rows 2
+       {
+        GridSpacerWidgetClass "{00000000AE4FDE57}" {
+         Name "triggers"
+         position 0 0
+         size 1 0.7
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Empty
+         Padding 0
+         Margin 0
+         "Size To Content H" 1
+         "Size To Content V" 1
+         Columns 1
+         {
+          EditBoxWidgetClass "{000000005BADF7D0}" {
+           Name "edit_left_search_item"
+           visible 0
+           position 0 0
+           size 0.8 0.05
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           "no focus" 1
+           font "gui/fonts/Metron"
+          }
+          ScrollWidgetClass "{0000000044C6D338}" {
+           Name "triggers_list_scroll"
+           clipchildren 1
+           ignorepointer 1
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style blank
+           "Scrollbar V" 1
+           {
+            WrapSpacerWidgetClass "{000000001942F2DE}" {
+             Name "triggers_list"
+             clipchildren 1
+             ignorepointer 1
+             position 0 0
+             size 1 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style Colorable
+             "Size To Content V" 1
+            }
+           }
+          }
+         }
+        }
+        GridSpacerWidgetClass "{00000000990F40DF}" {
+         Name "trigger_controls"
+         ignorepointer 1
+         position 0 0
+         size 1 0.3
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 10
+         Margin 10
+         "Size To Content V" 1
+         content_halign center
+         content_valign center
+         Columns 2
+         Rows 3
+         {
+          ButtonWidgetClass "{000000005D594B7E}" {
+           Name "trigger_controls_rename"
+           position 0 0
+           size 1 0.1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Rename"
+          }
+          ButtonWidgetClass "{00000000D7E674D9}" {
+           Name "trigger_controls_export"
+           position 0 0
+           size 1 0.1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Export"
+          }
+          ButtonWidgetClass "{00000000A08DD089}" {
+           Name "trigger_controls_reload"
+           position 0 0
+           size 1 0.1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Reload File"
+          }
+          ButtonWidgetClass "{00000000AB94AFEA}" {
+           Name "trigger_controls_delete"
+           position 0 0
+           size 1 0.1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Delete"
+          }
+          ButtonWidgetClass "{00000000CC000001}" {
+           Name "trigger_controls_edit_breadcrumbs"
+           position 0 0
+           size 1 0.1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Edit Breadcrumbs"
+          }
+          ButtonWidgetClass "{00000000CC000002}" {
+           Name "trigger_controls_edit_breadcrumbs_spacer"
+           visible 0
+           position 0 0
+           size 1 0.1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text ""
+          }
+         }
+        }
+       }
+      }
+      GridSpacerWidgetClass "{00000000CC000003}" {
+       Name "breadcrumb_edit_panel"
+       visible 0
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Empty
+       Padding 0
+       Margin 0
+       "Size To Content H" 1
+       "Size To Content V" 1
+       Columns 1
+       Rows 4
+       {
+        TextWidgetClass "{00000000CC000004}" {
+         Name "breadcrumb_edit_header"
+         position 0 0
+         size 1 0.04
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Breadcrumbs"
+         font "gui/fonts/sdf_MetronBook24"
+         "bold text" 1
+         "exact text" 1
+         "exact text size" 16
+        }
+        GridSpacerWidgetClass "{00000000CC000005}" {
+         Name "breadcrumbs_section"
+         position 0 0
+         size 1 0.7
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Empty
+         Padding 0
+         Margin 0
+         "Size To Content H" 1
+         "Size To Content V" 1
+         Columns 1
+         Rows 3
+         {
+          GridSpacerWidgetClass "{00000000CC000020}" {
+           Name "breadcrumb_params_section"
+           color 0.2 0.2 0.2 0.9
+           position 0 0
+           size 1 0.3
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Empty
+           Padding 5
+           Margin 0
+           "Size To Content V" 1
+           Columns 1
+           Rows 2
+           {
+            ButtonWidgetClass "{00000000CC000011}" {
+             Name "breadcrumb_params_header"
+             position 0 0
+             size 1 0.1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style MenuDefault
+             text "Parameters v"
+            }
+            GridSpacerWidgetClass "{00000000CC000012}" {
+             Name "breadcrumb_params_content"
+             visible 0
+             position 0 0
+             size 1 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style Empty
+             Padding 0
+             Margin 0
+             "Size To Content H" 1
+             "Size To Content V" 1
+             Columns 2
+             Rows 5
+             {
+              TextWidgetClass "{00000000CC000013}" {
+               Name "label_eye_acc"
+               position 0 0
+               size 0.7 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style Normal
+               text "Eye Accommodation"
+               font "gui/fonts/sdf_MetronBook24"
+              }
+              EditBoxWidgetClass "{00000000CC000014}" {
+               Name "breadcrumb_params_eye_acc"
+               position 0.5 0
+               size 0.3 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style Editor
+               text "0"
+               font "gui/fonts/Metron"
+              }
+              TextWidgetClass "{00000000CC000015}" {
+               Name "label_use_raycast"
+               position 0 0
+               size 0.7 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style Normal
+               text "Use Raycast"
+               font "gui/fonts/sdf_MetronBook24"
+              }
+              CheckBoxWidgetClass "{00000000CC000016}" {
+               Name "breadcrumb_params_use_raycast"
+               position 0.5 0
+               size 0.3 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style Default
+               text ""
+               font "gui/fonts/sdf_MetronBook24"
+              }
+              TextWidgetClass "{00000000CC000017}" {
+               Name "label_radius"
+               position 0 0
+               size 0.7 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style Normal
+               text "Radius"
+               font "gui/fonts/sdf_MetronBook24"
+              }
+              EditBoxWidgetClass "{00000000CC000018}" {
+               Name "breadcrumb_params_radius"
+               position 0.5 0
+               size 0.3 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style Editor
+               text "0"
+               font "gui/fonts/Metron"
+              }
+              TextWidgetClass "{00000000CC000019}" {
+               Name "label_light_lerp"
+               position 0 0
+               size 0.7 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style Normal
+               text "Light Lerp"
+               font "gui/fonts/sdf_MetronBook24"
+              }
+              CheckBoxWidgetClass "{00000000CC00001A}" {
+               Name "breadcrumb_params_light_lerp"
+               position 0.5 0
+               size 0.3 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style Default
+               text ""
+               font "gui/fonts/sdf_MetronBook24"
+              }
+              ButtonWidgetClass "{00000000CC00001B}" {
+               Name "breadcrumb_params_controls_apply"
+               position 0 0
+               size 0.5 0.1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               style MenuDefault
+               text "Apply"
+              }
+             }
+            }
+           }
+          }
+          ScrollWidgetClass "{00000000CC000006}" {
+           Name "breadcrumbs_list_scroll"
+           clipchildren 1
+           ignorepointer 1
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style blank
+           "Scrollbar V" 1
+           {
+            WrapSpacerWidgetClass "{00000000CC000007}" {
+             Name "breadcrumbs_list"
+             clipchildren 1
+             ignorepointer 1
+             position 0 0
+             size 1 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style Colorable
+             "Size To Content V" 1
+            }
+           }
+          }
+         }
+        }
+        GridSpacerWidgetClass "{00000000CC000008}" {
+         Name "breadcrumb_controls"
+         ignorepointer 1
+         position 0 0
+         size 1 0.28
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 10
+         Margin 10
+         "Size To Content V" 1
+         content_halign center
+         content_valign center
+         Columns 1
+         Rows 5
+         {
+          ButtonWidgetClass "{00000000CC00000C}" {
+           Name "breadcrumb_controls_rename"
+           position 0 0
+           size 1 0.1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Rename"
+          }
+          ButtonWidgetClass "{00000000CC000009}" {
+           Name "breadcrumb_controls_delete"
+           position 0 0
+           size 1 0.1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Delete Breadcrumb"
+          }
+          ButtonWidgetClass "{00000000CC00000A}" {
+           Name "breadcrumb_controls_save"
+           position 0 0
+           size 1 0.1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Save"
+          }
+          ButtonWidgetClass "{00000000CC00000B}" {
+           Name "breadcrumb_controls_back"
+           position 0 0
+           size 1 0.1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style MenuDefault
+           text "Back"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass "{00000000E326997A}" {
+     Name "panel_scene"
+     position 0.201 0.05
+     size 0.8 0.95
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     priority 1
+    }
+   }
+  }
+ }
+}

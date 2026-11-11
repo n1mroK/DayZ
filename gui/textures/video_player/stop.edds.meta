@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{6E0E58BF7904735F}Gui/textures/video_player/Stop.edds"
+ Author "4761"
+ ChangeDate -1326190863
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Stop.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

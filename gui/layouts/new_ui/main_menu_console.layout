@@ -1,0 +1,1352 @@
+FrameWidgetClass "{000000000352C58E}" {
+ Name "main_menu_root"
+ visible 1
+ ignorepointer 1
+ position -3.038 0
+ size 1 1
+ halign center_ref
+ valign center_ref
+ hexactpos 1
+ vexactpos 1
+ hexactsize 0
+ vexactsize 0
+ priority 951
+ {
+  PanelWidgetClass "{00000000D8215258}" {
+   Name "main_menu_dialog"
+   visible 0
+   disabled 0
+   ignorepointer 1
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   {
+    GridSpacerWidgetClass "{000000009F62D738}" {
+     Name "feedbag_dialog"
+     ignorepointer 1
+     color 0 0 0 0.784
+     position 0 0
+     size 0.29 0.3
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     priority 2
+     style Colorable
+     Padding 10
+     Margin 10
+     "Size To Content V" 1
+     content_halign center
+     Columns 1
+     Rows 5
+     {
+      TextWidgetClass "{0000000021DD9A42}" {
+       Name "feedbag_dialog_title"
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       position 0 20
+       size 0.95 44
+       halign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style Bold
+       text "#str_placeholder_feedback_dialog_title"
+       font "gui/fonts/sdf_MetronBook72"
+       "text color" 1 1 1 1
+       "exact text" 1
+       "exact text size" 32
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       {
+        ImageWidgetClass "{00000000DE15CDA3}" {
+         Name "qr_title_circle"
+         visible 0
+         ignorepointer 1
+         color 0 0 0 1
+         size 44 44
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+         image0 "set:dayz_gui image:circle"
+         mode blend
+         "src alpha" 1
+         "clamp mode" border
+         {
+          ImageWidgetClass "{00000000E0C4C501}" {
+           Name "qr_title_icon"
+           visible 1
+           ignorepointer 1
+           size 22 22
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           image0 "set:dayz_gui image:icon_PSButton"
+           mode blend
+           "src alpha" 1
+           "clamp mode" border
+          }
+         }
+        }
+       }
+      }
+      PanelWidgetClass "{00000000A0080A62}" {
+       Name "separator_panel"
+       ignorepointer 1
+       color 0.757 0.094 0.094 0.784
+       position 0 0
+       size 0.85 3
+       halign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       scaled 1
+       priority 5
+       style rover_sim_colorable
+      }
+      WrapSpacerWidgetClass "{0000000047E9107F}" {
+       Name "dialog_content"
+       ignorepointer 1
+       position 0 0
+       size 0.95 130
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 1
+       priority 10
+       "no focus" 1
+       Padding 0
+       Margin 0
+       "Size To Content H" 1
+       "Size To Content V" 1
+       content_halign center
+       content_valign center
+       {
+        WrapSpacerWidgetClass "{00000000FF4AC2B1}" {
+         Name "qr_description_panel"
+         ignorepointer 1
+         size 1 0.846
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 0
+         Margin 0
+         "Size To Content V" 1
+         {
+          MultilineTextWidgetClass "{00000000B0C5C89D}" {
+           Name "qr_description"
+           ignorepointer 1
+           size 1 110
+           halign right_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           text "#str_placeholder_feedback_dialog_text"
+           font "gui/fonts/sdf_MetronLight72"
+           "exact text" 1
+           "exact text size" 20
+           "size to text h" 0
+           "size to text v" 1
+           "text halign" center
+           wrap 1
+          }
+          MultilineTextWidgetClass "{00000000640D6676}" {
+           Name "qr_url"
+           ignorepointer 1
+           size 1 110
+           halign right_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+           text "report.bistudio.com"
+           font "gui/fonts/sdf_MetronLight72"
+           "bold text" 1
+           "exact text" 1
+           "exact text size" 20
+           "size to text v" 1
+           "text halign" center
+           wrap 1
+          }
+         }
+        }
+        PanelWidgetClass "{000000002A673C67}" {
+         Name "PanelWidget0"
+         ignorepointer 1
+         position 10 10
+         size 1 10
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+        }
+        ImageWidgetClass "{000000001109E4C3}" {
+         Name "qr_image"
+         ignorepointer 1
+         ignoregloballv 0
+         size 120 120
+         halign center_ref
+         valign bottom_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+         priority 11
+         imageTexture "{E04AAD962DAA3549}Gui/textures/feedback_qr.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+         "flip u" 0
+         "flip v" 0
+         filter 1
+         nocache 0
+        }
+        PanelWidgetClass "{00000000EA34643A}" {
+         Name "PanelWidget1"
+         ignorepointer 1
+         position 10 10
+         size 1 10
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         priority 12
+        }
+        PanelWidgetClass "{00000000AAA61FAF}" {
+         Name "button_content"
+         ignorepointer 1
+         position 10 10
+         size 1 36
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         priority 12
+         "no focus" 1
+         {
+          ButtonWidgetClass "{000000000CD91F8F}" {
+           Name "close_button"
+           visible 1
+           inheritalpha 0
+           color 1 0 0 1
+           size 0.3 36
+           halign center_ref
+           valign bottom_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           style Default
+           text_proportion 0.55
+           font "gui/fonts/sdf_MetronBook24"
+           {
+            PanelWidgetClass "{000000000961F4D6}" {
+             Name "close_button_panel"
+             visible 1
+             inheritalpha 0
+             ignorepointer 1
+             color 1 1 1 0
+             size 1 36
+             halign center_ref
+             valign bottom_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             style ColorablePanel
+             {
+              RichTextWidgetClass "{000000006924920E}" {
+               Name "close_button_label"
+               ignorepointer 1
+               size 1 36
+               halign center_ref
+               valign bottom_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 0
+               vexactsize 1
+               text "#close"
+               font "gui/fonts/sdf_MetronBook24"
+               "exact text" 0
+               "text halign" center
+               "text valign" center
+               wrap 1
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    ImageWidgetClass "{00000000664C6762}" {
+     Name "vignette0"
+     visible 1
+     ignorepointer 0
+     color 0 0 0 0.784
+     position 0 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 0
+     nocache 1
+    }
+   }
+  }
+  PanelWidgetClass "{00000000E9F2C290}" {
+   Name "main_menu_panel"
+   visible 1
+   ignorepointer 1
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   {
+    WrapSpacerWidgetClass "{00000000DCD6AB74}" {
+     Name "play_panel_root"
+     visible 1
+     clipchildren 0
+     ignorepointer 1
+     position 100 130
+     size 400 400
+     halign right_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     priority 3
+     Padding 0
+     Margin 0
+     content_halign center
+     content_valign bottom
+     {
+      WrapSpacerWidgetClass "{000000009F819A02}" {
+       Name "bottom"
+       visible 1
+       color 0 0 0 0.549
+       position 0 0
+       size 1 90
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style DayZDefaultPanel
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" ""
+       "next down" "exit_button"
+       Padding 0
+       Margin 0
+       "Size To Content H" 1
+       "Size To Content V" 1
+       {
+        ButtonWidgetClass "{00000000198C590C}" {
+         Name "play"
+         position 0 0
+         size 1 90
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Empty
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" "options"
+         "next down" "customize_character"
+         {
+          PanelWidgetClass "{00000000DE62DE98}" {
+           Name "play_panel"
+           visible 1
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{00000000CD273BF7}" {
+             Name "play_label"
+             visible 1
+             clipchildren 0
+             ignorepointer 1
+             size 1 0.65
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "#main_menu_play"
+             font "gui/fonts/sdf_MetronLight42"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      PanelWidgetClass "{00000000BA06B906}" {
+       Name "play_panel_separator"
+       ignorepointer 1
+       color 0.784 0 0 1
+       position 10 10
+       size 1 2
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style rover_sim_colorable
+      }
+      WrapSpacerWidgetClass "{00000000031A6F3A}" {
+       Name "top"
+       ignorepointer 1
+       color 0 0 0 0.549
+       position 0 0
+       size 1 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style DayZDefaultPanel
+       "no focus" 1
+       Padding 0
+       Margin 0
+       "Size To Content V" 1
+       {
+        FrameWidgetClass "{000000008F7B6D28}" {
+         Name "separator_top"
+         ignorepointer 1
+         position 10 10
+         size 1 5
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+        }
+        ButtonWidgetClass "{0000000036781537}" {
+         Name "choose_account"
+         visible 0
+         color 0.784 0 0 1
+         position 0 0
+         size 1 38
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Default
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" ""
+         "next down" ""
+         {
+          PanelWidgetClass "{00000000B1C6C85A}" {
+           Name "choose_account_panel"
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{00000000ADFA1EA9}" {
+             Name "choose_account_label"
+             ignorepointer 1
+             size 1 0.55
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "#layout_main_menu_choose_account"
+             font "gui/fonts/sdf_MetronLight24"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{0000000070399438}" {
+         Name "show_dlc"
+         visible 0
+         color 0.784 0 0 1
+         position 0 0
+         size 1 38
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Default
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" ""
+         "next down" ""
+         {
+          PanelWidgetClass "{0000000035415BDC}" {
+           Name "show_dlc_panel"
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{0000000055C58B41}" {
+             Name "show_dlc_label"
+             ignorepointer 1
+             size 1 0.55
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "#server_browser_dlc_livonia"
+             font "gui/fonts/sdf_MetronLight24"
+             "text halign" center
+             "text valign" center
+            }
+            ImageWidgetClass "{0000000036527967}" {
+             Name "show_dlc_icon"
+             clipchildren 1
+             ignorepointer 1
+             position 10 0
+             size 1 1
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             fixaspect fixwidth
+             priority 150
+             draggable 0
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             {
+              FrameWidgetClass "{00000000E8B2B82D}" {
+               Name "ModOwnership"
+               visible 1
+               ignorepointer 1
+               position 0 0
+               size 16 16
+               halign right_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               priority 1
+               {
+                ImageWidgetClass "{00000000719C0558}" {
+                 Name "Owned"
+                 visible 0
+                 ignorepointer 1
+                 color 0 1 0 1
+                 position 0 0
+                 size 1 1
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 0
+                 vexactsize 0
+                 image0 "set:dayz_gui image:circle"
+                 mode blend
+                 "src alpha" 1
+                 "clamp mode" clamp
+                 "stretch mode" stretch_w_h
+                }
+                ImageWidgetClass "{0000000063AFE1E3}" {
+                 Name "Unowned"
+                 visible 0
+                 ignorepointer 1
+                 color 1 0 0 1
+                 position 0 0
+                 size 1 1
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 0
+                 vexactsize 0
+                 image0 "set:dayz_gui image:circle"
+                 mode blend
+                 "src alpha" 1
+                 "clamp mode" clamp
+                 "stretch mode" stretch_w_h
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{0000000017D7C888}" {
+         Name "customize_character"
+         color 0.784 0 0 0.784
+         position 0 0
+         size 1 38
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style DayZDefaultButtonSides
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" "play"
+         "next down" "tutorials"
+         {
+          PanelWidgetClass "{0000000022432A59}" {
+           Name "customize_character_panel"
+           visible 1
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{00000000A699C0AC}" {
+             Name "customize_character_label"
+             ignorepointer 1
+             size 1 0.55
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "#layout_main_menu_customize_char"
+             font "gui/fonts/sdf_MetronLight24"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{0000000061F7374C}" {
+         Name "play_video"
+         visible 0
+         color 0.784 0 0 0.784
+         position 0 0
+         size 1 38
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Default
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" "customize_character"
+         "next down" "tutorials"
+         text_proportion 0.55
+         font "gui/fonts/sdf_MetronLight24"
+         "switch" normal
+         {
+          PanelWidgetClass "{00000000141B37C6}" {
+           Name "play_video_panel"
+           visible 1
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{00000000F96B05FB}" {
+             Name "play_video_label"
+             ignorepointer 1
+             size 1 0.55
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "#menu_introductionVideo"
+             font "gui/fonts/sdf_MetronLight30"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{00000000DBECCC74}" {
+         Name "feedback"
+         visible 0
+         color 0.784 0 0 1
+         position 0 0
+         size 1 38
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Default
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" "play_video"
+         "next down" "tutorials"
+         text_proportion 0.55
+         font "gui/fonts/sdf_MetronLight24"
+         "switch" normal
+         {
+          PanelWidgetClass "{0000000056A2F7D2}" {
+           Name "feedback_panel"
+           visible 1
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{000000009B5FFF19}" {
+             Name "feedback_label"
+             ignorepointer 1
+             size 1 0.55
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "#str_placeholder_feedback"
+             font "gui/fonts/sdf_MetronLight30"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{0000000064FE0472}" {
+         Name "tutorials"
+         visible 1
+         color 0.784 0 0 1
+         position 0 0
+         size 1.01 38
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Default
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" "customize_character"
+         "next down" "controls"
+         text_proportion 0.55
+         font "gui/fonts/sdf_MetronLight24"
+         "switch" normal
+         {
+          PanelWidgetClass "{0000000071EC91A8}" {
+           Name "tutorials_panel"
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{000000008C125FC8}" {
+             Name "tutorials_label"
+             ignorepointer 1
+             size 1 0.55
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "#menu_tutorials"
+             font "gui/fonts/sdf_MetronLight30"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{00000000DAE061EA}" {
+         Name "controls"
+         color 0.784 0 0 1
+         position 0 0
+         size 1 40
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Default
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" "tutorials"
+         "next down" "options"
+         {
+          PanelWidgetClass "{00000000A5AC4EFB}" {
+           Name "controls_panel"
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{0000000038D87A2A}" {
+             Name "controls_label"
+             ignorepointer 1
+             size 1 22
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             text "#main_menu_controls"
+             font "gui/fonts/sdf_MetronLight24"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{000000003B99C6BE}" {
+         Name "options"
+         color 0.784 0 0 1
+         position 0 0
+         size 1 40
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Default
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" "controls"
+         "next down" "play"
+         {
+          PanelWidgetClass "{00000000ADF687EB}" {
+           Name "options_panel"
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{000000007846B19C}" {
+             Name "options_label"
+             ignorepointer 1
+             size 1 22
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             text "#layout_xbox_ingame_menu_options"
+             font "gui/fonts/sdf_MetronLight24"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        ButtonWidgetClass "{000000006CC971A9}" {
+         Name "exit"
+         visible 0
+         color 0.784 0 0 1
+         position 0 0
+         size 1 40
+         halign center_ref
+         valign bottom_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         style Default
+         "no focus" 0
+         "next left" "none"
+         "next right" "none"
+         "next up" "controls"
+         "next down" "play"
+         {
+          PanelWidgetClass "{0000000096359E9B}" {
+           Name "exit_panel"
+           ignorepointer 1
+           color 0 0 0 0
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass "{00000000D19DE17F}" {
+             Name "exit_label"
+             ignorepointer 1
+             size 1 22
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             text "#main_menu_exit"
+             font "gui/fonts/sdf_MetronLight24"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        FrameWidgetClass "{000000005A46D932}" {
+         Name "separator_down"
+         visible 1
+         ignorepointer 1
+         position 10 10
+         size 1 7
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass "{000000009D2E6640}" {
+     Name "character_name_xbox_background"
+     visible 1
+     color 0 0 0 0.549
+     position 100 80
+     size 400 38
+     halign right_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     priority 5
+     style rover_sim_colorable
+     {
+      TextWidgetClass "{00000000B0600538}" {
+       Name "character_name_xbox"
+       visible 1
+       inheritalpha 0
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       halign right_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 3
+       text "#STR_main_menu_root_character_name_xbox_background_character_name_xbox0"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 0
+       text_proportion 0.55
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    ImageWidgetClass "{000000008A9B4FDB}" {
+     Name "dayz_logo"
+     visible 1
+     ignorepointer 1
+     position 100 78
+     size 444 208
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     priority 2
+     image0 "set:dayz_gui image:DayZLogo"
+     mode additive
+     "src alpha" 1
+    }
+    ImageWidgetClass "{00000000C54ED3C0}" {
+     Name "vignette"
+     visible 1
+     ignorepointer 0
+     color 0 0 0 0.784
+     position 0 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 0
+     nocache 1
+    }
+    FrameWidgetClass "{000000009A9DBC84}" {
+     Name "ModsDetailed"
+     visible 0
+     disabled 1
+     clipchildren 0
+     ignorepointer 1
+     position 0.059 0.11
+     size 540 620
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     priority 5
+    }
+    PanelWidgetClass "{000000000129FFF3}" {
+     Name "dlc_Frame"
+     visible 1
+     clipchildren 0
+     color 0 0 0 0
+     position 0.059 0.165
+     size 444 548.31
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     priority 5
+     draggable 0
+     scriptclass ""
+     style DayZDefaultPanel
+    }
+   }
+  }
+  PanelWidgetClass "{0000000032B2B07B}" {
+   Name "toolbar_bg"
+   visible 1
+   inheritalpha 0
+   color 0 0 0 0.549
+   position 0 0
+   size 1 0.1
+   halign center_ref
+   valign bottom_ref
+   hexactpos 0
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   priority 3
+   style ToolbarWidget
+   {
+    WrapSpacerWidgetClass "{00000000DD541869}" {
+     Name "ConsoleToolbar"
+     visible 1
+     clipchildren 0
+     position 100 11
+     size 840 48
+     halign right_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     priority 100
+     "no focus" 1
+     Padding 20
+     Margin 0
+     "Size To Content V" 1
+     content_halign right
+     content_valign center
+     {
+      RichTextWidgetClass "{00000000E5631E98}" {
+       Name "ContextToolbarText"
+       clipchildren 0
+       position 0 0
+       size 1 48
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "#layout_console_inventory_toolbar_context"
+       font "gui/fonts/sdf_MetronLight42"
+       "italic text" 0
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text halign" right
+       "text valign" center
+       wrap 1
+      }
+     }
+    }
+   }
+  }
+  FrameWidgetClass "{00000000B76EFB5F}" {
+   Name "MiscInfo"
+   ignorepointer 1
+   position 100 0.02
+   size 0.45 80
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 0
+   hexactsize 0
+   vexactsize 1
+   priority 4
+   {
+    WrapSpacerWidgetClass "{00000000DFD3B7A2}" {
+     Name "Licensing"
+     clipchildren 0
+     ignorepointer 1
+     position 0 0
+     size 1 0.5
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     priority 5
+     Padding 8
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     content_valign center
+     {
+      TextWidgetClass "{000000000D66FF35}" {
+       Name "version"
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       position 80 60
+       size 1 0.5
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 2
+       text "#main_menu_version"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 0
+       "text valign" center
+      }
+      TextWidgetClass "{000000008F1054C3}" {
+       Name "copyright"
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       position 80 40
+       size 1 0.5
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       priority 2
+       text "#copyright_disclamer"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 0
+       "text valign" center
+      }
+     }
+    }
+    PanelWidgetClass "{0000000078185D50}" {
+     Name "ButtonHolderCredits"
+     ignorepointer 1
+     position 0 0
+     size 300 33
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style ColorablePanel
+     {
+      ButtonWidgetClass "{00000000A3E639D1}" {
+       Name "message_button"
+       visible 1
+       color 1 1 1 0
+       size 45 33
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       priority 10
+       style Empty
+       "no focus" 0
+       "next up" ""
+       "next down" ""
+       font "gui/fonts/sdf_MetronLight24"
+       "switch" normal
+       {
+        PanelWidgetClass "{00000000B45D3F9A}" {
+         Name "message_button_panel"
+         ignorepointer 1
+         color 0 0 0 0
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style DayZDefaultPanel
+         {
+          ImageWidgetClass "{000000006BCA58D0}" {
+           Name "message_button_image"
+           visible 1
+           ignorepointer 1
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           image0 "set:dayz_gui image:credits"
+           mode blend
+           "src alpha" 1
+          }
+         }
+        }
+       }
+      }
+      RichTextWidgetClass "{00000000B78EB1E3}" {
+       Name "credits_name"
+       ignorepointer 1
+       position 50 0
+       size 300 33
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "#menu_credits"
+       font "gui/fonts/sdf_MetronBook24"
+       "exact text" 1
+       "exact text size" 24
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass "{0000000050EB063A}" {
+   Name "carousel_Frame"
+   visible 1
+   clipchildren 0
+   ignorepointer 1
+   color 0 0 0 0
+   position 0.059 0.12
+   size 460 599.053
+   valign bottom_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+   priority 5
+   draggable 0
+   scriptclass ""
+   style DayZDefaultPanel
+  }
+ }
+}

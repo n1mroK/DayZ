@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{5F80F7507DFD8209}Gui/textures/feedback_qr_xbox.tga"
+ Author "9702"
+ ChangeDate 1845670276
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "feedback_qr_xbox.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}
